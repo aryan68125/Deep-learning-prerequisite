@@ -188,7 +188,7 @@ The best hyper parameters found by GridSearchCV (C=4.281332398719396, penalty='n
 1. Precision : TP/(TP+FP)
 2. Recall or sensitivity : TP/(TP+FN)
 #### Total score is F1-Score Combines precision and recall into a balanced measure F1 = 2*(precision*recall)/(precision+recall). This is the harmonic mean of precision and recall
-## Final score :
+## Final score of Facial expression recognition:
 #### The validation Score after training of logistic regression model is complete is -> ```best validation error : 0.14```
 #### The graph after the training of logistic regression model is complete ->
 ![](util_pictures_for_explaination_README/facial_recognition/emotion_recognition_logistic_regression.png)
