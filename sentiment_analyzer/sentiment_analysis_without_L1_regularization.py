@@ -230,6 +230,7 @@ print (f'Accuracy : {best_clf.score(Xtest,Ytest):.3f}')
 Findings when looking through the console
 best model hyperparameters for logisticRegressionModel :
 LogisticRegression(C=4.281332398719396, penalty='none', solver='sag') Accuracy : 0.840
+best hyperparameters for logistic regression model : LogisticRegression(C=0.23357214690901212, penalty='none', solver='sag') Accuracy : 0.890
 '''
 
 print("Using my own Logistic Regression model using numpy without L1 regularization")

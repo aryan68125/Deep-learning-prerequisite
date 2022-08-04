@@ -77,7 +77,7 @@ def main():
 
     #use our model the way we use scikitLearn
     model = LogisticModel()
-    model.fit(X,Y,show_fig = True)
+    model.fit(X,Y,epochs=99999999,show_fig = True)
     model.score(X,Y)
 
 if __name__ == '__main__' :
