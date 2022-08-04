@@ -143,21 +143,21 @@ The best hyper parameters found by GridSearchCV (C=4.281332398719396, penalty='n
    ```
    Findings when looking through the console
    best model hyperparameters for logisticRegressionModel :
-   LogisticRegression(C=4.281332398719396, penalty='none', solver='sag') Accuracy : 0.840
+   LogisticRegression(C=0.23357214690901212, penalty='none', solver='sag') Accuracy : 0.890
    ```
    ```
-   best hyperparameters for logistic regression model : LogisticRegression(C=4.281332398719396, penalty='none', solver='sag')
-   Model Predictions : [0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 1. 1. 0.
-   0. 0. 1. 1. 0. 1. 0. 1. 0. 0. 1. 0. 1. 1. 0. 1. 1. 1. 1. 0. 0. 0. 1. 0.
-   1. 1. 0. 0. 1. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0. 0. 0. 1. 1. 1. 0. 1. 0. 0.
-   0. 1. 1. 0. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 0. 1.
-   0. 1. 0. 1.]
-   Targets or Ytest : [0. 0. 1. 1. 1. 1. 1. 0. 0. 1. 1. 1. 1. 0. 0. 1. 0. 0. 1. 1. 1. 1. 1. 1.
-   0. 0. 0. 0. 0. 1. 0. 1. 1. 0. 1. 0. 1. 1. 0. 1. 1. 1. 1. 0. 0. 0. 0. 0.
-   1. 1. 0. 1. 1. 1. 1. 1. 0. 1. 0. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0.
-   0. 1. 1. 0. 0. 1. 1. 1. 1. 0. 1. 1. 0. 1. 1. 0. 0. 1. 0. 1. 1. 1. 1. 1.
-   1. 1. 0. 1.]
-   Accuracy : 0.840
+   best hyperparameters for logistic regression model : LogisticRegression(C=0.23357214690901212, penalty='none', solver='sag')
+   Model Predictions : [1. 0. 0. 1. 0. 0. 1. 1. 1. 1. 1. 0. 0. 1. 1. 1. 1. 0. 0. 0. 0. 1. 1. 0.
+   0. 0. 0. 1. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 1.
+   1. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0.
+   0. 1. 1. 1. 0. 1. 0. 1. 0. 1. 0. 1. 0. 0. 1. 1. 0. 0. 1. 0. 1. 1. 0. 0.
+   1. 1. 1. 0.]
+   Targets or Ytest : [1. 0. 0. 1. 0. 1. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 0. 0. 0. 0. 1. 0.
+   0. 0. 0. 1. 0. 0. 0. 1. 0. 1. 1. 1. 1. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 1.
+   1. 1. 1. 0. 0. 0. 1. 1. 0. 0. 0. 0. 1. 1. 1. 1. 0. 0. 1. 1. 1. 0. 1. 0.
+   0. 1. 1. 1. 0. 1. 0. 1. 1. 1. 0. 1. 0. 0. 1. 1. 0. 1. 1. 0. 1. 1. 0. 0.
+   0. 1. 1. 0.]
+   Accuracy : 0.890
    ```
 ## Note :
 ### The code related to case 3 is incorporated in sentiment_analysis_without_L1_regularization.py file. I did not make a separate file case 3 demonstration SORRY.
