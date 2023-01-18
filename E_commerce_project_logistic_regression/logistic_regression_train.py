@@ -45,7 +45,7 @@ def classificationRate(Y,P):
     #It will divide the number of correct prediction by total number of predictions
     return np.mean(Y==P)
 
-#corss_entropy function this is gonna take in Targets which is Ytrain and Ytest and PofY
+#corss_entropy function this is gonna take in Targets which is Ytrain and Ytest and PofY PofY is the PofYGivenX
 def cross_entropy(T,pY):
     return -np.mean(T*np.log(pY) + (1-T)*np.log(1-pY))
 
