@@ -42,7 +42,7 @@ If we set var(wi) = 1/D, then we achieve var(y) = 1, since var(xi) = 1 by normal
 w = np.random.randn(D) / np.sqrt(D)
 learning_rate = 0.001
 #L1 penalty changing l1 penalty 2.0 -> 10.0
-l1 = 1.0
+l1 = 3
 # for loop to train the model for 10000 epox
 for t in range(10000):
     # find Y hat

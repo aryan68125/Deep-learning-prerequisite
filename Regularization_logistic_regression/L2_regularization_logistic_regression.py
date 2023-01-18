@@ -52,7 +52,7 @@ learning_rate = 0.1
 #L2 penalty lambda constant
 L2=0.1
 # performing 100 iteration of gradient descent
-for i in range(1000):
+for i in range(10000):
     #printing the cross_entropy after every 10 steps so see wheather it's decreasing or not
     if (i%10==0):
         print(f"cross entropy error function with gradient descent : {cross_entropy(T,Y)}")
