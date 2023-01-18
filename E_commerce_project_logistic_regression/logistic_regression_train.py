@@ -55,9 +55,9 @@ train_costs = []
 #array of test cost
 test_costs = []
 #set our learning rate to be 0.001
-learning_rate = 0.001
+learning_rate = 0.00001
 # we are gonna go for 10,000 epox
-for i in range(10000):
+for i in range(50000):
     #in each iteration calculate pYtrain
     #passing Xtrain through the logistic regression to make predictions on the train dataset
     # P_Y_given_X = pYtrain in training dataset
@@ -92,7 +92,7 @@ print(f"Final train classification rate : {classificationRate(Ytrain, np.round(p
 print(f"Final test classification rate : {classificationRate(Ytest, np.round(pYtest))}")
 
 #plot the train and test costs on the graph
-legend1 = plt.plot(train_costs, label = 'train cost')
-legend2 = plt.plot(test_costs, label = 'test cost')
-plt.legend([legend1, legend2])
+legend1, = plt.plot(train_costs)
+legend2, = plt.plot(test_costs)
+plt.legend([legend1,legend2],["train_costs", "test_costs"])
 plt.show()
