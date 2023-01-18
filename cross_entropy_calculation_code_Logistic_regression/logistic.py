@@ -14,6 +14,7 @@ X[:50,:]=X[:50,:] - 2*np.ones((50,D)) #centered at -2,-2
 X[50:,:]=X[50:,:] + 2*np.ones((50,D)) #centered at +2,+2
 
 #set the targets
+# The first 50 set to 0 and the next 50 set to 1
 T = np.array([0]*50+[1]*50)
 
 # concatenate a column with 1s or biase
