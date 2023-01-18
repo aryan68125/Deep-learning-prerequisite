@@ -55,9 +55,9 @@ train_costs = []
 #array of test cost
 test_costs = []
 #set our learning rate to be 0.001
-learning_rate = 0.00001
+learning_rate = 0.0000001
 # we are gonna go for 10,000 epox
-for i in range(50000):
+for i in range(9999999):
     #in each iteration calculate pYtrain
     #passing Xtrain through the logistic regression to make predictions on the train dataset
     # P_Y_given_X = pYtrain in training dataset
