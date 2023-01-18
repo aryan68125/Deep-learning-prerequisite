@@ -77,6 +77,7 @@ for i in range(50000):
     #Now we are ready to do the gradient descent
     #so the equation of dradient descent implemented here is the vectorized version of the equaiton of gradient descent that is solved in the NoteBook
     W -= learning_rate*Xtrain.T.dot(pYtrain - Ytrain) # defining the weights via gradient descent equation
+    #updating the bias term
     b-= learning_rate*(pYtrain-Ytrain).sum()
 
     # in every 1000 steps print the training cost and the test cost
