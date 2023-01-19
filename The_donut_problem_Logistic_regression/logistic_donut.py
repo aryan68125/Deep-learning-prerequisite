@@ -83,7 +83,7 @@ def cross_entropy(T,Y):
     return E
 
 #set the learning rate to 0.0001
-learning_rate = 0.0001
+learning_rate = 0.00001
 
 #array to hold the errors
 error = []
@@ -91,11 +91,11 @@ error = []
 '''
 In general you will have to experiment a little bit to find the right number for these values or you could use something like cross-validation
 '''
-for i in range(5000):
+for i in range(500000):
     #keep track of cross entropy so we can see how it evolves over time
     e = cross_entropy(T,Y)
     error.append(e)
-    #print the cross_entropy every 100 times
+    #print the cross_entropy every 100 times Keeping track of the cross_entropy function
     if i % 100 == 0:
         print(f"Cross_entropy error function : {e}")
 
