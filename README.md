@@ -193,4 +193,3 @@ The best hyper parameters found by GridSearchCV (C=4.281332398719396, penalty='n
 #### The validation Score after training of logistic regression model is complete is -> ```best validation error : 0.14```
 #### The graph after the training of logistic regression model is complete ->
 ![](util_pictures_for_explaination_README/facial_recognition/emotion_recognition_logistic_regression.png)
-hello
