@@ -112,7 +112,7 @@ Logistic function = Sigmoid funtion
 ![](util_pictures_for_explaination_README/data_pre_processing)
 - You can't feed your category type data into your logistic regression model or your neural network model because these work on numerical vectors.
 - For information visit this link:
-    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](.numberical_vectors_one_hot_encoding.md)
+    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](numerical_vectors_one_hot_encoding.md)
 
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
