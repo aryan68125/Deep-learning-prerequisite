@@ -98,6 +98,16 @@ Logistic function = Sigmoid funtion
 #### The Sigmoid funtion graph is shown as below ->
 ![](util_pictures_for_explaination_README/sigmoid_funtion_graph.png)
 
+# Some points to remember when analyzing data in machine learning:
+## Handle time column in a database or an excel sheet
+- When dealing with time which is cyclical in nature. We catagorize the time into different categories.
+- The categories may look something like this 
+    - 0 for 12 am to 6 am 
+    - 1 for 6 am to 12 pm
+    - 2 for 12 pm to 6 pm
+    - 3 for 6 pm to 12 am
+- The reason we divided time into buckets is because we assume that the users in the same bucket will behave similary. So this helps out when these types of columns end up in the training data when training our machine learning model.
+
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
 #### Findings during my testing ->
