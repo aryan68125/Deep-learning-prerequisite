@@ -1,4 +1,3 @@
-Great question! Let's break this down clearly and simply.
 
 ---
 
