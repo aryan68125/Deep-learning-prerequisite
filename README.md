@@ -119,6 +119,7 @@ Logistic function = Sigmoid funtion
 - Technically we could turn them into two different columns using one hot encoding but we don't necessarily need to.
     - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](handle_binary_categories.md)
     - [What does it mean to absorb the off effect into the bias term in the context of binary categories](absorb_the_off_effect_into_the_bias_term.md)
+    - [what is multicollinearity](multicollinearity.md)
 
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
