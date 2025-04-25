@@ -113,6 +113,8 @@ Logistic function = Sigmoid funtion
 - You can't feed your category type data into your logistic regression model or your neural network model because these work on numerical vectors.
 - For information visit this link:
     - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](numerical_vectors_one_hot_encoding.md)
+- In order to solve this problem we use One Hot Encoding:
+    - This simply means that if we have 3 different categories then we will use three different columns to represent them. We then set each column that represents the category for each sample to one.
 
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
