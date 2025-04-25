@@ -111,6 +111,8 @@ Logistic function = Sigmoid funtion
 ### One hot encoding:
 ![](util_pictures_for_explaination_README/data_pre_processing)
 - You can't feed your category type data into your logistic regression model or your neural network model because these work on numerical vectors.
+- For information visit this link:
+    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](numberical_vectors_one_hot_encoding.md)
 
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
@@ -122,7 +124,7 @@ Logistic function = Sigmoid funtion
    ```
 2. Logistic regression when applied from scratch with gradient descent and not using LogisticRegression Class from ScikitLearn I got performance of
    0.76
-   ```
+```
    Final train classification rate : 0.8694736842105263
    Final test classification rate : 0.76
    ```
