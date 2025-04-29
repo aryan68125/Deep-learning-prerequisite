@@ -54,7 +54,9 @@ Given:
 
 Plugging into:
 \[
-0=ax+by+c⇒0=1⋅x−1⋅y+0⇒x−y=0
+0=ax+by+c
+\⇒0=1⋅x−1⋅y+0
+\⇒x−y=0
 \]
 
 ✅ This line **perfectly separates** the two classes in your diagram:
