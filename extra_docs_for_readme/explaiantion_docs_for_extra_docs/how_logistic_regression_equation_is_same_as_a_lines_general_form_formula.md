@@ -11,12 +11,12 @@ with
 
 In **logistic regression**, you compute:
 \[
-z = w \cdot x + b = w_1x_1 + w_2x_2 + \dots + w_nx_n + b
+z=w⋅x+b=w1​x1​+w2​x2​+⋯+wn​xn​+b
 \]
 
 This `z` is the input to the **sigmoid function**:
 \[
-\sigma(z) = \frac{1}{1 + e^{-z}}
+σ(z)=1 / (1 + exp(-z))
 \]
 
 ---
