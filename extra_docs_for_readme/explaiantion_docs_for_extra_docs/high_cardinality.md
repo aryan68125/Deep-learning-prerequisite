@@ -30,6 +30,8 @@ Suppose you have a feature like **"User ID"** or **"Product ID"**:
   - We map each unique category to a **small dense vector** (say, 32 or 128 numbers).
   - Much more memory-efficient.
   - Helps the model **learn relationships** between different categories (e.g., similar products have similar embeddings).
+- [What do mean by embeddings?](explaiantion_docs_for_extra_docs/embeddings.md)
+
 
 ---
 
