@@ -72,7 +72,7 @@ We use **encoding techniques**:
 
 #### - Embeddings (especially in deep learning)
 - Used for high-cardinality categories like words or product IDs.
-- [What do mean by high-cardinality?](extra_docs_for_readme/explaiantion_docs_for_extra_docs/high_cardinality.md)
+- [What do mean by high-cardinality?](explaiantion_docs_for_extra_docs/high_cardinality.md)
 
 ---
 
