@@ -63,8 +63,7 @@ So we can directly substitute:
 
 If:
 \[
-w = [1, -1], \quad b = 0
-\Rightarrow w \cdot x + b = x_1 - x_2 = 0
+w=[1,−1],b=0⇒w⋅x+b=x1​−x2​=0⇒x=y
 \]
 
 Which matches:
