@@ -22,7 +22,18 @@ you can see that if our x's and o's are split along a 45deg line that crosses th
 
 ![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification2.png)
 Let's say we have a test point h(2,1) --> x=2 and y=1 <br>
-if we plug that into the equation h(2,1) =1>0 --> therefore weshould classify this new test point as an 'o'.
+if we plug that into the equation h(2,1) =1>0 --> therefore weshould classify this new test point as an 'o'. <br>
+
+Now let's take another senario where we have a test point (1,2). <br>
+h(x,y) = x-y <br>
+h(1,2) = -1 < 0 --> 'x' <br>
+Therefore the test point must be classified as 'x'. <br>
+
+Now let's take another senario where we have test point (1,1) <br>
+h(x,y) = x-y <br>
+h(1,1) = 0 = 0 --> Don't know <br>
+Here in this case we don't know which class the test point should belong to.
+
 # How do we calculate the output of a neuron(Logistic Regression):
 Just link in a brain of any organism is a collection of neurons which is a building block of a brain in a similar fashon,
 a logistic regression is also a building black of a neural network.
