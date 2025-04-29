@@ -38,7 +38,7 @@ You can rearrange this into slope-intercept form if needed, but this format is m
 This means:
 
 \[
-0 = x - y \quad \Rightarrow \quad x = y
+0=x−y⇒x=y
 \]
 
 That’s a line at **45°** (i.e., angle between x-axis and the line is 45°), passing through the origin (0, 0).
