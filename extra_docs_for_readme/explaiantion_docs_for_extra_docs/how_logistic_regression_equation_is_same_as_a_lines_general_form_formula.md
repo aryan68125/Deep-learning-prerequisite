@@ -25,12 +25,12 @@ This `z` is the input to the **sigmoid function**:
 
 Sigmoid output is **0.5** when \( z = 0 \), because:
 \[
-\sigma(0) = \frac{1}{1 + e^{0}} = 0.5
+σ(0)=1 / (1 + exp(0)) = 0.5
 \]
 
 So the **decision boundary** is when:
 \[
-w \cdot x + b = 0
+w⋅x+b=0
 \]
 
 This defines the **line (or hyperplane)** that separates the classes.
@@ -48,11 +48,11 @@ Let’s match terms:
 
 | Logistic Regression Form | General Line Form |
 |--------------------------|-------------------|
-| \( w_1x_1 + w_2x_2 + b = 0 \) | \( ax + by + c = 0 \) |
+| \( w1​x1​+w2​x2​+b=0 \) | \( ax + by + c = 0 \) |
 
 So we can directly substitute:
-- \( a = w_1 \)
-- \( b = w_2 \)
+- \( a = w1​ \)
+- \( b = w2 \)
 - \( c = b \) (bias term)
 
 ✅ **They are mathematically the same form!**
@@ -65,7 +65,6 @@ If:
 \[
 w = [1, -1], \quad b = 0
 \Rightarrow w \cdot x + b = x_1 - x_2 = 0
-\Rightarrow x = y
 \]
 
 Which matches:
