@@ -54,7 +54,7 @@ h(x)=σ(w1​x1​+w2​x2​+⋯+wn​xn​+b)
 \]
 
 Where:
-- \( \sigma(z) = \frac{1}{1 + e^{-z}} \) is the sigmoid function
+- \( σ(z)=1+e−z1 \) is the sigmoid function
 - The inside of the sigmoid, \( z = w \cdot x + b \), is a **linear combination** — same as \( ax + by + c \)
 
 ### 🔍 Decision Boundary:
