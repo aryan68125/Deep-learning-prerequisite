@@ -85,7 +85,7 @@ Same as the decision boundary you showed in the original diagram!
   \[
   0 = ax + by + c
   \]
-- The parameters \( w_1, w_2 \) become the line's coefficients \( a, b \), and the bias becomes \( c \).
+- The parameters \( w1, w2 \) become the line's coefficients \( a, b \), and the bias becomes \( c \).
 
 ---
 
