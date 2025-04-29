@@ -79,7 +79,7 @@ Same as the decision boundary you showed in the original diagram!
 
 - Logistic regression draws a decision boundary at:  
   \[
-  w \cdot x + b = 0
+  w⋅x+b=0
   \]
 - This **is equivalent** to the general linear form:
   \[
