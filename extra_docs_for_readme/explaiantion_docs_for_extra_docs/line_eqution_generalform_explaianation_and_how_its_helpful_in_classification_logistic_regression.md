@@ -61,14 +61,12 @@ Where:
 
 To **classify**, we check:
 \[
-h(x) \geq 0.5 \Rightarrow \text{class 1}
-\quad \text{vs} \quad
-h(x) < 0.5 \Rightarrow \text{class 0}
+h(x)≥0.5⇒class 1vsh(x)<0.5⇒class 0
 \]
 
 Since sigmoid is 0.5 when the input is 0, the boundary is:
 \[
-w \cdot x + b = 0 \quad \text{⇨ our decision boundary}
+w⋅x+b=0⇨ our decision boundary
 \]
 
 This is exactly the **general form**: 
