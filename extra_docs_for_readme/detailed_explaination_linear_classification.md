@@ -68,7 +68,7 @@ In **binary classification**, linear models (like logistic regression or a singl
 
 In higher dimensions, it's not a line but a **hyperplane**:
 \[
-w_1x_1 + w_2x_2 + \dots + w_nx_n + b = 0
+w1​x1​+w2​x2​+⋯+wn​xn​+b=0
 \]
 
 ---
