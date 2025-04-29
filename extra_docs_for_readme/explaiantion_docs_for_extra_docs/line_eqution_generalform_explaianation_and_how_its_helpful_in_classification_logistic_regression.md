@@ -50,7 +50,7 @@ So:
 In logistic regression, we model the **probability** that a sample belongs to class 1:
 
 \[
-h(x) = \sigma(w_1x_1 + w_2x_2 + \dots + w_nx_n + b)
+h(x)=σ(w1​x1​+w2​x2​+⋯+wn​xn​+b)
 \]
 
 Where:
