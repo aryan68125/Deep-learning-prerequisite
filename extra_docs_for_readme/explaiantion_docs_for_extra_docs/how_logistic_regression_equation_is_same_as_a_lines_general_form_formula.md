@@ -68,8 +68,7 @@ w=[1,−1],b=0⇒w⋅x+b=x1​−x2​=0⇒x=y
 
 Which matches:
 \[
-0 = x - y
-\Rightarrow a = 1, b = -1, c = 0
+0=x−y⇒a=1,b=−1,c=0
 \]
 
 Same as the decision boundary you showed in the original diagram!
