@@ -109,17 +109,17 @@ Logistic function = Sigmoid funtion
     - 3 for 6 pm to 12 am
 - The reason we divided time into buckets is because we assume that the users in the same bucket will behave similary. So this helps out when these types of columns end up in the training data when training our machine learning model.
 ### One hot encoding:
-![](util_pictures_for_explaination_README/data_pre_processing)
+![](util_pictures_for_explaination_README/data_pre_processing/one_hot_encoding.png)
 - You can't feed your category type data into your logistic regression model or your neural network model because these work on numerical vectors.
 - For information visit this link:
-    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](numerical_vectors_one_hot_encoding.md)
+    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](extra_docs_for_readme/numerical_vectors_one_hot_encoding.md)
 - In order to solve this problem we use One Hot Encoding:
     - This simply means that if we have 3 different categories then we will use three different columns to represent them. We then set each column that represents the category for each sample to one.
 ### Handle binary categories
 - Technically we could turn them into two different columns using one hot encoding but we don't necessarily need to.
-    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](handle_binary_categories.md)
-    - [What does it mean to absorb the off effect into the bias term in the context of binary categories](absorb_the_off_effect_into_the_bias_term.md)
-    - [what is multicollinearity](multicollinearity.md)
+    - [Explain numerical vectors in this context and why we can't feed categorical data in logistic regression or neural network](extra_docs_for_readme/handle_binary_categories.md)
+    - [What does it mean to absorb the off effect into the bias term in the context of binary categories](extra_docs_for_readme/absorb_the_off_effect_into_the_bias_term.md)
+    - [what is multicollinearity](extra_docs_for_readme/multicollinearity.md)
 
 # Sentiment Analysis with Logistic Regression
 ## Case 1 : Without L1 Regularization
