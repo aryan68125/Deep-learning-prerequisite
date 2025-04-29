@@ -26,6 +26,7 @@ But this form becomes **inconvenient** in machine learning when you want to hand
 \[
 0 = ax + by + c
 \]
+
 You can rearrange this into slope-intercept form if needed, but this format is more general-purpose — especially useful in classification (like logistic regression). <br>
 
 [How can I rearrange this y=mx+b into this 0=ax+by+c and How its useful in classification like logistic regression](explaiantion_docs_for_extra_docs/line_eqution_generalform_explaianation_and_how_its_helpful_in_classification_logistic_regression.md)
