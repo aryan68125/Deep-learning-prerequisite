@@ -5,7 +5,7 @@
 
 ![we_want_to_write_the_hypothesis_like_this](../util_pictures_for_explaination_README/explaiantion/we_want_to_write_the_hypothesis_like_this.png)
 
-[Here you just said that x's are features then what are w's](explaiantion_docs_for_extra_docs/what_are_w.md)
+### [Here you just said that x's are features then what are w's](explaiantion_docs_for_extra_docs/what_are_w.md)
 ---
 
 ### ✅ Vector form:
