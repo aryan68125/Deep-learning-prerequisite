@@ -22,7 +22,7 @@ This is **exactly** the same as:
 
 \[
 0 = w1x + w2y + b
-\Rightarrow 0 = ax + by + c
+-> 0 = ax + by + c
 \]
 
 So, in this general line equation:
