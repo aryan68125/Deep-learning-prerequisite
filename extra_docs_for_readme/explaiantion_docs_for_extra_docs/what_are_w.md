@@ -4,6 +4,7 @@
 
 So what are \( \vec{w} = [w_0, w_1, w_2, \dots, w_n] \)?
 
+![Equation](https://latex.codecogs.com/png.latex?\vec{w}\cdot\vec{x})
 ---
 
 ### ✅ **\( \vec{w} \) are the model's learned parameters — the weights**
