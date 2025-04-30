@@ -28,7 +28,7 @@ Now let's take another senario where we have a test point (1,2). <br>
 h(x,y) = x-y <br>
 h(1,2) = -1 < 0 --> 'x' <br>
 Therefore the test point must be classified as 'x'. <br>
-![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification4.png)
+![](util_pictures_for_explaination_README/util_images/linear_regression/linear_regression4.png)
 Now let's take another senario where we have test point (1,1) <br>
 h(x,y) = x-y <br>
 h(1,1) = 0 = 0 --> Don't know <br>
