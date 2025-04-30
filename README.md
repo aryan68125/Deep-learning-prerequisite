@@ -1,15 +1,4 @@
 # This repository holds the basic fundamentals of logistic regression
-### We know that logistic regression is treated as a single neuron and a nural network is a collection of neurons. Hence we can say that logistic regression is the fundamental building block of deep neural networks
-## Numpy axis --->
-![](util_pictures_for_explaination_README/numpy_axis.jpg)
-
-# What is Logistic regression : 
-Logistic regression is a base line model. If you can get away with logistic regression then you should, It is very interpretable and stable . You don't have to do a lot of tuning to find the solution unlike neural networks. It is also fast and it is well established having been studied by statistitians for many decades.
-![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression1.png)
-Logistic regression can be seen as a model for the neuron. A combination of logistic regression is a neural network. Logistic regression is a linear model. by using feature engineering we can build powerful non-linear logistic regression model.
-![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression2.png)
-# Performance interpretation of a model : 
-If our model only performs well on the training data not the test data we say that this model does not generalize well. So one way we can ensure that our model generalize well is to use regularization.
 # linear classification :
 ![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification1.png)
 As you can see we have a bunch of x in the left and a bunch of o in the right and we would like to separate them by drawing a line in a 2D plane.
@@ -33,6 +22,18 @@ Now let's take another senario where we have test point (1,1) <br>
 h(x,y) = x-y <br>
 h(1,1) = 0 = 0 --> Don't know <br>
 Here in this case we don't know which class the test point should belong to.
+
+### We know that logistic regression is treated as a single neuron and a nural network is a collection of neurons. Hence we can say that logistic regression is the fundamental building block of deep neural networks
+## Numpy axis --->
+![](util_pictures_for_explaination_README/numpy_axis.jpg)
+
+# What is Logistic regression : 
+Logistic regression is a base line model. If you can get away with logistic regression then you should, It is very interpretable and stable . You don't have to do a lot of tuning to find the solution unlike neural networks. It is also fast and it is well established having been studied by statistitians for many decades. <br>
+![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression1.png)
+Logistic regression can be seen as a model for the neuron. A combination of logistic regression is a neural network. Logistic regression is a linear model. by using feature engineering we can build powerful non-linear logistic regression model.
+![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression2.png)
+# Performance interpretation of a model : 
+If our model only performs well on the training data not the test data we say that this model does not generalize well. So one way we can ensure that our model generalize well is to use regularization.
 
 # How do we calculate the output of a neuron(Logistic Regression):
 Just link in a brain of any organism is a collection of neurons which is a building block of a brain in a similar fashon,
