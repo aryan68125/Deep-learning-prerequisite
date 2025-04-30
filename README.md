@@ -23,12 +23,12 @@ you can see that if our x's and o's are split along a 45deg line that crosses th
 ![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification2.png)
 Let's say we have a test point h(2,1) --> x=2 and y=1 <br>
 if we plug that into the equation h(2,1) =1>0 --> therefore weshould classify this new test point as an 'o'. <br>
-
+![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification3.png)
 Now let's take another senario where we have a test point (1,2). <br>
 h(x,y) = x-y <br>
 h(1,2) = -1 < 0 --> 'x' <br>
 Therefore the test point must be classified as 'x'. <br>
-
+![](util_pictures_for_explaination_README/util_images/linear_regression/linear_classification4.png)
 Now let's take another senario where we have test point (1,1) <br>
 h(x,y) = x-y <br>
 h(1,1) = 0 = 0 --> Don't know <br>
