@@ -26,8 +26,7 @@ h(x) = w0x0 + w1x1 + w2x2 + ... + wnxn
 
 ### ✅ Vector form:
 
-![](util_pictures_for_explaination_README/numpy_axis.jpg)
-![](util_pictures_for_explaination_README/explaiantion/vector.png)
+![Vector representation](util_pictures_for_explaination_README/explaiantion/vector.png)
 
 This makes the math:
 - Shorter
@@ -40,8 +39,7 @@ This makes the math:
 
 If your original model is:
 
-![](util_pictures_for_explaination_README/numpy_axis.jpg)
-![](util_pictures_for_explaination_README/explaiantion/same_thing_but_easier.png)
+![Same thing but easier](util_pictures_for_explaination_README/explaiantion/same_thing_but_easier.png)
 
 Same thing — but easier to work with computationally.
 
