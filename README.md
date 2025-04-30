@@ -27,6 +27,7 @@ Here in this case we don't know which class the test point should belong to.
 - In this equation 0=ax+by+c we renamed (a,b and c) constants as Wi
 - In this equation 0=ax+by+c We renamed the bias term or y intercept ```c``` as w0
     - [Why c is the bias term or y-intercept](extra_docs_for_readme/bais_term_explaiantion.md)
+- We usually create a dummy variable called x0 which is always euql to 1 and then we can form our hypothesis function h in terms of vector x and vector w. h(x) = w0 + w1x1 + w2x2
 
 ### We know that logistic regression is treated as a single neuron and a nural network is a collection of neurons. Hence we can say that logistic regression is the fundamental building block of deep neural networks
 ## Numpy axis --->
