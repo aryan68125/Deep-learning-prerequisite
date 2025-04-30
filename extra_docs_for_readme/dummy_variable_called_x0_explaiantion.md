@@ -52,4 +52,3 @@ Same thing — but easier to work with computationally.
 
 ---
 
-Would you like to see how this looks in matrix form across multiple training samples?
