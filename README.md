@@ -22,7 +22,7 @@ Now let's take another senario where we have test point (1,1) <br>
 h(x,y) = x-y <br>
 h(1,1) = 0 = 0 --> Don't know <br>
 Here in this case we don't know which class the test point should belong to.
-## Machine learning lingo:
+## Machine learning lingo: 
 - In this equation 0=ax+by+c (x,y) is called as (X1,X2) = x where x is a big vector.
 - In this equation 0=ax+by+c we renamed (a,b and c) constants as Wi
 - In this equation 0=ax+by+c We renamed the bias term or y intercept ```c``` as w0
