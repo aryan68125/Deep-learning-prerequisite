@@ -29,6 +29,7 @@ Here in this case we don't know which class the test point should belong to.
     - [Why c is the bias term or y-intercept](extra_docs_for_readme/bais_term_explaiantion.md)
 - We usually create a dummy variable called x0 which is always euql to 1 and then we can form our hypothesis function h in terms of vector x and vector w. h(x) = w0 + w1x1 + w2x2
     - [Why are we doing this](extra_docs_for_readme/dummy_variable_called_x0_explaiantion.md)
+    - What is a hypothesis function h ? : ```https://docs.google.com/document/d/1jdxquc-qyeMOT7cnPjJIcOS7x6Y1jWOH7WSwuSt869A/edit?tab=t.0#heading=h.38tg8liwl5rq```
 
 ### We know that logistic regression is treated as a single neuron and a nural network is a collection of neurons. Hence we can say that logistic regression is the fundamental building block of deep neural networks
 ## Numpy axis --->
@@ -36,7 +37,7 @@ Here in this case we don't know which class the test point should belong to.
 
 # What is Logistic regression : 
 Logistic regression is a base line model. If you can get away with logistic regression then you should, It is very interpretable and stable . You don't have to do a lot of tuning to find the solution unlike neural networks. It is also fast and it is well established having been studied by statistitians for many decades. <br>
-![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression1.png)
+![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression1.png) <br>
 Logistic regression can be seen as a model for the neuron. A combination of logistic regression is a neural network. Logistic regression is a linear model. by using feature engineering we can build powerful non-linear logistic regression model.
 ![](util_pictures_for_explaination_README/util_images/logistic_regression/logistic_regression2.png)
 # Performance interpretation of a model : 
