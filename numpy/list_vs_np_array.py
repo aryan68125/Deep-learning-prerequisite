@@ -36,4 +36,19 @@ end2 = time.time()
 print(f"Time taken to process the np_array ===> {(end2-start2)*1000}")
 # print(f"result np_array ===> {result_np}")
 
+# Demo of operations that can be performed on np array
+np_array_1 = np.arange(10)
+np_array_2 = np.arange(10)
+# Performing operations on np array
+np_multiply = np_array_1 * np_array_2
+print(f"np_multiply ===> {np_multiply}")
+np_add = np_array_1 + np_array_2
+print(f"np_add ===> {np_add}")
+np_sub = np_array_1 - np_array_2
+print(f"np_sub ===> {np_sub}")
+np_divide = np_array_1 / np_array_2
+print(f"np_divide ===> {np_divide}")
+
+
+
 
