@@ -39,8 +39,30 @@ print("\n")
 # How to initialize a np array with some placeholder number
 zeros_array = np.zeros((3,4))
 print(f"zeros_array ===> {zeros_array}")
+print("\n")
+
 
 # numpy also has a function that is similar to python's range function
 # np.arange(1,10,2) here 1 = starting number 10 is the ending number and 2 is the steps i.e the number of steps that the arange must skip when creating a numpy array
 arr = np.arange(1,10,2)
 print(f"arr ===> {arr}")
+print("\n")
+
+
+
+# Suppose you want to generate 20 numbers between 1 and 10 that are linearly spaced then you can use linspace function This is pretty useful when you want to create a linear sequence of numbers
+arr = np.linspace(1,10,20)
+print(f"arr_linspace ===> {arr}")
+print("\n")
+
+
+# reshape array using numpy 
+# reshaping means that if you have an array that has the shape of 3 X 2 then you can reshape it to be 2 X 3
+original_arr = np.array([[1,2,3],[4,5,6]],dtype=np.float64)
+print(f"original_arr ===> \n {original_arr}")
+print(f"shape of the original_arr ===> {original_arr.shape}")
+reshaped_arr = original_arr.reshape(3,2)
+print(f"reshaped_arr ===> \n {reshaped_arr}")
+print(f"shape of the reshape_arr ===> {reshaped_arr.shape}")
+print("\n")
+
