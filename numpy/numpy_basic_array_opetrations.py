@@ -67,9 +67,22 @@ print(f"shape of the reshape_arr ===> {reshaped_arr.shape}")
 print("\n")
 
 # If you want to flatten your 2D array into a oneD array then you can use ravel function
+# One thing to remember is that ravel() function do not touch the original array so this the one thing you need to keep in mind when working with ravel function
 two_d_array = np.array([[1,2,3],[4,5,6]],dtype=np.int64)
 print(f"two_d_array ===> \n {two_d_array}")
 print(f"two_d_array shape ===> {two_d_array.shape}")
 flattened_array = two_d_array.ravel()
 print(f"flattened_array ===> \n {flattened_array}")
 print(f"flattened_array shape ===> {flattened_array.shape}")
+print("\n")
+
+#Some mathematical functions in numpy
+two_d_array = np.array([[1,2,3],[4,5,6]],dtype=np.int64)
+print(f"array ===> \n {two_d_array}")
+# get minimum element in np array
+print(f"minimum element in np_array ===> {two_d_array.min()}")
+# get maximum element in np array
+print(f"maximum element in np_array ===> {two_d_array.max()}")
+# get the summation of all the elements in a np array
+print(f"summation of all the elements in the array ===> {two_d_array.sum()}")
+print("\n")
