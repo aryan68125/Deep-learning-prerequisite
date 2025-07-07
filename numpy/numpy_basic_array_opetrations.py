@@ -85,5 +85,42 @@ print(f"minimum element in np_array ===> {two_d_array.min()}")
 print(f"maximum element in np_array ===> {two_d_array.max()}")
 # get the summation of all the elements in a np array
 print(f"summation of all the elements in the array ===> {two_d_array.sum()}")
+# There is a concept of axis in numpy
+""""
+This function is used to prettify the shape of numpy arrays for better readability.
+"""
+def pretty_shape(name, arr):
+    shape = arr.shape
+    if len(shape) == 1:
+        return f"> {name}.shape\n({shape[0]} columns, )\n"
+    elif len(shape) == 2:
+        return f"> {name}.shape\n({shape[0]} rows, {shape[1]} columns)\n"
+    elif len(shape) == 3:
+        return f"> {name}.shape\n({shape[0]} sheets, {shape[1]} rows, {shape[2]} columns)\n"
+    else:
+        return f"> {name}.shape\n{shape} (unsupported format)\n"
+    
+vec = np.array([1, 2, 3, 4])
+
+row = np.array([[1, 2, 3, 4]])
+
+col = np.array([[1],
+                [2],
+                [3],
+                [4]])
+
+mat = np.array([[1, 2, 3, 4],
+                [5, 6, 7, 8]])
+
+book = np.array([[[1.0, 2.0, 3.0, 4.0],
+                  [5.0, 6.0, 7.0, 8.0]],
+                 
+                 [[1.1, 2.1, 3.1, 4.1],
+                  [5.1, 6.1, 7.1, 8.1]],
+
+                 [[1.2, 2.2, 3.2, 4.2],
+                  [5.2, 6.2, 7.2, 8.2]]])
+for name, arr in [('vec', vec), ('row', row), ('col', col), ('mat', mat), ('book', book)]:
+    print(pretty_shape(name, arr))
 print("\n")
 # there is a concept of axis in numpy 
