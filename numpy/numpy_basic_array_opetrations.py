@@ -122,5 +122,17 @@ book = np.array([[[1.0, 2.0, 3.0, 4.0],
                   [5.2, 6.2, 7.2, 8.2]]])
 for name, arr in [('vec', vec), ('row', row), ('col', col), ('mat', mat), ('book', book)]:
     print(pretty_shape(name, arr))
+# for 1D array 
+print(f"Calculated the sum of elements along axis 0 (row axis) of a 1D array (row) ===> {row.sum(axis=0)}")
+print(f"Calculated the sum of elements along axis 1 (column axis) of a 1D array (row) ===> {row.sum(axis=1)}")
+print(f"Calculated the sum of elements along axis 0 (row axis) of a 1D array (col) ===> {col.sum(axis=0)}")
+print(f"Calculated the sum of elements along axis 1 (column axis) of a 1D array (col) ===> {col.sum(axis=1)}")
+# for 2D array
+print(f"Calculated the sum of elements along axis 0 (row axis) of a 2D array ===> {mat.sum(axis=0)}")
+print(f"Calculated the sum of elements along axis 1 (column axis) of a 2D array ===> {mat.sum(axis=1)}")
+# for 3D array
+print(f"Calculated the sum of elements along axis 0 of a 3D array (sheets) ===> {book.sum(axis=0)}")
+print(f"Calculated the sum of elements along axis 1 of a 3D array (rows) ===> {book.sum(axis=1)}")
+print(f"Calculated the sum of elements along axis 2 of a 3D array (columns) ===> {book.sum(axis=2)}")
 print("\n")
 # there is a concept of axis in numpy 
