@@ -86,3 +86,4 @@ print(f"maximum element in np_array ===> {two_d_array.max()}")
 # get the summation of all the elements in a np array
 print(f"summation of all the elements in the array ===> {two_d_array.sum()}")
 print("\n")
+# there is a concept of axis in numpy 
