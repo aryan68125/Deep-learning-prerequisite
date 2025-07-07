@@ -35,3 +35,12 @@ print("\n")
 complex_array = np.array([[1,2,3,4,5],[6,7,8,9,0]], dtype=np.complex)
 print(f"complex_array ===> {complex_array}")
 print("\n")
+
+# How to initialize a np array with some placeholder number
+zeros_array = np.zeros((3,4))
+print(f"zeros_array ===> {zeros_array}")
+
+# numpy also has a function that is similar to python's range function
+# np.arange(1,10,2) here 1 = starting number 10 is the ending number and 2 is the steps i.e the number of steps that the arange must skip when creating a numpy array
+arr = np.arange(1,10,2)
+print(f"arr ===> {arr}")
