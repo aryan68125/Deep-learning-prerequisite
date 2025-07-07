@@ -140,4 +140,3 @@ print(f"Calculated the sum of elements along axis 1 of a 3D array (rows) ===> {b
 print(f"Calculated the sum of elements along axis 2 of a 3D array (columns) ===> {book.sum(axis=2)}")
 print("\n")
 
-# there is a concept of axis in numpy 
