@@ -66,3 +66,10 @@ print(f"reshaped_arr ===> \n {reshaped_arr}")
 print(f"shape of the reshape_arr ===> {reshaped_arr.shape}")
 print("\n")
 
+# If you want to flatten your 2D array into a oneD array then you can use ravel function
+two_d_array = np.array([[1,2,3],[4,5,6]],dtype=np.int64)
+print(f"two_d_array ===> \n {two_d_array}")
+print(f"two_d_array shape ===> {two_d_array.shape}")
+flattened_array = two_d_array.ravel()
+print(f"flattened_array ===> \n {flattened_array}")
+print(f"flattened_array shape ===> {flattened_array.shape}")
