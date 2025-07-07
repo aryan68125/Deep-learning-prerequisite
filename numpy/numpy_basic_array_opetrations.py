@@ -85,6 +85,10 @@ print(f"minimum element in np_array ===> {two_d_array.min()}")
 print(f"maximum element in np_array ===> {two_d_array.max()}")
 # get the summation of all the elements in a np array
 print(f"summation of all the elements in the array ===> {two_d_array.sum()}")
+# get the square root of all the elements in a np array
+print(f"square root of all the elements in the array ===> {np.sqrt(two_d_array)}")
+# get the square root of all the elements in a np array
+print(f"standard deviation of all the elements in the two_d_array ===> {np.std(two_d_array)}")
 # There is a concept of axis in numpy
 """"
 This function is used to prettify the shape of numpy arrays for better readability.
@@ -135,4 +139,5 @@ print(f"Calculated the sum of elements along axis 0 of a 3D array (sheets) ===> 
 print(f"Calculated the sum of elements along axis 1 of a 3D array (rows) ===> {book.sum(axis=1)}")
 print(f"Calculated the sum of elements along axis 2 of a 3D array (columns) ===> {book.sum(axis=2)}")
 print("\n")
+
 # there is a concept of axis in numpy 
