@@ -33,16 +33,34 @@ print(f"reverse indexing in numpy 2D array: {np_2d_array[-1,-1]}")  # Accessing 
 print(f"reverse indexing to select last row from the 2D array: {np_2d_array[-1]}")
 # flatten a 2D array into a 1D array 
 print(f"flatten a 2D array into a 1D array: {np_2d_array.flatten()}")
+print(f"\n \n")
 
 """2. ITERATING THROUGH A NUMPY ARRAY"""
 """3. STACKING TOGEATHER TWO ARRAYS"""
 # stacking two arrays togeather 
 arr1 = np.array([[1, 2, 3], [4, 5, 6]])
 arr2 = np.array([[7, 8, 9], [10, 11, 12]])
+print(f"printing first array: \n {arr1}")
+print(f"printing second array: \n {arr2}")
 # stacking two arrays vertically
 print(f"stacking two arrays vertically: \n {np.vstack((arr1, arr2))}")
 # stacking two arrays horizontally
 print(f"stacking two arrays horizontally: \n {np.hstack((arr1, arr2))}")
 # stacking two arrays in depth
 print(f"stacking two arrays in depth: \n {np.dstack((arr1, arr2))}")
+print("\n")
+
+# split numpy array into two arrays
+arr3 = np.arange(30).reshape(2,15)
+print(f"print the arr3 ===> \n {arr3}")
+# split the array horizontally into three different arrays
+# np.hsplit(the original array , how many arrays you want to split the array into)
+print(f"split the array horizontally into three arrays: \n {np.hsplit(arr3, 3)}")
+# split the array vertially into three different arrays
+print(f"split the array vertically into two arrays: \n {np.vsplit(arr3, 2)}")
+# split the array using .split() function
+# numpy.split(array, indices_or_sections, axis=0) this splits athe array vertically when axis=0
+print(f"split the array using .split() function vertically: \n {np.split(arr3, 3, axis=0)}")
+# numpy.split(array, indices_or_sections, axis=0) this splits athe array horizontally when axis=1
+print(f"split the array using .split() function horizontally: \n {np.split(arr3, 3, axis=1)}")
 """4. INDEXING A BOOLEAN NUMPY ARRAY"""
