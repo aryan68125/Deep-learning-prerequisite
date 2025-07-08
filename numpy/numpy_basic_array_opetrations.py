@@ -72,8 +72,17 @@ two_d_array = np.array([[1,2,3],[4,5,6]],dtype=np.int64)
 print(f"two_d_array ===> \n {two_d_array}")
 print(f"two_d_array shape ===> {two_d_array.shape}")
 flattened_array = two_d_array.ravel()
-print(f"flattened_array ===> \n {flattened_array}")
+print(f"flattened_array using ravel function ===> \n {flattened_array}")
 print(f"flattened_array shape ===> {flattened_array.shape}")
+print(f"id of original 2D array ===> {id(two_d_array)}")
+print(f"id of flattened_array using ravel function ===> {id(two_d_array.ravel())}")
+print("\n")
+# There is another way to flatten a 2D array into a 1D array using flatten function
+flattened_array_2 = two_d_array.flatten()
+print(f"flattened_array_2 using flatten function ===> \n {flattened_array_2}")
+print(f"flattened_array_2 shape ===> {flattened_array_2.shape}")
+print(f"id of original 2D array ===> {id(two_d_array)}")
+print(f"id of flattened_array using flatten function ===> {id(two_d_array.flatten())}")
 print("\n")
 
 #Some mathematical functions in numpy

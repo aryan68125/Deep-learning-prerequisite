@@ -31,6 +31,8 @@ print(f"slicing a 2D array to select first two columns from all the rows : \n {n
 print(f"reverse indexing in numpy 2D array: {np_2d_array[-1,-1]}")  # Accessing the last element in the last row
 # if you provie the reverse indexing like this then it will select the last row from the 2D array
 print(f"reverse indexing to select last row from the 2D array: {np_2d_array[-1]}")
+# flatten a 2D array into a 1D array 
+print(f"flatten a 2D array into a 1D array: {np_2d_array.flatten()}")
 """2. ITERATING THROUGH A NUMPY ARRAY"""
 """3. STACKING TOGEATHER TWO ARRAYS"""
 """4. INDEXING A BOOLEAN NUMPY ARRAY"""
