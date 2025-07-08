@@ -33,6 +33,16 @@ print(f"reverse indexing in numpy 2D array: {np_2d_array[-1,-1]}")  # Accessing 
 print(f"reverse indexing to select last row from the 2D array: {np_2d_array[-1]}")
 # flatten a 2D array into a 1D array 
 print(f"flatten a 2D array into a 1D array: {np_2d_array.flatten()}")
+
 """2. ITERATING THROUGH A NUMPY ARRAY"""
 """3. STACKING TOGEATHER TWO ARRAYS"""
+# stacking two arrays togeather 
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([[7, 8, 9], [10, 11, 12]])
+# stacking two arrays vertically
+print(f"stacking two arrays vertically: \n {np.vstack((arr1, arr2))}")
+# stacking two arrays horizontally
+print(f"stacking two arrays horizontally: \n {np.hstack((arr1, arr2))}")
+# stacking two arrays in depth
+print(f"stacking two arrays in depth: \n {np.dstack((arr1, arr2))}")
 """4. INDEXING A BOOLEAN NUMPY ARRAY"""
