@@ -25,6 +25,8 @@ print(f"select element in numpy 2D array: {np_2d_array[1, 1]}")  # Accessing ele
 # when slicing a 2D array like this 0:2 the code doesn't include the number 2 which means it will select the element from 0th to 1st row this is the same when you slice the columns as well
 print(f"slice a 2D array in a way to select the 2nd element in row 0 and row1 : {np_2d_array[0:3,2]}")
 print(f"slicing a 2D array to select the first two column from the first row : {np_2d_array[0,1:3]}")
+# np_2d_array[rows,columns] when you don't provide rows like this ':' but you don't provide any number to slice the rows then in this case all the rows will be selected and in case of coumns we have passed 0:2 which means the 0th column and the 1st column will be selected
+print(f"slicing a 2D array to select first two columns from all the rows : \n {np_2d_array[:,0:2]}")
 # you can also do reverse indexing in numpy 2D array
 print(f"reverse indexing in numpy 2D array: {np_2d_array[-1,-1]}")  # Accessing the last element in the last row
 # if you provie the reverse indexing like this then it will select the last row from the 2D array
