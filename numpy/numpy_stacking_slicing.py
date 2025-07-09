@@ -12,7 +12,7 @@ print(f"indexing in python list with -1: {my_list[-1]}")
 np_array = np.array([1, 2, 3, 4, 5])
 print(f"printing numpy 1D array ===> \n {np_array}")
 print(f"indexing in numpy array: {np_array[0:3]}")
-# just like python list it supports reverse index
+# just like python list it supports reverse index it will print the very last element in a 1D array
 print(f"indexing in numpy array with -1: {np_array[-1]}")
 
 # indexing in numpy 2D array
