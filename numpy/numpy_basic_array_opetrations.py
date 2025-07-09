@@ -83,6 +83,10 @@ print(f"flattened_array_2 using flatten function ===> \n {flattened_array_2}")
 print(f"flattened_array_2 shape ===> {flattened_array_2.shape}")
 print(f"id of original 2D array ===> {id(two_d_array)}")
 print(f"id of flattened_array using flatten function ===> {id(two_d_array.flatten())}")
+# sometimes you want to print the flatten array
+print("\nprint Flattened array elements:")
+for cell in two_d_array.flatten():
+    print(cell, end=' ')
 print("\n")
 
 #Some mathematical functions in numpy
