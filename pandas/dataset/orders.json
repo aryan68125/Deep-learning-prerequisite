@@ -1,0 +1,36 @@
+
+[
+  {
+    "order_id": "ORD001",
+    "customer": {
+      "id": "C001",
+      "name": "Alice",
+      "location": {"city": "New York", "state": "NY"}
+    },
+    "items": [
+      {"product_id": "P1001", "name": "Laptop", "price": 999.99, "quantity": 1},
+      {"product_id": "P1002", "name": "Mouse", "price": 25.5, "quantity": 2}
+    ],
+    "order_date": "2023-07-01",
+    "payment": {
+      "method": "Credit Card",
+      "status": "Paid"
+    }
+  },
+  {
+    "order_id": "ORD002",
+    "customer": {
+      "id": "C002",
+      "name": "Bob",
+      "location": {"city": "Los Angeles", "state": "CA"}
+    },
+    "items": [
+      {"product_id": "P1003", "name": "Keyboard", "price": 45.0, "quantity": 1}
+    ],
+    "order_date": "2023-07-02",
+    "payment": {
+      "method": "PayPal",
+      "status": "Pending"
+    }
+  }
+]
