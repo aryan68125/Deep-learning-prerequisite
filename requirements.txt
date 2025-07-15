@@ -68,6 +68,7 @@ jupyterlab_widgets @ file:///croot/jupyterlab_widgets_1733440870459/work
 keras @ file:///home/builder/mesters/opt/envs/tensorflow/conda-bld/keras_1682445665871/work/keras-2.12.0-py2.py3-none-any.whl
 Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
 kiwisolver @ file:///croot/kiwisolver_1737039087198/work
+lxml==6.0.0
 Markdown @ file:///croot/markdown_1671541909495/work
 MarkupSafe @ file:///croot/markupsafe_1738584038848/work
 matplotlib==3.10.0
