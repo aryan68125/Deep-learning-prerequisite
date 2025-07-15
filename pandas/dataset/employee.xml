@@ -1,0 +1,20 @@
+<employees>
+    <employee>
+        <name>Alice</name>
+        <department>Engineering</department>
+        <salary>85000</salary>
+        <joining_date>2018-07-01</joining_date>
+    </employee>
+    <employee>
+        <name>Bob</name>
+        <department>HR</department>
+        <salary>52000</salary>
+        <joining_date>2020-03-15</joining_date>
+    </employee>
+    <employee>
+        <name>Charlie</name>
+        <department>Marketing</department>
+        <salary>60000</salary>
+        <joining_date>2019-11-12</joining_date>
+    </employee>
+</employees>

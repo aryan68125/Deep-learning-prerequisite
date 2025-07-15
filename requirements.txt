@@ -17,7 +17,7 @@ blinker @ file:///croot/blinker_1737448726027/work
 Bottleneck @ file:///croot/bottleneck_1731058641041/work
 Brotli @ file:///croot/brotli-split_1736182456865/work
 cachetools @ file:///croot/cachetools_1738224668060/work
-certifi @ file:///croot/certifi_1738623731865/work/certifi
+certifi @ file:///croot/certifi_1750863846190/work/certifi
 cffi @ file:///croot/cffi_1736182485317/work
 charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
 click @ file:///croot/click_1744271578095/work
@@ -106,6 +106,7 @@ psutil @ file:///croot/psutil_1736367091698/work
 psycopg2-binary==2.9.10
 ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
 pure-eval @ file:///opt/conda/conda-bld/pure_eval_1646925070566/work
+py-cpuinfo @ file:///croot/py-cpuinfo_1698068081650/work
 pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
 pyasn1-modules==0.2.8
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
@@ -137,6 +138,7 @@ six @ file:///croot/six_1744271502820/work
 sniffio @ file:///croot/sniffio_1705431295498/work
 soupsieve @ file:///croot/soupsieve_1696347547217/work
 stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
+tables @ file:///croot/pytables_1725380772899/work
 tensorboard @ file:///home/builder/mesters/opt/envs/tensorflow/conda-bld/tensorboard_1682445826165/work/tensorboard-2.12.1-py3-none-any.whl
 tensorboard-plugin-wit @ file:///home/builder/tkoch/workspace/tensorflow/tensorboard-plugin-wit_1658918494740/work/tensorboard_plugin_wit-1.8.1-py3-none-any.whl
 tensorboard_data_server @ file:///croot/tensorboard-data-server_1724172556187/work/tensorboard_data_server-0.7.0-py3-none-manylinux2014_x86_64.whl#sha256=4428d660733184391dab7b6b6a953467b614b984df0cc1baf3d8c5d3d4ecf29d
