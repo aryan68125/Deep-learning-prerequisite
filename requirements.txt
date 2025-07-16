@@ -23,6 +23,7 @@ charset-normalizer @ file:///croot/charset-normalizer_1721748349566/work
 click @ file:///croot/click_1744271578095/work
 comm @ file:///croot/comm_1709322850197/work
 contourpy @ file:///croot/contourpy_1732540045555/work
+cramjam==2.10.0
 cryptography @ file:///croot/cryptography_1694444244250/work
 cycler @ file:///tmp/build/80754af9/cycler_1637851556182/work
 debugpy @ file:///croot/debugpy_1736267418885/work
@@ -32,9 +33,11 @@ et_xmlfile==2.0.0
 exceptiongroup @ file:///croot/exceptiongroup_1706031385326/work
 executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
 fastjsonschema @ file:///croot/python-fastjsonschema_1731939362158/work
+fastparquet==2024.11.0
 flatbuffers @ file:///croot/python-flatbuffers_1722369094438/work
 fonttools @ file:///croot/fonttools_1737039080035/work
 frozenlist @ file:///croot/frozenlist_1730902802621/work
+fsspec==2025.7.0
 gast @ file:///Users/ktietz/demo/mc3/conda-bld/gast_1628588903283/work
 google-auth @ file:///croot/google-auth_1741275169457/work
 google-auth-oauthlib @ file:///opt/conda/conda-bld/google-auth-oauthlib_1660687784486/work
