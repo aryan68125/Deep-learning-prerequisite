@@ -7,6 +7,10 @@ class Main(TestClass):
         result = self.print_welcome_message("Aditya")
         print(result)
 
+coffee_one = "Expresso"
+coffee_two = "Black"
+coffee_three = "Cappuchino"
+
 if __name__ == "__main__":
     obj = Main()
     obj.driver_fun()
