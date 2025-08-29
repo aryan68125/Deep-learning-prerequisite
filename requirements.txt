@@ -3,6 +3,7 @@ aiohappyeyeballs @ file:///croot/aiohappyeyeballs_1734469393482/work
 aiohttp @ file:///croot/aiohttp_1734687138658/work
 aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
 anyio @ file:///croot/anyio_1745334642479/work
+appdirs==1.4.4
 argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
 argon2-cffi-bindings @ file:///croot/argon2-cffi-bindings_1736182440035/work
 asttokens @ file:///croot/asttokens_1743630435401/work
@@ -48,6 +49,7 @@ h5py @ file:///croot/h5py_1730215935167/work
 httpcore @ file:///croot/httpcore_1706728464539/work
 httpx @ file:///croot/httpx_1723474802858/work
 idna @ file:///croot/idna_1714398848350/work
+importlib_metadata==8.7.0
 ipykernel @ file:///croot/ipykernel_1737660677549/work
 ipython @ file:///croot/ipython_1734548052611/work
 ipywidgets @ file:///croot/ipywidgets_1733504575802/work
@@ -114,12 +116,16 @@ pyarrow==20.0.0
 pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
 pyasn1-modules==0.2.8
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pyee==11.1.1
 Pygments @ file:///croot/pygments_1744664109463/work
 PyJWT @ file:///croot/pyjwt_1736178889029/work
 pyOpenSSL @ file:///croot/pyopenssl_1690223430423/work
 pyparsing @ file:///croot/pyparsing_1731445506121/work
+pyppeteer==2.0.0
 PyQt5==5.15.10
 PyQt5_sip @ file:///croot/pyqt-split_1736540531116/work/pyqt_sip
+PyQtWebEngine==5.15.7
+PyQtWebEngine-Qt5==5.15.17
 PySocks @ file:///home/builder/ci_310/pysocks_1640793678128/work
 python-dateutil @ file:///croot/python-dateutil_1716495738603/work
 python-json-logger @ file:///croot/python-json-logger_1734370021104/work
@@ -136,6 +142,7 @@ rfc3986-validator @ file:///croot/rfc3986-validator_1683058983515/work
 rpds-py @ file:///croot/rpds-py_1736541261634/work
 rsa @ file:///tmp/build/80754af9/rsa_1614366226499/work
 scipy @ file:///croot/scipy_1743153247252/work/dist/scipy-1.15.2-cp310-cp310-linux_x86_64.whl#sha256=89cede43d4ba858f9d38b2cbe78d9e0c7a876a008ce203d7ce26f74c11a69868
+seaborn==0.13.2
 Send2Trash @ file:///croot/send2trash_1736540790175/work
 sip @ file:///croot/sip_1736541134699/work
 six @ file:///croot/six_1744271502820/work
@@ -153,15 +160,19 @@ terminado @ file:///croot/terminado_1671751832461/work
 tinycss2 @ file:///croot/tinycss2_1738337643607/work
 tomli @ file:///opt/conda/conda-bld/tomli_1657175507142/work
 tornado @ file:///croot/tornado_1733960490606/work
+tqdm==4.67.1
 traitlets @ file:///croot/traitlets_1718227057033/work
 typing_extensions @ file:///croot/typing_extensions_1734714854207/work
 tzdata @ file:///croot/python-tzdata_1690578112552/work
 unicodedata2 @ file:///croot/unicodedata2_1736541023050/work
-urllib3 @ file:///croot/urllib3_1737133630106/work
+urllib3==1.26.20
 wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
 webencodings==0.5.1
 websocket-client @ file:///croot/websocket-client_1715878298792/work
+websockets==10.4
 Werkzeug @ file:///croot/werkzeug_1737448706492/work
 widgetsnbextension @ file:///croot/widgetsnbextension_1733439572884/work
 wrapt @ file:///croot/wrapt_1736540904746/work
+xlrd==2.0.1
 yarl @ file:///croot/yarl_1732546845924/work
+zipp==3.23.0
