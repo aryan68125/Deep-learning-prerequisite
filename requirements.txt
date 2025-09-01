@@ -2,6 +2,7 @@ absl-py @ file:///croot/absl-py_1714140470852/work
 aiohappyeyeballs @ file:///croot/aiohappyeyeballs_1734469393482/work
 aiohttp @ file:///croot/aiohttp_1734687138658/work
 aiosignal @ file:///tmp/build/80754af9/aiosignal_1637843061372/work
+annotated-types==0.7.0
 anyio @ file:///croot/anyio_1745334642479/work
 appdirs==1.4.4
 argon2-cffi @ file:///opt/conda/conda-bld/argon2-cffi_1645000214183/work
@@ -117,6 +118,8 @@ pyarrow==20.0.0
 pyasn1 @ file:///Users/ktietz/demo/mc3/conda-bld/pyasn1_1629708007385/work
 pyasn1-modules==0.2.8
 pycparser @ file:///tmp/build/80754af9/pycparser_1636541352034/work
+pydantic==2.11.7
+pydantic_core==2.33.2
 pyee==11.1.1
 Pygments @ file:///croot/pygments_1744664109463/work
 PyJWT @ file:///croot/pyjwt_1736178889029/work
@@ -164,6 +167,7 @@ tomli @ file:///opt/conda/conda-bld/tomli_1657175507142/work
 tornado @ file:///croot/tornado_1733960490606/work
 tqdm==4.67.1
 traitlets @ file:///croot/traitlets_1718227057033/work
+typing-inspection==0.4.1
 typing_extensions @ file:///croot/typing_extensions_1734714854207/work
 tzdata @ file:///croot/python-tzdata_1690578112552/work
 unicodedata2 @ file:///croot/unicodedata2_1736541023050/work
