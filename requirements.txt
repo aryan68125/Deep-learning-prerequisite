@@ -132,6 +132,7 @@ PyQtWebEngine==5.15.7
 PyQtWebEngine-Qt5==5.15.17
 PySocks @ file:///home/builder/ci_310/pysocks_1640793678128/work
 python-dateutil @ file:///croot/python-dateutil_1716495738603/work
+python-decouple==3.8
 python-json-logger @ file:///croot/python-json-logger_1734370021104/work
 pytz @ file:///croot/pytz_1713974312559/work
 PyYAML @ file:///croot/pyyaml_1728657952215/work
