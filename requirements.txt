@@ -43,6 +43,7 @@ gast @ file:///Users/ktietz/demo/mc3/conda-bld/gast_1628588903283/work
 google-auth @ file:///croot/google-auth_1741275169457/work
 google-auth-oauthlib @ file:///opt/conda/conda-bld/google-auth-oauthlib_1660687784486/work
 google-pasta @ file:///Users/ktietz/demo/mc3/conda-bld/google-pasta_1630577991354/work
+greenlet==3.2.4
 grpcio @ file:///croot/grpc-suite_1681912592597/work
 h11 @ file:///croot/h11_1706652277403/work
 h5py @ file:///croot/h5py_1730215935167/work
@@ -148,6 +149,7 @@ sip @ file:///croot/sip_1736541134699/work
 six @ file:///croot/six_1744271502820/work
 sniffio @ file:///croot/sniffio_1705431295498/work
 soupsieve @ file:///croot/soupsieve_1696347547217/work
+SQLAlchemy==2.0.43
 stack-data @ file:///opt/conda/conda-bld/stack_data_1646927590127/work
 tables @ file:///croot/pytables_1725380772899/work
 tensorboard @ file:///home/builder/mesters/opt/envs/tensorflow/conda-bld/tensorboard_1682445826165/work/tensorboard-2.12.1-py3-none-any.whl
