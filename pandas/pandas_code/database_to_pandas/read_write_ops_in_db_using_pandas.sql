@@ -1,3 +1,6 @@
+DROP TABLE customers;
+DROP TABLE orders;
+
 -- Create a customers table
 CREATE TABLE Customers (
 id BIGSERIAL PRIMARY KEY,
@@ -57,11 +60,7 @@ INSERT INTO Orders (customer_id,name,amount) VALUES
 -- check if the data is present in the orders table
 SELECT * FROM Orders;
 
-
-
-
-
-
+-- create a database function
 CREATE OR REPLACE FUNCTION get_customer_orders()
 RETURNS TABLE (
 customer_id BIGINT,
@@ -90,10 +89,9 @@ BEGIN
 END;
 $$
 
+-- create a database view from a FUNCTION
 CREATE OR REPLACE VIEW customer_orders_view AS
 SELECT * FROM get_customer_orders();
 
+-- Fire up and see if the databaseview is working or NOT
 SELECT * FROM customer_orders_view;
-
-DROP TABLE customers
-DROP TABLE orders
