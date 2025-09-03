@@ -1,5 +1,9 @@
+
 DROP TABLE customers;
 DROP TABLE orders;
+
+DROP FUNCTION get_customer_orders();
+DROP VIEW customer_orders_view;
 
 -- Create a customers table
 CREATE TABLE Customers (
@@ -33,7 +37,7 @@ CREATE TABLE Orders (
 id BIGSERIAL PRIMARY KEY,
 customer_id BIGINT NOT NULL,
 name VARCHAR(255) NOT NULL,
-amount MONEY NOT NULL,
+amount NUMERIC(12,2) NOT NULL,
 order_date TIMESTAMP DEFAULT NOW(),
 CONSTRAINT fk_customer FOREIGN KEY (customer_id)
 REFERENCES Customers (id)
@@ -68,7 +72,7 @@ customer_name VARCHAR,
 phone_number VARCHAR,
 order_id BIGINT,
 order_name VARCHAR,
-amount MONEY,
+amount NUMERIC(12,2),
 order_date TIMESTAMP
 )
 LANGUAGE plpgsql
