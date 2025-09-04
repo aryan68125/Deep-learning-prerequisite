@@ -34,6 +34,7 @@ defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
 et_xmlfile==2.0.0
 exceptiongroup @ file:///croot/exceptiongroup_1706031385326/work
 executing @ file:///opt/conda/conda-bld/executing_1646925071911/work
+Faker==37.6.0
 fastjsonschema @ file:///croot/python-fastjsonschema_1731939362158/work
 fastparquet==2024.11.0
 flatbuffers @ file:///croot/python-flatbuffers_1722369094438/work
