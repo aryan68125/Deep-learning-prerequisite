@@ -176,3 +176,5 @@ INSERT INTO voters_trend (state, district, age, gender, party_voted, vote_date, 
 
 -- check if the data exists 
 SELECT *  FROM voters_trend;
+
+DROP TABLE voters_trend;
