@@ -98,3 +98,81 @@ SELECT * FROM get_customer_orders();
 
 -- Fire up and see if the databaseview is working or NOT
 SELECT * FROM customer_orders_view;
+
+
+
+
+
+
+
+
+-- SQL code that helps simulate handling large dataset in pandas --
+-- voters_trend.sql
+-- PostgreSQL script to create voters_trend table and insert synthetic data
+
+DROP TABLE IF EXISTS voters_trend;
+
+CREATE TABLE voters_trend (
+    voter_id BIGSERIAL PRIMARY KEY,
+    state VARCHAR(100) NOT NULL,
+    district VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    party_voted VARCHAR(50),
+    vote_date TIMESTAMP NOT NULL DEFAULT NOW(),
+    turnout BOOLEAN NOT NULL
+);
+
+-- Insert synthetic data (sample of ~50 rows, expand later)
+INSERT INTO voters_trend (state, district, age, gender, party_voted, vote_date, turnout) VALUES
+('Uttar Pradesh', 'Lucknow', 34, 'Male', 'BJP', '2024-04-19 10:30:00', TRUE),
+('Uttar Pradesh', 'Lucknow', 29, 'Female', 'INC', '2024-04-19 11:15:00', TRUE),
+('Uttar Pradesh', 'Kanpur', 41, 'Male', 'BJP', '2024-04-19 12:45:00', TRUE),
+('Uttar Pradesh', 'Kanpur', 55, 'Female', 'BSP', '2024-04-19 13:20:00', TRUE),
+('Maharashtra', 'Mumbai', 26, 'Male', 'SS', '2024-04-20 09:10:00', TRUE),
+('Maharashtra', 'Mumbai', 33, 'Female', 'INC', '2024-04-20 10:05:00', TRUE),
+('Maharashtra', 'Pune', 38, 'Male', 'BJP', '2024-04-20 11:50:00', TRUE),
+('Maharashtra', 'Pune', 22, 'Female', 'AAP', '2024-04-20 12:30:00', TRUE),
+('Bihar', 'Patna', 44, 'Male', 'RJD', '2024-04-21 10:40:00', TRUE),
+('Bihar', 'Patna', 36, 'Female', 'BJP', '2024-04-21 11:25:00', TRUE),
+('Bihar', 'Gaya', 51, 'Male', 'JD(U)', '2024-04-21 12:10:00', TRUE),
+('Bihar', 'Gaya', 27, 'Female', 'INC', '2024-04-21 13:00:00', TRUE),
+('Delhi', 'New Delhi', 30, 'Male', 'AAP', '2024-04-22 09:50:00', TRUE),
+('Delhi', 'New Delhi', 25, 'Female', 'BJP', '2024-04-22 10:35:00', TRUE),
+('Delhi', 'South Delhi', 42, 'Male', 'INC', '2024-04-22 11:15:00', TRUE),
+('Delhi', 'South Delhi', 37, 'Female', 'AAP', '2024-04-22 12:00:00', TRUE),
+('West Bengal', 'Kolkata', 33, 'Male', 'TMC', '2024-04-23 09:25:00', TRUE),
+('West Bengal', 'Kolkata', 29, 'Female', 'BJP', '2024-04-23 10:15:00', TRUE),
+('West Bengal', 'Darjeeling', 48, 'Male', 'INC', '2024-04-23 11:05:00', TRUE),
+('West Bengal', 'Darjeeling', 39, 'Female', 'BJP', '2024-04-23 12:20:00', TRUE),
+('Tamil Nadu', 'Chennai', 31, 'Male', 'DMK', '2024-04-24 09:40:00', TRUE),
+('Tamil Nadu', 'Chennai', 28, 'Female', 'AIADMK', '2024-04-24 10:25:00', TRUE),
+('Tamil Nadu', 'Coimbatore', 52, 'Male', 'BJP', '2024-04-24 11:10:00', TRUE),
+('Tamil Nadu', 'Coimbatore', 45, 'Female', 'DMK', '2024-04-24 12:05:00', TRUE),
+('Karnataka', 'Bengaluru', 27, 'Male', 'BJP', '2024-04-25 09:55:00', TRUE),
+('Karnataka', 'Bengaluru', 34, 'Female', 'INC', '2024-04-25 10:40:00', TRUE),
+('Karnataka', 'Mysuru', 47, 'Male', 'JDS', '2024-04-25 11:30:00', TRUE),
+('Karnataka', 'Mysuru', 29, 'Female', 'BJP', '2024-04-25 12:15:00', TRUE),
+('Kerala', 'Thiruvananthapuram', 40, 'Male', 'CPI(M)', '2024-04-26 09:20:00', TRUE),
+('Kerala', 'Thiruvananthapuram', 35, 'Female', 'INC', '2024-04-26 10:05:00', TRUE),
+('Kerala', 'Kochi', 50, 'Male', 'INC', '2024-04-26 11:10:00', TRUE),
+('Kerala', 'Kochi', 32, 'Female', 'CPI(M)', '2024-04-26 12:25:00', TRUE),
+('Punjab', 'Amritsar', 28, 'Male', 'INC', '2024-04-27 09:35:00', TRUE),
+('Punjab', 'Amritsar', 36, 'Female', 'BJP', '2024-04-27 10:45:00', TRUE),
+('Punjab', 'Ludhiana', 44, 'Male', 'AAP', '2024-04-27 11:30:00', TRUE),
+('Punjab', 'Ludhiana', 30, 'Female', 'INC', '2024-04-27 12:10:00', TRUE),
+('Rajasthan', 'Jaipur', 39, 'Male', 'BJP', '2024-04-28 09:50:00', TRUE),
+('Rajasthan', 'Jaipur', 26, 'Female', 'INC', '2024-04-28 10:35:00', TRUE),
+('Rajasthan', 'Udaipur', 53, 'Male', 'BJP', '2024-04-28 11:25:00', TRUE),
+('Rajasthan', 'Udaipur', 41, 'Female', 'INC', '2024-04-28 12:00:00', TRUE),
+('Haryana', 'Gurgaon', 29, 'Male', 'BJP', '2024-04-29 09:15:00', TRUE),
+('Haryana', 'Gurgaon', 34, 'Female', 'INC', '2024-04-29 10:10:00', TRUE),
+('Haryana', 'Faridabad', 46, 'Male', 'BJP', '2024-04-29 11:20:00', TRUE),
+('Haryana', 'Faridabad', 33, 'Female', 'AAP', '2024-04-29 12:05:00', TRUE),
+('Gujarat', 'Ahmedabad', 27, 'Male', 'BJP', '2024-04-30 09:30:00', TRUE),
+('Gujarat', 'Ahmedabad', 31, 'Female', 'INC', '2024-04-30 10:15:00', TRUE),
+('Gujarat', 'Surat', 42, 'Male', 'BJP', '2024-04-30 11:00:00', TRUE),
+('Gujarat', 'Surat', 37, 'Female', 'INC', '2024-04-30 11:45:00', TRUE);
+
+-- check if the data exists 
+SELECT *  FROM voters_trend;
