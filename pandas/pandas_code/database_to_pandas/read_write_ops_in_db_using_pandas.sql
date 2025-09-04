@@ -1,8 +1,8 @@
 DROP TABLE customers;
 DROP TABLE orders;
 
-DROP FUNCTION get_customer_orders();
 DROP VIEW customer_orders_view;
+DROP FUNCTION get_customer_orders();
 
 -- Create a customers table
 CREATE TABLE Customers (
