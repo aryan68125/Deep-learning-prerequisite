@@ -178,3 +178,31 @@ INSERT INTO voters_trend (state, district, age, gender, party_voted, vote_date, 
 SELECT *  FROM voters_trend;
 
 DROP TABLE voters_trend;
+
+
+-- Read database data in chunks of 500 rows and send it to pandas to be saved in excel file
+CREATE OR REPLACE FUNCTION get_voters_trend_chunk(
+    limit_count INT,
+    offset_count INT
+)
+RETURNS TABLE (
+    id BIGINT,
+    state VARCHAR(100),
+    district VARCHAR(100),
+    age INT,
+    gender VARCHAR(10),
+    party_voted VARCHAR(50),
+    vote_date TIMESTAMP,
+    turnout BOOLEAN
+) AS $$
+BEGIN 
+    RETURN QUERY
+    SELECT id, state, district, age, gender, party_voted, vote_date, turnout
+    FROM voters_trend
+    ORDER BY id
+    LIMIT limit_count OFFSET offset_count;
+END;
+$$ LANGUAGE plpgsql STABLE;
+
+-- Drop the function get_voters_trend_chunk
+DROP FUNCTION get_voters_trend_chunk;
