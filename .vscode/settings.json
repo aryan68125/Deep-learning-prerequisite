@@ -1,0 +1,8 @@
+{
+    "terminal.explorerKind": "integrated",
+    "terminal.integrated.automationProfile.linux": {
+
+    },
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontLigatures.enabled": true
+}
