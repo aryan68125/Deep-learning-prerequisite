@@ -7,7 +7,7 @@ import sys
 
 start = time.time()
 
-# 1️⃣ Create Spark session in local mode using all cores
+#Create Spark session in local mode using all cores
 spark = SparkSession.builder \
     .appName("CPU_Stress_Test") \
     .master("local[*]") \
@@ -16,8 +16,8 @@ spark = SparkSession.builder \
 print("Spark master:", spark.sparkContext.master)
 print("Total cores Spark sees:", spark.sparkContext.defaultParallelism)
 
-# 2️⃣ Create a large synthetic dataset (e.g., 100 million rows)
-num_rows = 999_999_999_999
+#Create a large synthetic dataset (e.g., 100 million rows)
+num_rows = 99_999_999
 num_partitions = spark.sparkContext.defaultParallelism  # same as CPU cores
 
 df = spark.range(0, num_rows, numPartitions=num_partitions) \
@@ -39,7 +39,7 @@ total_bytes = sum(partition_sizes)
 total_mb = total_bytes / (1024 * 1024)
 print(f"Estimated DataFrame size in memory: {total_mb:.2f} MB")
 
-# 3️⃣ Apply heavy transformations — wide operations
+#Apply heavy transformations — wide operations
 #    Force Spark to use multiple stages and shuffles
 aggregated_df = (
     df.withColumn("squared", col("random_val") * col("random_val"))
@@ -48,7 +48,7 @@ aggregated_df = (
       .orderBy("group")                          # shuffle operation
 )
 
-# 4️⃣ Trigger computation (action)
+#Trigger computation (action)
 aggregated_df.show()
 
 end = time.time()
