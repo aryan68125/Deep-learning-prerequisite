@@ -17,7 +17,7 @@ print("Spark master:", spark.sparkContext.master)
 print("Total cores Spark sees:", spark.sparkContext.defaultParallelism)
 
 #Create a large synthetic dataset (e.g., 100 million rows)
-num_rows = 99_999_999
+num_rows = 9_999_999
 num_partitions = spark.sparkContext.defaultParallelism  # same as CPU cores
 
 df = spark.range(0, num_rows, numPartitions=num_partitions) \
