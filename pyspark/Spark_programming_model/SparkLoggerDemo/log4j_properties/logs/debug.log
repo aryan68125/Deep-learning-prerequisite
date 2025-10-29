@@ -1,0 +1,76 @@
+2025-10-29 17:19:33 WARN  Utils:250 - Your hostname, aditya-IdeaPad-5-15ITL05, resolves to a loopback address: 127.0.1.1; using 192.168.1.204 instead (on interface wlp0s20f3)
+2025-10-29 17:19:33 WARN  Utils:244 - Set SPARK_LOCAL_IP if you need to bind to another address
+2025-10-29 17:19:33 DEBUG ShutdownHookManager:204 - Adding shutdown hook
+2025-10-29 17:19:33 DEBUG PythonGatewayServer:204 - Started PythonGatewayServer on localhost/127.0.0.1 with port 33081
+2025-10-29 17:19:33 INFO  SparkContext:190 - Running Spark version 4.0.1
+2025-10-29 17:19:33 INFO  SparkContext:190 - OS info Linux, 5.15.0-139-generic, amd64
+2025-10-29 17:19:33 INFO  SparkContext:190 - Java version 17.0.15
+2025-10-29 17:19:33 INFO  ResourceUtils:184 - ==============================================================
+2025-10-29 17:19:33 INFO  ResourceUtils:184 - No custom resources configured for spark.driver.
+2025-10-29 17:19:33 INFO  ResourceUtils:184 - ==============================================================
+2025-10-29 17:19:33 INFO  SparkContext:190 - Submitted application: SparkLoggerDemo
+2025-10-29 17:19:33 INFO  ResourceProfile:190 - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-10-29 17:19:33 INFO  ResourceProfile:190 - Limiting resource is cpu
+2025-10-29 17:19:33 INFO  ResourceProfileManager:190 - Added ResourceProfile id: 0
+2025-10-29 17:19:33 INFO  SecurityManager:190 - Changing view acls to: aditya
+2025-10-29 17:19:33 INFO  SecurityManager:190 - Changing modify acls to: aditya
+2025-10-29 17:19:33 INFO  SecurityManager:190 - Changing view acls groups to: aditya
+2025-10-29 17:19:33 INFO  SecurityManager:190 - Changing modify acls groups to: aditya
+2025-10-29 17:19:33 INFO  SecurityManager:190 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: aditya groups with view permissions: EMPTY; users with modify permissions: aditya; groups with modify permissions: EMPTY; RPC SSL disabled
+2025-10-29 17:19:33 DEBUG SecurityManager:204 - Created SSL options for rpc: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-10-29 17:19:33 DEBUG TransportServer:180 - Shuffle server started on 192.168.1.204 with port 41137
+2025-10-29 17:19:34 INFO  Utils:190 - Successfully started service 'sparkDriver' on port 41137.
+2025-10-29 17:19:34 DEBUG SparkEnv:204 - Using serializer: class org.apache.spark.serializer.JavaSerializer
+2025-10-29 17:19:34 INFO  SparkEnv:190 - Registering MapOutputTracker
+2025-10-29 17:19:34 DEBUG MapOutputTrackerMasterEndpoint:204 - init
+2025-10-29 17:19:34 INFO  SparkEnv:190 - Registering BlockManagerMaster
+2025-10-29 17:19:34 INFO  BlockManagerMasterEndpoint:190 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2025-10-29 17:19:34 INFO  BlockManagerMasterEndpoint:184 - BlockManagerMasterEndpoint up
+2025-10-29 17:19:34 INFO  SparkEnv:190 - Registering BlockManagerMasterHeartbeat
+2025-10-29 17:19:34 INFO  DiskBlockManager:190 - Created local directory at /tmp/blockmgr-fea82d8c-6b33-404e-be48-46d40f33ffb3
+2025-10-29 17:19:34 DEBUG DiskBlockManager:204 - Adding shutdown hook
+2025-10-29 17:19:34 INFO  SparkEnv:190 - Registering OutputCommitCoordinator
+2025-10-29 17:19:34 DEBUG OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:204 - init
+2025-10-29 17:19:34 DEBUG SecurityManager:204 - Created SSL options for ui: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-10-29 17:19:34 INFO  JettyUtils:190 - Start Jetty 0.0.0.0:4040 for SparkUI
+2025-10-29 17:19:34 DEBUG JettyUtils:204 - Using requestHeaderSize: 8192
+2025-10-29 17:19:34 DEBUG JettyUtils:204 - Using setSendServerVersion: false
+2025-10-29 17:19:34 DEBUG JettyUtils:204 - Using setSendXPoweredBy: false
+2025-10-29 17:19:34 INFO  Utils:190 - Successfully started service 'SparkUI' on port 4040.
+2025-10-29 17:19:34 INFO  SecurityManager:190 - Changing view acls to: aditya
+2025-10-29 17:19:34 INFO  SecurityManager:190 - Changing modify acls to: aditya
+2025-10-29 17:19:34 INFO  SecurityManager:190 - Changing view acls groups to: aditya
+2025-10-29 17:19:34 INFO  SecurityManager:190 - Changing modify acls groups to: aditya
+2025-10-29 17:19:34 INFO  SecurityManager:190 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: aditya groups with view permissions: EMPTY; users with modify permissions: aditya; groups with modify permissions: EMPTY; RPC SSL disabled
+2025-10-29 17:19:34 DEBUG SecurityManager:204 - Created SSL options for rpc: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-10-29 17:19:34 INFO  Executor:190 - Starting executor ID driver on host 192.168.1.204
+2025-10-29 17:19:34 INFO  Executor:190 - OS info Linux, 5.15.0-139-generic, amd64
+2025-10-29 17:19:34 INFO  Executor:190 - Java version 17.0.15
+2025-10-29 17:19:34 INFO  Executor:190 - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-10-29 17:19:34 INFO  Executor:190 - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6666309c for default.
+2025-10-29 17:19:34 DEBUG TransportServer:180 - Shuffle server started on 192.168.1.204 with port 44711
+2025-10-29 17:19:34 INFO  Utils:190 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44711.
+2025-10-29 17:19:34 INFO  NettyBlockTransferService:155 - Server created on 192.168.1.204:44711
+2025-10-29 17:19:34 INFO  BlockManager:190 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-10-29 17:19:34 INFO  BlockManagerMaster:190 - Registering BlockManager BlockManagerId(driver, 192.168.1.204, 44711, None)
+2025-10-29 17:19:34 DEBUG DefaultTopologyMapper:204 - Got a request for 192.168.1.204
+2025-10-29 17:19:34 INFO  BlockManagerMasterEndpoint:190 - Registering block manager 192.168.1.204:44711 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.1.204, 44711, None)
+2025-10-29 17:19:34 INFO  BlockManagerMaster:190 - Registered BlockManager BlockManagerId(driver, 192.168.1.204, 44711, None)
+2025-10-29 17:19:34 INFO  BlockManager:190 - Initialized BlockManager: BlockManagerId(driver, 192.168.1.204, 44711, None)
+2025-10-29 17:19:34 DEBUG SparkContext:204 - Adding shutdown hook
+2025-10-29 17:19:35 WARN  SparkLoggerDemo:244 - >>>Starting SparkLoggerDemo
+2025-10-29 17:19:35 WARN  SparkLoggerDemo:244 - >>>Ending SparkLoggerDemo
+2025-10-29 17:19:35 INFO  SparkContext:190 - SparkContext is stopping with exitCode 0 from stop at NativeMethodAccessorImpl.java:0.
+2025-10-29 17:19:35 INFO  SparkUI:190 - Stopped Spark web UI at http://192.168.1.204:4040
+2025-10-29 17:19:35 INFO  MapOutputTrackerMasterEndpoint:184 - MapOutputTrackerMasterEndpoint stopped!
+2025-10-29 17:19:35 INFO  MemoryStore:190 - MemoryStore started with capacity 434.4 MiB
+2025-10-29 17:19:35 INFO  MemoryStore:184 - MemoryStore cleared
+2025-10-29 17:19:35 INFO  BlockManager:184 - BlockManager stopped
+2025-10-29 17:19:35 INFO  BlockManagerMaster:184 - BlockManagerMaster stopped
+2025-10-29 17:19:35 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:184 - OutputCommitCoordinator stopped!
+2025-10-29 17:19:35 INFO  SparkContext:184 - Successfully stopped SparkContext
+2025-10-29 17:19:36 DEBUG PythonGatewayServer:204 - Exiting due to broken pipe from Python driver
+2025-10-29 17:19:36 INFO  ShutdownHookManager:184 - Shutdown hook called
+2025-10-29 17:19:36 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-1b5bfa0c-a743-49f6-b511-b99083250666
+2025-10-29 17:19:36 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-9e59ac6e-f59c-4467-b3dc-27b26de9a7b6
+2025-10-29 17:19:36 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-9e59ac6e-f59c-4467-b3dc-27b26de9a7b6/pyspark-7e8d85da-260a-4978-90ba-4b4c742bd2ad

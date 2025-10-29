@@ -1,0 +1,5 @@
+2025-10-29 17:19:33 WARN  Utils:250 - Your hostname, aditya-IdeaPad-5-15ITL05, resolves to a loopback address: 127.0.1.1; using 192.168.1.204 instead (on interface wlp0s20f3)
+2025-10-29 17:19:33 WARN  Utils:244 - Set SPARK_LOCAL_IP if you need to bind to another address
+2025-10-29 17:19:33 WARN  NativeCodeLoader:60 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-10-29 17:19:35 WARN  SparkLoggerDemo:244 - >>>Starting SparkLoggerDemo
+2025-10-29 17:19:35 WARN  SparkLoggerDemo:244 - >>>Ending SparkLoggerDemo
