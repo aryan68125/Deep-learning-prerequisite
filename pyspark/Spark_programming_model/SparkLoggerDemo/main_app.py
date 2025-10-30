@@ -30,15 +30,11 @@ if __name__ == "__main__":
     )
 
     logger = Log4j(spark)
-    # logger.warn(">>>Starting SparkLoggerDemo")
-    # conf_out = spark.sparkContext.getConf()
-    # logger.debug(f">>>conf_out = {conf_out}")
-    # logger.info(">>Testing the debug messages")
-    # logger.warn(">>>Ending SparkLoggerDemo")
-    # logger.error(">>>System.out.println")
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
-    file_name = "sf-fire-calls.csv"
+    # file_name = "sf-fire-calls.csv" nor mally we provide the file name by hard coding it in the app 
+    # But there the dataset file name is supplied via spark.conf file
+    file_name = conf.get("file_name")
     file_dir = os.path.join(dataset_dir,file_name)
     logger.info(f"dataset_csv_file_dir = {file_dir}")
     try:

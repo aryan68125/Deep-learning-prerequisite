@@ -6,3 +6,9 @@
 2025-10-30 12:01:24 INFO  pyspark-shell:244 - Reading the data from the directory
 2025-10-30 12:01:24 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
 2025-10-30 12:01:27 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
+2025-10-30 12:05:41 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 12:05:41 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
+2025-10-30 12:05:44 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
+2025-10-30 12:14:45 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 12:14:45 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
+2025-10-30 12:14:48 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
