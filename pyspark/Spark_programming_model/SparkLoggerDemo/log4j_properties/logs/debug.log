@@ -1,2 +1,4 @@
-2025-10-30 16:32:29 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:46755': (434.4, 422.89)} MB
-2025-10-30 16:32:29 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:46755': 11.51} MB
+2025-10-30 16:44:39 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42003': (434.4, 422.91)} MB
+2025-10-30 16:44:39 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42003': 11.49} MB
+2025-10-30 16:57:20 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:46231': (434.4, 422.89)} MB
+2025-10-30 16:57:20 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:46231': 11.51} MB

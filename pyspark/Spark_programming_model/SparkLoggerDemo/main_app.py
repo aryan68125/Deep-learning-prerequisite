@@ -47,15 +47,19 @@ if __name__ == "__main__":
     # The function must taken in file_dir csv file and then returns a spark dataFrame
     ingest_data = IngestData(spark)
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
+    # partition the spark dataFrame
+    parti_spark_df = spark_df.repartition(2)
     spark_df.show()
     
     # Transformations
     df_transform = DataFrameTransformations(spark)
-    count_by_country = df_transform.count_by_country(spark_df=spark_df)
+    count_by_country = df_transform.count_by_country(spark_df=parti_spark_df)
 
     # Display
     logger.info(f"DataFrame sample:\n{count_by_country.limit(25).toPandas().to_string(index=False)}")
     logger.info(f"{count_by_country.limit(25).collect()}")
     count_by_country.show()
 
+    # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
+    input("Please enter")
     spark.stop()
