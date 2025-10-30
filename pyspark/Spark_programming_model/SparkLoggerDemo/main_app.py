@@ -55,6 +55,7 @@ if __name__ == "__main__":
 
     # Display
     logger.info(f"DataFrame sample:\n{count_by_country.limit(25).toPandas().to_string(index=False)}")
+    logger.info(f"{count_by_country.limit(25).collect()}")
     count_by_country.show()
 
     spark.stop()
