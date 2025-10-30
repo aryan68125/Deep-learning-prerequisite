@@ -8,6 +8,8 @@ import os
 
 # Imports related to ingest data
 from lib.ingest_data import IngestData
+# Transform data
+from transformations.dataframe_transformations import DataFrameTransformations
 
 if __name__ == "__main__":
     # logging related logic
@@ -48,17 +50,11 @@ if __name__ == "__main__":
     spark_df.show()
     
     # Transformations
-    intermediate_result_df = (
-        spark_df
-        .where("CallType is not null")
-        .select("CallType","Zipcode")
-        .groupby("CallType","Zipcode")
-    )
-    row_count = intermediate_result_df.count()
-    result_df = row_count.orderBy("count",ascending=False)
+    df_transform = DataFrameTransformations(spark)
+    count_by_country = df_transform.count_by_country(spark_df=spark_df)
 
     # Display
-    logger.info(f"DataFrame sample:\n{result_df.limit(25).toPandas().to_string(index=False)}")
-    result_df.show()
+    logger.info(f"DataFrame sample:\n{count_by_country.limit(25).toPandas().to_string(index=False)}")
+    count_by_country.show()
 
     spark.stop()
