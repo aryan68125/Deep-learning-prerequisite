@@ -66,4 +66,3 @@ class GetDataFrameMemory:
         except Exception as e:
             self.logger.error(f"Error in convert_bytes_to_mb: {e}")
             return value
-
