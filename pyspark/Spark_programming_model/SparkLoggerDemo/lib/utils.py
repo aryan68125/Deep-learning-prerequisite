@@ -9,6 +9,7 @@ This function will load the configuration from spark.conf file and return a spar
 def get_saprk_app_config():
     spark_conf = SparkConf()
     config = configparser.ConfigParser()
+    # Read the spark.conf file from the dirtectory
     config.read(os.path.join(os.getcwd(),"..","spark.conf"))
 
     # Loop through the configs and set it to the spark conf

@@ -8,10 +8,13 @@ import os
 
 if __name__ == "__main__":
     # logging related logic
+    # Get the current project's directory
     project_dir = os.path.dirname(os.path.abspath(__file__))
+    # Get the Log4j.properties file directory
     log4j_config_path = os.path.join(project_dir, "log4j_properties", "log4j.properties")
+    # Save the directory where the generated log files must reside
     log_dir = os.path.join(project_dir, "log4j_properties", "logs")
-
+    # Create the directory where the log files must be kept if not present
     os.makedirs(log_dir, exist_ok=True)
 
     conf = get_saprk_app_config()
@@ -28,6 +31,9 @@ if __name__ == "__main__":
 
     logger = Log4j(spark)
     logger.warn(">>>Starting SparkLoggerDemo")
+    conf_out = spark.sparkContext.getConf()
+    logger.info(">>>{conf_out}")
+    logger.debug(">>Testing the debug messages")
     logger.warn(">>>Ending SparkLoggerDemo")
-
+    logger.error(">>>System.out.println")
     spark.stop()
