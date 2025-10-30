@@ -47,4 +47,18 @@ if __name__ == "__main__":
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
     spark_df.show()
     
+    # Transformations
+    intermediate_result_df = (
+        spark_df
+        .where("CallType is not null")
+        .select("CallType","Zipcode")
+        .groupby("CallType","Zipcode")
+    )
+    row_count = intermediate_result_df.count()
+    result_df = row_count.orderBy("count",ascending=False)
+
+    # Display
+    logger.info(f"DataFrame sample:\n{result_df.limit(25).toPandas().to_string(index=False)}")
+    result_df.show()
+
     spark.stop()

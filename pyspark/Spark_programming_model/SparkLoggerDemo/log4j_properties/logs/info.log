@@ -1,8 +1,8 @@
-2025-10-30 14:46:33 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-10-30 14:46:33 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
-2025-10-30 14:46:36 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
-2025-10-30 14:46:38 INFO  pyspark-shell:244 - The memory taken by the dataFrame is = {'192.168.1.204:40663': 11.51} MB
-2025-10-30 14:46:38 INFO  pyspark-shell:244 - DataFrame sample:
+2025-10-30 15:08:43 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 15:08:43 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
+2025-10-30 15:08:46 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
+2025-10-30 15:08:47 INFO  pyspark-shell:244 - The memory taken by the dataFrame is = {'192.168.1.204:36217': 11.5} MB
+2025-10-30 15:08:48 INFO  pyspark-shell:244 - DataFrame sample:
  CallNumber UnitID  IncidentNumber                 CallType   CallDate  WatchDate CallFinalDisposition          AvailableDtTm                        Address City  Zipcode Battalion StationArea  Box OriginalPriority Priority  FinalPriority  ALSUnit CallTypeGroup  NumAlarms       UnitType  UnitSequenceInCallDispatch FirePreventionDistrict SupervisorDistrict                   Neighborhood                              Location         RowID    Delay
    20110016    T13         2003235           Structure Fire 01/11/2002 01/10/2002                Other 01/11/2002 01:51:44 AM    2000 Block of CALIFORNIA ST   SF    94109       B04          38 3362                3        3              3    False          None          1          TRUCK                           2                      4                  5                Pacific Heights (37.7895840679362, -122.428071912459) 020110016-T13 2.950000
    20110022    M17         2003241         Medical Incident 01/11/2002 01/10/2002                Other 01/11/2002 03:01:18 AM       0 Block of SILVERVIEW DR   SF    94124       B10          42 6495                3        3              3     True          None          1          MEDIC                           1                     10                 10          Bayview Hunters Point (37.7337623673897, -122.396113802632) 020110022-M17 4.700000
@@ -29,3 +29,30 @@
    20110375    B05         2003453                   Alarms 01/11/2002 01/11/2002                Other 01/11/2002 06:48:01 PM      100 Block of JOHNSTONE DR   SF    94131       B05          20 5278                3        3              3    False          None          1          CHIEF                           3                      5                  7                   Inner Sunset (37.7585821585787, -122.453613744703) 020110375-B05 1.800000
    20110425    B01         2003497           Structure Fire 01/11/2002 01/11/2002                Other 01/11/2002 09:03:17 PM       600 Block of OFARRELL ST   SF    94109       B04          03 1544                3        3              3    False          None          1          CHIEF                           4                      4                  6                     Tenderloin (37.7854670505017, -122.415977627827) 020110425-B01 2.566667
    20110428    M28         2003500         Medical Incident 01/11/2002 01/11/2002                Other 01/11/2002 10:08:48 PM       1000 Block of BATTERY ST   SF    94111       B01          13 1153                3        3              3     True          None          1          MEDIC                           2                      1                  3 Financial District/South Beach (37.8006802692983, -122.401542794883) 020110428-M28 3.883333
+2025-10-30 15:08:49 INFO  pyspark-shell:244 - DataFrame sample:
+        CallType  Zipcode  count
+Medical Incident    94102  16130
+Medical Incident    94103  14775
+Medical Incident    94110   9995
+Medical Incident    94109   9479
+Medical Incident    94124   5885
+Medical Incident    94112   5630
+Medical Incident    94115   4785
+Medical Incident    94122   4323
+Medical Incident    94107   4284
+Medical Incident    94133   3977
+Medical Incident    94117   3522
+Medical Incident    94134   3437
+Medical Incident    94114   3225
+Medical Incident    94118   3104
+Medical Incident    94121   2953
+Medical Incident    94116   2738
+Medical Incident    94132   2594
+  Structure Fire    94110   2267
+Medical Incident    94105   2258
+  Structure Fire    94102   2229
+  Structure Fire    94103   2221
+          Alarms    94103   2168
+Medical Incident    94108   2162
+  Structure Fire    94109   2160
+          Alarms    94102   2140
