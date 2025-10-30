@@ -52,7 +52,7 @@ if __name__ == "__main__":
         metrics = GetDataFrameMemory(spark)
         logger.info(f"spark_df created successfully from {file_dir} dataset file")
         logger.info(f"The memory taken by the dataFrame is = {metrics.get_mem_usage(spark_df).get("mem")} MB")
-        logger.info(f"DataFrame sample:\n{spark_df.limit(5).toPandas().to_string(index=False)}")
+        logger.info(f"DataFrame sample:\n{spark_df.limit(25).toPandas().to_string(index=False)}")
 
     except Exception as e:
         logger.error(e)
