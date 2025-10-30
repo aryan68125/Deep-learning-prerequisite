@@ -1,1 +1,1 @@
-2025-10-30 09:17:13 DEBUG pyspark-shell:244 - >>Testing the debug messages
+2025-10-30 11:39:36 DEBUG pyspark-shell:244 - >>>conf_out = <pyspark.conf.SparkConf object at 0x7fb721a70ef0>

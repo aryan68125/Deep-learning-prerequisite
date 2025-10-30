@@ -6,7 +6,7 @@ import os
 """
 This function will load the configuration from spark.conf file and return a spark conf object
 """
-def get_saprk_app_config():
+def get_spark_app_config():
     spark_conf = SparkConf()
     config = configparser.ConfigParser()
     # Read the spark.conf file from the dirtectory

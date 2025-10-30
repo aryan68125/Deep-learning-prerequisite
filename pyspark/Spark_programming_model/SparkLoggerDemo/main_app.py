@@ -2,7 +2,7 @@ from pyspark.sql import SparkSession
 # import related to logging
 from lib.logger import Log4j
 # import related to custom spark configurations
-from lib.utils import get_saprk_app_config
+from lib.utils import get_spark_app_config
 # logging related imports 
 import os
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # Create the directory where the log files must be kept if not present
     os.makedirs(log_dir, exist_ok=True)
 
-    conf = get_saprk_app_config()
+    conf = get_spark_app_config()
     spark = (
         SparkSession
         .builder
@@ -32,8 +32,8 @@ if __name__ == "__main__":
     logger = Log4j(spark)
     logger.warn(">>>Starting SparkLoggerDemo")
     conf_out = spark.sparkContext.getConf()
-    logger.info(">>>{conf_out}")
-    logger.debug(">>Testing the debug messages")
+    logger.debug(f">>>conf_out = {conf_out}")
+    logger.info(">>Testing the debug messages")
     logger.warn(">>>Ending SparkLoggerDemo")
     logger.error(">>>System.out.println")
     spark.stop()
