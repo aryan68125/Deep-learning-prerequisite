@@ -1,1 +1,8 @@
 2025-10-30 11:39:36 INFO  pyspark-shell:244 - >>Testing the debug messages
+2025-10-30 11:59:38 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 12:00:39 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 12:00:39 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
+2025-10-30 12:00:42 INFO  pyspark-shell:244 - spark_df created successfully from {file_dir} dataset file
+2025-10-30 12:01:24 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-10-30 12:01:24 INFO  pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv
+2025-10-30 12:01:27 INFO  pyspark-shell:244 - spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkLoggerDemo/dataset/sf-fire-calls.csv dataset file
