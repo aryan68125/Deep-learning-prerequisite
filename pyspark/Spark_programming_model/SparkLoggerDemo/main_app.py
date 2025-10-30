@@ -5,6 +5,8 @@ from lib.logger import Log4j
 from lib.utils import get_spark_app_config
 # logging related imports 
 import os
+# metrics monitoring related imports
+from lib.app_monitor import GetDataFrameMemory
 
 if __name__ == "__main__":
     # logging related logic
@@ -28,7 +30,7 @@ if __name__ == "__main__":
                 f"-Dlog4j.configuration=file:{log4j_config_path} -Dcustom.log.dir={log_dir}")
         .getOrCreate()
     )
-
+    # initialize logger class 
     logger = Log4j(spark)
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
@@ -46,7 +48,12 @@ if __name__ == "__main__":
             .option("inferschema","true")
             .load(file_dir)
                     )
+        # initialize the metrics class
+        metrics = GetDataFrameMemory(spark)
         logger.info(f"spark_df created successfully from {file_dir} dataset file")
+        logger.info(f"The memory taken by the dataFrame is = {metrics.get_mem_usage(spark_df).get("mem")} MB")
+        logger.info(f"DataFrame sample:\n{spark_df.limit(5).toPandas().to_string(index=False)}")
+
     except Exception as e:
         logger.error(e)
     spark_df.show()

@@ -1,3 +1,0 @@
-2025-10-30 11:39:36 WARN  pyspark-shell:244 - >>>Starting SparkLoggerDemo
-2025-10-30 11:39:36 WARN  pyspark-shell:244 - >>>Ending SparkLoggerDemo
-2025-10-30 11:39:36 ERROR pyspark-shell:244 - >>>System.out.println
