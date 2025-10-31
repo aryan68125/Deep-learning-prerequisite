@@ -19,7 +19,11 @@ class IngestData:
             
             self.logger.info(f"spark_df created successfully from {file_dir} dataset file")
             self.logger.info(f"The memory taken by the dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
-            self.logger.info(f"DataFrame sample:\n{spark_df.limit(25).toPandas().to_string(index=False)}")
             return spark_df
+        except Exception as e:
+            self.logger.error(e)
+    def import_data_json(self,file_dir):
+        try:
+            pass
         except Exception as e:
             self.logger.error(e)

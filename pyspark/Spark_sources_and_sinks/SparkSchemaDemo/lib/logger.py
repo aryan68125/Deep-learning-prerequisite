@@ -20,4 +20,10 @@ class Log4j:
     
     def debug(self,message):
         self.logger.debug(message)
-     
+
+class LogSparkDataframe:
+    def __init__(self,spark):
+        self.sp = spark
+        self.logger = Log4j(spark)
+    def log_df(self,spark_df,spark_df_name):
+        self.logger.info(f">>>>> {spark_df_name} dataframe:\n{spark_df.limit(25).toPandas().to_string(index=False)}")

@@ -1,2 +1,6 @@
-2025-10-31 10:48:15 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:41229': (434.4, 422.89)} MB
-2025-10-31 10:48:15 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:41229': 11.51} MB
+2025-10-31 16:03:14 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/log4j_properties/log4j.properties
+2025-10-31 16:03:14 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/log4j_properties/logs
+2025-10-31 16:03:14 DEBUG pyspark-shell:244 - log dir exists = True
+2025-10-31 16:03:14 DEBUG pyspark-shell:244 - file_name_csv dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset/flight-time.csv
+2025-10-31 16:03:19 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:36285': (434.4, 425.41)} MB
+2025-10-31 16:03:19 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:36285': 8.99} MB

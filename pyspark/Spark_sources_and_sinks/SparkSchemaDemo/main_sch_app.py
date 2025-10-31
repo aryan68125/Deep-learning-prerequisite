@@ -1,6 +1,6 @@
 from pyspark.sql import SparkSession
 # import related to logging
-from lib.logger import Log4j
+from lib.logger import Log4j, LogSparkDataframe
 # import related to custom spark configurations
 from lib.utils import get_spark_app_config
 # logging related imports 
@@ -33,32 +33,32 @@ if __name__ == "__main__":
                 f"-Dlog4j.configuration=file:{log4j_config_path} -Dcustom.log.dir={log_dir}")
         .getOrCreate()
     )
+
     # initialize logger class 
     logger = Log4j(spark)
+
+    # initialize the spark dataframe logger 
+    sp_df_logger = LogSparkDataframe(spark)
+
+    # logging some debug related stuff 
+    logger.debug(f"log4j.properties file dir = {log4j_config_path}")
+    logger.debug(f"log files dir = {log_dir}")
+    logger.debug(f"log dir exists = {os.path.exists(log_dir)}")
     
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
     # file_name = "sf-fire-calls.csv" nor mally we provide the file name by hard coding it in the app 
     # But here the dataset file name is supplied via spark.conf file
-    file_name = conf.get("file_name")
+    file_name = conf.get("file_name_csv")
     file_dir = os.path.join(dataset_dir,file_name)
-    logger.info(f"dataset_csv_file_dir = {file_dir}")
+    logger.debug(f"file_name_csv dir = {file_dir}")
     
     # The function must taken in file_dir csv file and then returns a spark dataFrame
     ingest_data = IngestData(spark)
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
-    # partition the spark dataFrame
-    parti_spark_df = spark_df.repartition(2)
-    spark_df.show()
-    
-    # Transformations
-    df_transform = DataFrameTransformations(spark)
-    count_by_country = df_transform.count_by_country(spark_df=parti_spark_df)
 
-    # Display
-    logger.info(f"DataFrame sample:\n{count_by_country.limit(25).toPandas().to_string(index=False)}")
-    logger.info(f"{count_by_country.limit(25).collect()}")
-    count_by_country.show()
+    # log spark dataframe
+    sp_df_logger.log_df(spark_df,"spark_df")
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
 #     input("Please enter")
