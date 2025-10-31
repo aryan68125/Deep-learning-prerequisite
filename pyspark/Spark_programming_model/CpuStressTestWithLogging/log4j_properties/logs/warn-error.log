@@ -2,3 +2,7 @@
 2025-10-29 10:53:26 WARN  Utils:244 - Set SPARK_LOCAL_IP if you need to bind to another address
 2025-10-29 10:53:26 WARN  NativeCodeLoader:60 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 2025-10-29 10:53:27 WARN  Utils:250 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+2025-10-31 10:49:54 WARN  Utils:250 - Your hostname, aditya-IdeaPad-5-15ITL05, resolves to a loopback address: 127.0.1.1; using 192.168.1.204 instead (on interface wlp0s20f3)
+2025-10-31 10:49:54 WARN  Utils:244 - Set SPARK_LOCAL_IP if you need to bind to another address
+2025-10-31 10:49:54 WARN  NativeCodeLoader:60 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-10-31 10:49:55 WARN  Utils:250 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.

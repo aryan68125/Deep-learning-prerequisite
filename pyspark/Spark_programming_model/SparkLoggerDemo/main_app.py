@@ -61,5 +61,5 @@ if __name__ == "__main__":
     count_by_country.show()
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
-    input("Please enter")
+#     input("Please enter")
     spark.stop()
