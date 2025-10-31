@@ -8,8 +8,10 @@ import os
 
 # Imports related to ingest data
 from lib.ingest_data import IngestData
-# Transform data
+# import Transform data related stuff
 from transformations.dataframe_transformations import DataFrameTransformations
+# import sql operations related stuff
+from sql_operations.sql_operations import SqlOperations
 
 if __name__ == "__main__":
     # logging related logic
@@ -50,17 +52,14 @@ if __name__ == "__main__":
     # The function must taken in file_dir csv file and then returns a spark dataFrame
     ingest_data = IngestData(spark)
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
+
+    # initialize sql operation class 
+    sql_ops = SqlOperations(spark)
     # Create a View using spark_df
-    spark_df.createOrReplaceTempView("fire_data")
+    fire_view = sql_ops.create_view(spark_df=spark_df,view_name="fire_view")
 
     # Spark sql operations
-    query = """
-    SELECT * FROM fire_data LIMIT 25;
-    """
-    result = spark.sql(query)
-    result_pd_df = result.limit(25).toPandas().to_string(index=False)
-    logger.info(f"view ==> \n {result_pd_df}")
-    result.show()
+    sql_ops.display_view(view_name="fire_view")
     
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
 #     input("Please enter")
