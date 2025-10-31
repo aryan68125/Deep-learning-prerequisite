@@ -1,0 +1,4 @@
+2025-10-31 13:43:41 DEBUG pyspark-shell:244 - path to logger4j.properties True
+2025-10-31 13:43:41 DEBUG pyspark-shell:244 - dataset_csv_file_dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/SparkSql/dataset/sf-fire-calls.csv
+2025-10-31 13:43:45 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:37767': (434.4, 422.89)} MB
+2025-10-31 13:43:45 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:37767': 11.51} MB
