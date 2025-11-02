@@ -1,10 +1,12 @@
 from .logger import Log4j
 from .app_monitor import GetDataFrameMemory
+
 class IngestData:
     def __init__(self,spark):
         self.spark_object = spark
         self.logger = Log4j(spark)
         self.metrics = GetDataFrameMemory(spark)
+
     def import_data_csv(self,file_dir):
         try:
             spark_df = (
@@ -15,15 +17,40 @@ class IngestData:
                 .option("inferschema","true")
                 .load(file_dir)
                         )
-            # initialize the metrics class
-            
-            self.logger.info(f"spark_df created successfully from {file_dir} dataset file")
-            self.logger.info(f"The memory taken by the dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
+            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
             return spark_df
         except Exception as e:
-            self.logger.error(e)
+            self.logger.error(str(e))
+
     def import_data_json(self,file_dir):
         try:
-            pass
+            spark_df = (
+                self.spark_object
+                .read
+                .format("json")
+                .load(file_dir)
+            )
+            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
+            return spark_df
         except Exception as e:
-            self.logger.error(e)
+            self.logger.error(str(e))
+
+    def import_data_parquet(self,file_dir):
+        try:
+            spark_df = (
+                self.spark_object
+                .read
+                .format("parquet")
+                .load(file_dir)
+            )
+            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
+            return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+
+    # utility methods
+    def log_df_metrics(self,spark_df,file_dir):
+        self.logger.info(f"import_data_csv :: spark_df created successfully from {file_dir} dataset file")
+        self.logger.info(f"import_data_csv :: The memory taken by the spark dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
+        schema_str = spark_df._jdf.schema().treeString()
+        self.logger.debug(f"Spark DataFrame Schema (expanded): {schema_str}")

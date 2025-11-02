@@ -58,8 +58,26 @@ if __name__ == "__main__":
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
 
     # log spark dataframe
-    sp_df_logger.log_df(spark_df,"spark_df")
+    sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df")
+
+    # import data from a json file
+    file_name = conf.get("file_name_json")
+    file_dir = os.path.join(dataset_dir,file_name)
+    logger.debug(f"file_name_json dir = {file_dir}")
+    spark_df_json = ingest_data.import_data_json(file_dir=file_dir)
+
+    # log spark dataframe
+    sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df_json")
+
+    # import data from a parquet file
+    file_name = conf.get("file_name_parquet")
+    file_dir = os.path.join(dataset_dir,file_name)
+    logger.debug(f"file_name_json dir = {file_dir}")
+    spark_df_parquet = ingest_data.import_data_parquet(file_dir=file_dir)
+
+    # log spark dataframe
+    sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df_parquet")
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
-#     input("Please enter")
+    # input("Please enter")
     spark.stop()
