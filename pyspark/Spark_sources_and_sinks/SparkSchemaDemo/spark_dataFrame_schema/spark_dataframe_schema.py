@@ -1,6 +1,10 @@
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, DateType, TimestampType
 
+
 class FlightSchemaMixin:
+    """
+    This method defines the spark dataFrame schema using Programmatical method
+    """
     def return_flight_df_schema(self):
         flight_schema = StructType([
             StructField("FL_DATE", DateType(), True),
@@ -20,3 +24,26 @@ class FlightSchemaMixin:
             StructField("DISTANCE", IntegerType(), True)
         ])
         return flight_schema
+
+    """
+    This method defines the spark dataFrame schema using DDL method
+    """
+    def return_flight_schema_ddl(self):
+        flight_schema_ddl = """
+            FL_DATE DATE,
+            OP_CARRIER STRING,
+            OP_CARRIER_FL_NUM INT,
+            ORIGIN STRING,
+            ORIGIN_CITY_NAME STRING,
+            DEST STRING,
+            DEST_CITY_NAME STRING,
+            CRS_DEP_TIME INT,
+            DEP_TIME INT,
+            WHEELS_ON INT,
+            TAXI_IN INT,
+            CRS_ARR_TIME INT,
+            ARR_TIME INT,
+            CANCELLED INT,
+            DISTANCE INT
+        """
+        return flight_schema_ddl

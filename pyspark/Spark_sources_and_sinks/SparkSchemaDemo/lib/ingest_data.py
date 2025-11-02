@@ -47,6 +47,8 @@ class IngestData():
                 self.spark_object
                 .read
                 .format("json")
+                .schema(self.df_schema.return_flight_schema_ddl())
+                .option("dateFormat","M/d/y")
                 .load(file_dir)
             )
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
