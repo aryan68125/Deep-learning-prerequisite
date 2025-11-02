@@ -1,11 +1,22 @@
+# --- Add project root to sys.path ---
+import os 
+import sys
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 from .logger import Log4j
 from .app_monitor import GetDataFrameMemory
+
+from spark_dataFrame_schema.spark_dataframe_schema import FlightSchemaMixin
 
 """
 This class ingest data from csv, json and parquet file format
 """
-class IngestData:
+class IngestData(FlightSchemaMixin):
     def __init__(self,spark):
+        super().__init__()
         self.spark_object = spark
         self.logger = Log4j(spark)
         self.metrics = GetDataFrameMemory(spark)
@@ -17,7 +28,8 @@ class IngestData:
                 .read
                 .format("csv")
                 .option("header","true")
-                .option("inferschema","true")
+                # .option("inferschema","true")
+                .schema(self.flight_schema)
                 .load(file_dir)
                         )
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
