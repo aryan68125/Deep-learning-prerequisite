@@ -1,6 +1,9 @@
 from .logger import Log4j
 from .app_monitor import GetDataFrameMemory
 
+"""
+This class ingest data from csv, json and parquet file format
+"""
 class IngestData:
     def __init__(self,spark):
         self.spark_object = spark
