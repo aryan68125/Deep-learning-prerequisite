@@ -93,7 +93,7 @@ if __name__ == "__main__":
     os.makedirs(export_dir, exist_ok=True)
     # initializing dtaframe exporter class 
     export_obj = ExportSparkDataFrame(spark_df,spark)
-    export_obj.export_df_parquet(save_mode="overwrite",output_path=export_dir)
+    export_obj.export_df_parquet(save_mode="overwrite",output_path=export_dir,max_rec=1000)
 
     # export data in avro format
     project_dir

@@ -3,13 +3,14 @@ class ExportSparkDataFrame:
     def __init__(self,spark_df,spark):
         self.spark_df = spark_df
         self.logger = Log4j(spark)
-    def export_df_parquet(self,save_mode: str = "overwrite",output_path : str=""):
+    def export_df_parquet(self,save_mode: str = "overwrite",output_path : str="",max_rec : int = 100):
         try:
             (
                 self.spark_df.write
                 .format("parquet")
                 .mode(save_mode)
                 .option("path",output_path)
+                .option("maxRecorsdPerFile",max_rec)
                 .save()
             )
             return True
