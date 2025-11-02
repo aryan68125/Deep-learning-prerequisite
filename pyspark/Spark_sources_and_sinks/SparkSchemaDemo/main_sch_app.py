@@ -91,7 +91,6 @@ if __name__ == "__main__":
     export_dir = os.path.join(project_dir, "export_df", "flight_data_paraquet")
     # Create the directory where the exported dataframe files must be kept if not present
     os.makedirs(export_dir, exist_ok=True)
-
     # initializing dtaframe exporter class 
     export_obj = ExportSparkDataFrame(spark_df,spark)
     export_obj.export_df_parquet(save_mode="overwrite",output_path=export_dir)
@@ -101,10 +100,18 @@ if __name__ == "__main__":
     export_dir = os.path.join(project_dir, "export_df", "flight_data_avro")
     # Create the directory where the exported dataframe files must be kept if not present
     os.makedirs(export_dir, exist_ok=True)
-
     # initializing dtaframe exporter class 
     export_obj = ExportSparkDataFrame(spark_df,spark)
     export_obj.export_df_avro(save_mode="overwrite",output_path=export_dir)
+
+    # export data in JSON format
+    project_dir
+    export_dir = os.path.join(project_dir, "export_df", "flight_data_json")
+    # Create the directory where the exported dataframe files must be kept if not present
+    os.makedirs(export_dir, exist_ok=True)
+    # initializing dtaframe exporter class 
+    export_obj = ExportSparkDataFrame(spark_df,spark)
+    export_obj.export_df_json(save_mode="overwrite",output_path=export_dir,column_list=["OP_CARRIER","ORIGIN"])
     # EXPORTING DATAFRAME ENDS
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
