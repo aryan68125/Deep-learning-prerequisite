@@ -3,6 +3,8 @@ from pyspark.sql import SparkSession
 from lib.logger import Log4j, LogSparkDataframe
 # import related to custom spark configurations
 from lib.utils import get_spark_app_config
+# imports related to exporting dataframe
+from lib.write_df import ExportSparkDataFrame
 # logging related imports 
 import os
 
@@ -47,6 +49,8 @@ if __name__ == "__main__":
     
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
+
+    # INGETING DATA FROM VARIOUS FILE FORMATS STARTS
     # file_name = "sf-fire-calls.csv" nor mally we provide the file name by hard coding it in the app 
     # But here the dataset file name is supplied via spark.conf file
     file_name = conf.get("file_name_csv")
@@ -78,6 +82,18 @@ if __name__ == "__main__":
 
     # log spark dataframe
     sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df_parquet")
+    # INGETING DATA FROM VARIOUS FILE FORMATS ENDS
+
+    # EXPORTING DATAFRAME IN PARAQUET FORMAT STARTS
+    project_dir
+    export_dir = os.path.join(project_dir, "export_df", "flight_data")
+    # Create the directory where the exported dataframe files must be kept if not present
+    os.makedirs(export_dir, exist_ok=True)
+
+    # initializing dtaframe exporter class 
+    export_obj = ExportSparkDataFrame(spark_df)
+    export_obj.export_df_parquet(save_mode="overwrite",output_path=export_dir)
+    # EXPORTING DATAFRAME IN PARAQUET FORMAT ENDS
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")

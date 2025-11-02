@@ -61,3 +61,66 @@
  |-- CANCELLED: integer (nullable = true)
  |-- DISTANCE: integer (nullable = true)
 
+2025-11-02 17:10:50 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/log4j_properties/log4j.properties
+2025-11-02 17:10:50 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/log4j_properties/logs
+2025-11-02 17:10:50 DEBUG pyspark-shell:244 - log dir exists = True
+2025-11-02 17:10:50 DEBUG pyspark-shell:244 - file_name_csv dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset/flight-time.csv
+2025-11-02 17:10:54 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.19:35663': (434.4, 425.44)} MB
+2025-11-02 17:10:54 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.19:35663': 8.96} MB
+2025-11-02 17:10:54 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+ |-- FL_DATE: date (nullable = true)
+ |-- OP_CARRIER: string (nullable = true)
+ |-- OP_CARRIER_FL_NUM: integer (nullable = true)
+ |-- ORIGIN: string (nullable = true)
+ |-- ORIGIN_CITY_NAME: string (nullable = true)
+ |-- DEST: string (nullable = true)
+ |-- DEST_CITY_NAME: string (nullable = true)
+ |-- CRS_DEP_TIME: integer (nullable = true)
+ |-- DEP_TIME: integer (nullable = true)
+ |-- WHEELS_ON: integer (nullable = true)
+ |-- TAXI_IN: integer (nullable = true)
+ |-- CRS_ARR_TIME: integer (nullable = true)
+ |-- ARR_TIME: integer (nullable = true)
+ |-- CANCELLED: integer (nullable = true)
+ |-- DISTANCE: integer (nullable = true)
+
+2025-11-02 17:10:54 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset/flight-time.json
+2025-11-02 17:10:55 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.19:35663': (434.4, 419.84)} MB
+2025-11-02 17:10:55 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.19:35663': 14.56} MB
+2025-11-02 17:10:55 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+ |-- FL_DATE: date (nullable = true)
+ |-- OP_CARRIER: string (nullable = true)
+ |-- OP_CARRIER_FL_NUM: integer (nullable = true)
+ |-- ORIGIN: string (nullable = true)
+ |-- ORIGIN_CITY_NAME: string (nullable = true)
+ |-- DEST: string (nullable = true)
+ |-- DEST_CITY_NAME: string (nullable = true)
+ |-- CRS_DEP_TIME: integer (nullable = true)
+ |-- DEP_TIME: integer (nullable = true)
+ |-- WHEELS_ON: integer (nullable = true)
+ |-- TAXI_IN: integer (nullable = true)
+ |-- CRS_ARR_TIME: integer (nullable = true)
+ |-- ARR_TIME: integer (nullable = true)
+ |-- CANCELLED: integer (nullable = true)
+ |-- DISTANCE: integer (nullable = true)
+
+2025-11-02 17:10:55 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset/flight-time.parquet
+2025-11-02 17:10:57 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.19:35663': (434.4, 410.96)} MB
+2025-11-02 17:10:57 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.19:35663': 23.44} MB
+2025-11-02 17:10:57 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+ |-- FL_DATE: date (nullable = true)
+ |-- OP_CARRIER: string (nullable = true)
+ |-- OP_CARRIER_FL_NUM: integer (nullable = true)
+ |-- ORIGIN: string (nullable = true)
+ |-- ORIGIN_CITY_NAME: string (nullable = true)
+ |-- DEST: string (nullable = true)
+ |-- DEST_CITY_NAME: string (nullable = true)
+ |-- CRS_DEP_TIME: integer (nullable = true)
+ |-- DEP_TIME: integer (nullable = true)
+ |-- WHEELS_ON: integer (nullable = true)
+ |-- TAXI_IN: integer (nullable = true)
+ |-- CRS_ARR_TIME: integer (nullable = true)
+ |-- ARR_TIME: integer (nullable = true)
+ |-- CANCELLED: integer (nullable = true)
+ |-- DISTANCE: integer (nullable = true)
+
