@@ -14,24 +14,28 @@ from spark_dataFrame_schema.spark_dataframe_schema import FlightSchemaMixin
 """
 This class ingest data from csv, json and parquet file format
 """
-class IngestData(FlightSchemaMixin):
+class IngestData():
     def __init__(self,spark):
-        super().__init__()
         self.spark_object = spark
         self.logger = Log4j(spark)
         self.metrics = GetDataFrameMemory(spark)
+        self.df_schema = FlightSchemaMixin()
 
     def import_data_csv(self,file_dir):
         try:
             spark_df = (
-                self.spark_object
-                .read
-                .format("csv")
-                .option("header","true")
-                # .option("inferschema","true")
-                .schema(self.flight_schema)
-                .load(file_dir)
-                        )
+                    self.spark_object
+                    .read
+                    .format("csv")
+                    .option("header","true")
+                    # .option("inferschema","true")
+                    .schema(self.df_schema.return_flight_df_schema())
+                    # Set the mode for error if the schema don't match
+                    .option("mode","FAILFAST")
+                    # Set the date string format
+                    .option("dateFormat","M/d/y")
+                    .load(file_dir)
+            )
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
             return spark_df
         except Exception as e:

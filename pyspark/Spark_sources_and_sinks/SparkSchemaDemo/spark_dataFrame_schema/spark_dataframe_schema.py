@@ -1,8 +1,8 @@
 from pyspark.sql.types import StructType, StructField, StringType, IntegerType, DoubleType, DateType, TimestampType
 
 class FlightSchemaMixin:
-    def __init__(self):
-        self.flight_schema = StructType([
+    def return_flight_df_schema(self):
+        flight_schema = StructType([
             StructField("FL_DATE", DateType(), True),
             StructField("OP_CARRIER", StringType(), True),
             StructField("OP_CARRIER_FL_NUM", IntegerType(), True),
@@ -19,3 +19,4 @@ class FlightSchemaMixin:
             StructField("CANCELLED", IntegerType(), True),
             StructField("DISTANCE", IntegerType(), True)
         ])
+        return flight_schema
