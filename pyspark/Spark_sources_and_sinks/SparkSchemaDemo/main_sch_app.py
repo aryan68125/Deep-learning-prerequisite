@@ -54,6 +54,7 @@ if __name__ == "__main__":
     logger.debug(f"file_name_csv dir = {file_dir}")
     
     # The function must taken in file_dir csv file and then returns a spark dataFrame
+    # import data from a csv file
     ingest_data = IngestData(spark)
     spark_df = ingest_data.import_data_csv(file_dir=file_dir)
 
