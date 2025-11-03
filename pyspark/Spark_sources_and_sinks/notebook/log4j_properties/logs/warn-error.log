@@ -1,6 +1,0 @@
-2025-10-31 10:50:51 WARN  Utils:250 - Your hostname, aditya-IdeaPad-5-15ITL05, resolves to a loopback address: 127.0.1.1; using 192.168.1.204 instead (on interface wlp0s20f3)
-2025-10-31 10:50:51 WARN  Utils:244 - Set SPARK_LOCAL_IP if you need to bind to another address
-2025-10-31 10:50:51 WARN  NativeCodeLoader:60 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2025-10-31 10:50:52 WARN  Utils:250 - Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
-2025-10-31 10:51:17 WARN  SparkSession:244 - Using an existing Spark session; only runtime SQL configurations will take effect.
-2025-10-31 10:51:19 WARN  SparkStringUtils:244 - Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
