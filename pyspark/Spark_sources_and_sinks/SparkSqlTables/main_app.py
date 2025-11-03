@@ -5,6 +5,8 @@ from lib.logger import Log4j, LogSparkDataframe
 from lib.utils import get_spark_app_config
 # imports related to exporting dataframe
 from lib.write_df import ExportSparkDataFrame
+# import writing sparkdf to tables related stuff
+from lib.load_df_data_into_table import LoadSparkDFIntoTable
 # logging related imports 
 import os
 
@@ -13,10 +15,18 @@ from lib.ingest_data import IngestData
 # Transform data
 from transformations.dataframe_transformations import DataFrameTransformations
 
+# imports related to cleanup when the main_app.py is re-run
+from lib.clean_up_file_system import CleanupAppFileSystemOnReRun
+
 if __name__ == "__main__":
     # logging related logic
     # Get the current project's directory
     project_dir = os.path.dirname(os.path.abspath(__file__))
+    # cleanup loggic on main_app.py re-run
+    # initialize the cleanup class
+    cleanup = CleanupAppFileSystemOnReRun(project_dir)
+    cleanup.execute_cleanup(clean_logs=True)
+
     # Get the Log4j.properties file directory
     log4j_config_path = os.path.join(project_dir, "log4j_properties", "log4j.properties")
     # Save the directory where the generated log files must reside
@@ -34,6 +44,7 @@ if __name__ == "__main__":
         .config("spark.executor.extraJavaOptions",
                 f"-Dlog4j.configuration=file:{log4j_config_path} -Dcustom.log.dir={log_dir}")
         .config("spark.jars.packages", "org.apache.spark:spark-avro_2.13:4.0.1")
+        .enableHiveSupport()
         .getOrCreate()
     )
 
@@ -63,6 +74,14 @@ if __name__ == "__main__":
     # log spark_df_parquet dataframe
     sp_df_logger.log_df(spark_df=spark_df_parquet,spark_df_name="spark_df_parquet")
     """INGETING DATA FROM VARIOUS FILE FORMATS ENDS"""
+
+    """Save the data in the spark dataFrame into a table STARTS"""
+    # initialize the LoadSparkDFIntoTable class 
+    save_df_to_table = LoadSparkDFIntoTable(spark)
+    save_df_to_table.save_df_to_spark_managed_table(spark_df=spark_df_parquet,mode = "overwrite",db_name = conf.get("db_name"),table_name=conf.get("flight_table_name"))
+    # check if the table holds the data in it
+    save_df_to_table.generate_logs(conf=conf)    
+    """Save the data in the spark dataFrame into a table ENDS"""
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
