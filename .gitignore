@@ -1,3 +1,4 @@
 *.env
 pyspark/Introduction/dataset/*
 pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset*
+pyspark/Spark_sources_and_sinks/SparkSqlTables/dataset*
