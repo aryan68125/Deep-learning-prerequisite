@@ -8,7 +8,7 @@ class LoadSparkDFIntoTable:
         self.logger = Log4j(spark)
     
     """This method will save the spark dataFrame into a spark managed table"""
-    def save_df_to_spark_managed_table(self,spark_df,mode:str = "overwrite",db_name:str = "",table_name:str=""):
+    def save_df_to_spark_managed_table(self,spark_df,partition_config:list = [],mode:str = "overwrite",db_name:str = "",table_name:str=""):
         try:
             if not db_name == "":
                 # To be on the safer side create the db just in case
@@ -18,23 +18,60 @@ class LoadSparkDFIntoTable:
                 self.spark.sql(query)
                 # tell spark to use the created database 
                 self.spark.catalog.setCurrentDatabase(db_name)
-                (
+                """
+                5 is the partition no
+                OP_CARRIER = column name 
+                ORIGIN = column name
+                """
+                writer = (
                     spark_df
                     .write
                     .mode(mode)
-                    .saveAsTable(table_name)
                 )
+                writer = self.partition_handler(partition_config,writer)
+                writer.saveAsTable(table_name)
                 self.logger.info(self.spark.catalog.listTables(db_name))
             else:
-                (
+                writer = (
                     spark_df
                     .write
                     .mode(mode)
-                    .saveAsTable(table_name)
                 )
+                writer = self.partition_handler(partition_config,writer)
+                writer.saveAsTable(table_name)
                 self.logger.info(self.spark.catalog.listTables("default"))
         except Exception as e:
             self.logger.error(str(e))
+    
+    # util methods 
+    def partition_handler(self,partition_config,writer):
+        try:
+            # Handle None or empty list
+            if not partition_config:
+                partition_config = []
+                return writer
+
+            num_buckets = None
+            partition_cols = []
+
+            # Detect if first element is an integer (buckets)
+            if partition_config and isinstance(partition_config[0], int):
+                num_buckets = partition_config[0]
+                partition_cols = partition_config[1:]
+            else:
+                partition_cols = partition_config
+
+            # Apply bucketing (if defined)
+            if num_buckets and partition_cols:
+                self.logger.debug("Applying bucketBy on the table")
+                writer = writer.bucketBy(num_buckets, *partition_cols).sortBy(*partition_cols)
+            elif partition_cols:
+                self.logger.debug("Applying partitionBy on the table")
+                writer = writer.partitionBy(*partition_cols)
+            return writer
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
 
     def generate_logs(self, conf):
         try:

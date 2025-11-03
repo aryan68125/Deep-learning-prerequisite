@@ -78,7 +78,7 @@ if __name__ == "__main__":
     """Save the data in the spark dataFrame into a table STARTS"""
     # initialize the LoadSparkDFIntoTable class 
     save_df_to_table = LoadSparkDFIntoTable(spark)
-    save_df_to_table.save_df_to_spark_managed_table(spark_df=spark_df_parquet,mode = "overwrite",db_name = conf.get("db_name"),table_name=conf.get("flight_table_name"))
+    save_df_to_table.save_df_to_spark_managed_table(spark_df=spark_df_parquet,partition_config=[5,"OP_CARRIER","ORIGIN"],mode = "overwrite",db_name = conf.get("db_name"),table_name=conf.get("flight_table_name"))
     # check if the table holds the data in it
     save_df_to_table.generate_logs(conf=conf)    
     """Save the data in the spark dataFrame into a table ENDS"""

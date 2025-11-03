@@ -18,7 +18,7 @@ class CleanupAppFileSystemOnReRun:
         self.metastore_cleanup()
         if clean_logs == True:
             self.logs_cleanup()
-        time.sleep(5)
+        # time.sleep(5)
 
     """This will cleanup the derby.logs"""
     def derby_logs_cleanup(self):

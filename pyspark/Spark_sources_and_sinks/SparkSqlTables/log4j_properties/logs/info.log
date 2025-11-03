@@ -1,7 +1,7 @@
-2025-11-03 14:26:27 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-03 14:26:28 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSqlTables/dataset/flight-time.parquet dataset file
-2025-11-03 14:26:31 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:40335': 8.9} MB
-2025-11-03 14:26:31 INFO  pyspark-shell:244 - >>>>> spark_df_parquet dataframe:
+2025-11-03 15:25:52 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-03 15:25:54 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_sources_and_sinks/SparkSqlTables/dataset/flight-time.parquet dataset file
+2025-11-03 15:25:57 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:38093': 8.89} MB
+2025-11-03 15:25:57 INFO  pyspark-shell:244 - >>>>> spark_df_parquet dataframe:
    FL_DATE OP_CARRIER  OP_CARRIER_FL_NUM ORIGIN ORIGIN_CITY_NAME DEST DEST_CITY_NAME  CRS_DEP_TIME  DEP_TIME  WHEELS_ON  TAXI_IN  CRS_ARR_TIME  ARR_TIME  CANCELLED  DISTANCE
 2000-01-01         DL               1451    BOS       Boston, MA  ATL    Atlanta, GA          1115    1113.0     1343.0      5.0          1400    1348.0          0       946
 2000-01-01         DL               1479    BOS       Boston, MA  ATL    Atlanta, GA          1315    1311.0     1536.0      7.0          1559    1543.0          0       946
@@ -28,36 +28,36 @@
 2000-01-01         DL               1289    CAE     Columbia, SC  ATL    Atlanta, GA          1515    1514.0     1619.0      9.0          1633    1628.0          0       191
 2000-01-01         DL               1518    CAE     Columbia, SC  ATL    Atlanta, GA          1735    1737.0     1844.0      7.0          1852    1851.0          0       191
 2000-01-01         DL               1519    CAE     Columbia, SC  ATL    Atlanta, GA           720     720.0      811.0     10.0           818     821.0          0       191
-2025-11-03 14:26:36 INFO  pyspark-shell:244 - [[flight_data, spark_catalog, [airline_db], null, MANAGED, false]]
-2025-11-03 14:26:36 INFO  pyspark-shell:244 - 
+2025-11-03 15:26:02 INFO  pyspark-shell:244 - [[flight_data, spark_catalog, [airline_db], null, MANAGED, false]]
+2025-11-03 15:26:03 INFO  pyspark-shell:244 - 
 First 24 records from table 'flight_data':
-+----------+----------+-----------------+------+----------------+----+--------------+------------+--------+---------+-------+------------+--------+---------+--------+
-|FL_DATE   |OP_CARRIER|OP_CARRIER_FL_NUM|ORIGIN|ORIGIN_CITY_NAME|DEST|DEST_CITY_NAME|CRS_DEP_TIME|DEP_TIME|WHEELS_ON|TAXI_IN|CRS_ARR_TIME|ARR_TIME|CANCELLED|DISTANCE|
-+----------+----------+-----------------+------+----------------+----+--------------+------------+--------+---------+-------+------------+--------+---------+--------+
-|2000-01-01|DL        |1451             |BOS   |Boston, MA      |ATL |Atlanta, GA   |1115        |1113    |1343     |5      |1400        |1348    |0        |946     |
-|2000-01-01|DL        |1479             |BOS   |Boston, MA      |ATL |Atlanta, GA   |1315        |1311    |1536     |7      |1559        |1543    |0        |946     |
-|2000-01-01|DL        |1857             |BOS   |Boston, MA      |ATL |Atlanta, GA   |1415        |1414    |1642     |9      |1721        |1651    |0        |946     |
-|2000-01-01|DL        |1997             |BOS   |Boston, MA      |ATL |Atlanta, GA   |1715        |1720    |1955     |10     |2013        |2005    |0        |946     |
-|2000-01-01|DL        |2065             |BOS   |Boston, MA      |ATL |Atlanta, GA   |2015        |2010    |2230     |10     |2300        |2240    |0        |946     |
-|2000-01-01|US        |2619             |BOS   |Boston, MA      |ATL |Atlanta, GA   |650         |649     |956      |7      |955         |1003    |0        |946     |
-|2000-01-01|US        |2621             |BOS   |Boston, MA      |ATL |Atlanta, GA   |1440        |1446    |1713     |4      |1738        |1717    |0        |946     |
-|2000-01-01|DL        |346              |BTR   |Baton Rouge, LA |ATL |Atlanta, GA   |1740        |1744    |1957     |9      |2008        |2006    |0        |449     |
-|2000-01-01|DL        |412              |BTR   |Baton Rouge, LA |ATL |Atlanta, GA   |1345        |1345    |1552     |9      |1622        |1601    |0        |449     |
-|2000-01-01|DL        |299              |BUF   |Buffalo, NY     |ATL |Atlanta, GA   |1245        |1245    |1443     |5      |1455        |1448    |0        |712     |
-|2000-01-01|DL        |495              |BUF   |Buffalo, NY     |ATL |Atlanta, GA   |2035        |2035    |2226     |9      |2241        |2235    |0        |712     |
-|2000-01-01|DL        |677              |BUF   |Buffalo, NY     |ATL |Atlanta, GA   |710         |710     |940      |7      |925         |947     |0        |712     |
-|2000-01-01|DL        |251              |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |2040        |2100    |2235     |7      |2233        |2242    |0        |576     |
-|2000-01-01|DL        |1003             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |1635        |1838    |2020     |12     |1832        |2032    |0        |576     |
-|2000-01-01|DL        |1501             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |1430        |1435    |1623     |12     |1634        |1635    |0        |576     |
-|2000-01-01|DL        |1907             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |530         |530     |716      |4      |723         |720     |0        |576     |
-|2000-01-01|DL        |2063             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |1250        |NULL    |NULL     |NULL   |1449        |NULL    |1        |576     |
-|2000-01-01|DL        |2111             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |1845        |1855    |2041     |9      |2046        |2050    |0        |576     |
-|2000-01-01|US        |2632             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |710         |710     |NULL     |NULL   |905         |NULL    |0        |576     |
-|2000-01-01|US        |2967             |BWI   |Baltimore, MD   |ATL |Atlanta, GA   |1700        |1700    |1845     |6      |1853        |1851    |0        |576     |
-|2000-01-01|DL        |540              |CAE   |Columbia, SC    |ATL |Atlanta, GA   |955         |952     |1052     |5      |1104        |1057    |0        |191     |
-|2000-01-01|DL        |544              |CAE   |Columbia, SC    |ATL |Atlanta, GA   |2130        |2125    |2208     |10     |2232        |2218    |0        |191     |
-|2000-01-01|DL        |1289             |CAE   |Columbia, SC    |ATL |Atlanta, GA   |1515        |1514    |1619     |9      |1633        |1628    |0        |191     |
-|2000-01-01|DL        |1518             |CAE   |Columbia, SC    |ATL |Atlanta, GA   |1735        |1737    |1844     |7      |1852        |1851    |0        |191     |
-+----------+----------+-----------------+------+----------------+----+--------------+------------+--------+---------+-------+------------+--------+---------+--------+
++----------+----------+-----------------+------+----------------+----+---------------------+------------+--------+---------+-------+------------+--------+---------+--------+
+|FL_DATE   |OP_CARRIER|OP_CARRIER_FL_NUM|ORIGIN|ORIGIN_CITY_NAME|DEST|DEST_CITY_NAME       |CRS_DEP_TIME|DEP_TIME|WHEELS_ON|TAXI_IN|CRS_ARR_TIME|ARR_TIME|CANCELLED|DISTANCE|
++----------+----------+-----------------+------+----------------+----+---------------------+------------+--------+---------+-------+------------+--------+---------+--------+
+|2000-01-01|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |752     |920      |14     |949         |934     |0        |927     |
+|2000-01-01|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1843    |2025     |8      |2045        |2033    |0        |927     |
+|2000-01-01|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1258    |1429     |9      |1454        |1438    |0        |927     |
+|2000-01-02|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |753     |935      |12     |949         |947     |0        |927     |
+|2000-01-02|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1847    |2028     |8      |2045        |2036    |0        |927     |
+|2000-01-02|AA        |1617             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|635         |632     |815      |7      |825         |822     |0        |927     |
+|2000-01-02|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1258    |1445     |8      |1454        |1453    |0        |927     |
+|2000-01-03|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |758     |948      |11     |949         |959     |0        |927     |
+|2000-01-03|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1848    |2056     |6      |2045        |2102    |0        |927     |
+|2000-01-03|AA        |1617             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|635         |632     |835      |7      |825         |842     |0        |927     |
+|2000-01-03|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1302    |1533     |9      |1454        |1542    |0        |927     |
+|2000-01-04|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |755     |937      |9      |949         |946     |0        |927     |
+|2000-01-04|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1847    |2025     |7      |2045        |2032    |0        |927     |
+|2000-01-04|AA        |1617             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|635         |631     |831      |5      |825         |836     |0        |927     |
+|2000-01-04|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1258    |1438     |6      |1454        |1444    |0        |927     |
+|2000-01-05|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |757     |934      |10     |949         |944     |0        |927     |
+|2000-01-05|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1845    |2016     |12     |2045        |2028    |0        |927     |
+|2000-01-05|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1300    |1429     |9      |1454        |1438    |0        |927     |
+|2000-01-05|AA        |1943             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|635         |633     |759      |13     |825         |812     |0        |927     |
+|2000-01-06|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |801     |936      |11     |949         |947     |0        |927     |
+|2000-01-06|AA        |1171             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1850        |1850    |2025     |7      |2045        |2032    |0        |927     |
+|2000-01-06|AA        |1807             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|1300        |1254    |1429     |13     |1454        |1442    |0        |927     |
+|2000-01-06|AA        |1943             |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|635         |634     |813      |9      |825         |822     |0        |927     |
+|2000-01-07|AA        |369              |CMH   |Columbus, OH    |DFW |Dallas/Fort Worth, TX|800         |755     |930      |7      |949         |937     |0        |927     |
++----------+----------+-----------------+------+----------------+----+---------------------+------------+--------+---------+-------+------------+--------+---------+--------+
 
-2025-11-03 14:26:36 INFO  pyspark-shell:244 - The number of records in table 'flight_data' => 470477
+2025-11-03 15:26:03 INFO  pyspark-shell:244 - The number of records in table 'flight_data' => 470477
