@@ -75,10 +75,18 @@ if __name__ == "__main__":
     sp_df_logger.log_df(spark_df=spark_df_parquet,spark_df_name="spark_df_parquet")
     """INGETING DATA FROM VARIOUS FILE FORMATS ENDS"""
 
+    """Import data from a log file (unstructured data) STARTS"""
+    # import data from a text file 
+    file_name = conf.get("file_name_text")
+    file_dir = os.path.join(dataset_dir,file_name)
+    logger.debug(f"file_name_json dir = {file_dir}")
+    spark_df_text = ingest_data.import_data_text(file_dir=file_dir,unstructured=False)
+    # log spark_df_parquet dataframe
+    sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
+    """Import data from a log file (unstructured data) ENDS"""
+
     """Data Transformation STARTS"""
-    df_t = DataFrameTransformations(spark)
-    
-    df_t.convert_to_date_type(spark_df=spark_df,date_format="M/d/y",col_name="EventDate")
+
     """Data Transformation ENDS"""
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>

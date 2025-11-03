@@ -55,6 +55,7 @@ class IngestData():
             return spark_df
         except Exception as e:
             self.logger.error(str(e))
+            raise
 
     def import_data_parquet(self,file_dir):
         try:
@@ -68,6 +69,21 @@ class IngestData():
             return spark_df
         except Exception as e:
             self.logger.error(str(e))
+            raise
+    
+    def import_data_text(self,file_dir,unstructured:bool=False):
+        try:
+            spark_df = (
+                self.spark_object
+                .read
+                .format("text")
+                .load(file_dir)
+            )
+            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir)
+            return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
 
     # utility methods
     def log_df_metrics(self,spark_df,file_dir):
