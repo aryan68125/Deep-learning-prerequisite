@@ -62,33 +62,34 @@ if __name__ == "__main__":
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
 
-    """INGETING DATA FROM VARIOUS FILE FORMATS STARTS"""
-    # The function must taken in file_dir csv file and then returns a spark dataFrame
-    # import data from a parquet file
-    ingest_data = IngestData(spark)
-    # import data from a parquet file
-    file_name = conf.get("file_name_parquet")
-    file_dir = os.path.join(dataset_dir,file_name)
-    logger.debug(f"file_name_json dir = {file_dir}")
-    spark_df_parquet = ingest_data.import_data_parquet(file_dir=file_dir)
-    # log spark_df_parquet dataframe
-    sp_df_logger.log_df(spark_df=spark_df_parquet,spark_df_name="spark_df_parquet")
-    """INGETING DATA FROM VARIOUS FILE FORMATS ENDS"""
-
     """Import data from a log file (unstructured data) STARTS"""
     # import data from a text file 
     file_name = conf.get("file_name_text")
     file_dir = os.path.join(dataset_dir,file_name)
     logger.debug(f"file_name_json dir = {file_dir}")
-    spark_df_text = ingest_data.import_data_text(file_dir=file_dir,unstructured=False)
+    ingest_data = IngestData(spark)
+    spark_df_text = ingest_data.import_data_text(file_dir=file_dir,unstructured=True)
     # log spark_df_parquet dataframe
     sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
     """Import data from a log file (unstructured data) ENDS"""
 
     """Data Transformation STARTS"""
+    df_t = DataFrameTransformations(spark)
 
+    # conver the string dataType datetime to timestamp datatype datetime
+    spark_df_text = df_t.convert_str_to_timestamp_type(spark_df=spark_df_text,col_name="date",spark_df_name="spark_df_text")
+    sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
+
+    # groupBy() rows based on referrer column
+    spark_df_text = df_t.groupby_referrer(spark_df=spark_df_text, col_name="referrer")
+    sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
     """Data Transformation ENDS"""
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
     spark.stop()
+
+
+
+
+    
