@@ -26,15 +26,14 @@ class DataFrameTransformations:
 
 
     """This methods onverts the column with dates in string datatype to date datatype"""
-    def convert_str_to_timestamp_type(self, spark_df, col_name,spark_df_name):
+    def convert_str_to_timestamp_type(self, spark_df, col_name,spark_df_name,time_stamp:bool=False):
         try:
             self.logger.debug(f"converting date columns from string datatype to timestamp datatype in dataFrame {spark_df_name}")
             # Apply Spark’s to_timestamp() with the exact format
-            if spark_df_name == "spark_df_text" and col_name=="date":
+            if time_stamp:
                 parsed_col = F.to_timestamp(F.col(col_name), "dd/MMM/yyyy:HH:mm:ss Z")
             else:
-                self.logger.error(f"You need to implement the rules to related to dataType conversion to date type from string type")
-                return None
+                parsed_col = F.to_date(F.col(col_name), "d/M/yyyy")
 
             result_df = spark_df.withColumn(col_name, parsed_col)
             self.log_df_metrics(result_df,operation_name="convert_str_to_timestamp_type")

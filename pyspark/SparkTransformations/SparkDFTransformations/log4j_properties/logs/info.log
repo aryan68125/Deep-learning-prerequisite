@@ -1,7 +1,7 @@
-2025-11-04 16:36:07 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-04 16:36:08 INFO  pyspark-shell:244 - import_data_text :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/apache_logs.txt dataset file
-2025-11-04 16:36:10 INFO  pyspark-shell:244 - import_data_text :: The memory taken by the spark dataFrame is = {'192.168.1.204:44051': 0.2} MB
-2025-11-04 16:36:10 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
+2025-11-04 17:28:22 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-04 17:28:23 INFO  pyspark-shell:244 - import_data_text :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/apache_logs.txt dataset file
+2025-11-04 17:28:25 INFO  pyspark-shell:244 - import_data_text :: The memory taken by the spark dataFrame is = {'192.168.1.204:45947': 0.2} MB
+2025-11-04 17:28:25 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
            ip                       date                                                                            request                                                                                                                                                                                                                                       referrer
  83.149.9.216 17/May/2015:10:05:03 +0000                   /presentations/logstash-monitorama-2013/images/kibana-search.png                                                                                                                                                                                http://semicomplete.com/presentations/logstash-monitorama-2013/
  83.149.9.216 17/May/2015:10:05:43 +0000               /presentations/logstash-monitorama-2013/images/kibana-dashboard3.png                                                                                                                                                                                http://semicomplete.com/presentations/logstash-monitorama-2013/
@@ -28,8 +28,8 @@
  83.149.9.216 17/May/2015:10:05:56 +0000                                                                       /favicon.ico                                                                                                                                                                                                                                              -
 24.236.252.67 17/May/2015:10:05:40 +0000                                                                       /favicon.ico                                                                                                                                                                                                                                              -
  93.114.45.13 17/May/2015:10:05:14 +0000                                                   /articles/dynamic-dns-with-dhcp/ http://www.google.ro/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCwQFjAB&url=http%3A%2F%2Fwww.semicomplete.com%2Farticles%2Fdynamic-dns-with-dhcp%2F&ei=W88AU4n9HOq60QXbv4GwBg&usg=AFQjCNEF1X4Rs52UYQyLiySTQxa97ozM4g&bvm=bv.61535280,d.d2k
-2025-11-04 16:36:11 INFO  pyspark-shell:244 - convert_str_to_timestamp_type :: The memory taken by the spark dataFrame is = {'192.168.1.204:44051': 0.36} MB
-2025-11-04 16:36:11 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
+2025-11-04 17:28:25 INFO  pyspark-shell:244 - convert_str_to_timestamp_type :: The memory taken by the spark dataFrame is = {'192.168.1.204:45947': 0.36} MB
+2025-11-04 17:28:25 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
            ip                date                                                                            request                                                                                                                                                                                                                                       referrer
  83.149.9.216 2015-05-17 15:35:03                   /presentations/logstash-monitorama-2013/images/kibana-search.png                                                                                                                                                                                http://semicomplete.com/presentations/logstash-monitorama-2013/
  83.149.9.216 2015-05-17 15:35:43               /presentations/logstash-monitorama-2013/images/kibana-dashboard3.png                                                                                                                                                                                http://semicomplete.com/presentations/logstash-monitorama-2013/
@@ -56,8 +56,8 @@
  83.149.9.216 2015-05-17 15:35:56                                                                       /favicon.ico                                                                                                                                                                                                                                              -
 24.236.252.67 2015-05-17 15:35:40                                                                       /favicon.ico                                                                                                                                                                                                                                              -
  93.114.45.13 2015-05-17 15:35:14                                                   /articles/dynamic-dns-with-dhcp/ http://www.google.ro/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0CCwQFjAB&url=http%3A%2F%2Fwww.semicomplete.com%2Farticles%2Fdynamic-dns-with-dhcp%2F&ei=W88AU4n9HOq60QXbv4GwBg&usg=AFQjCNEF1X4Rs52UYQyLiySTQxa97ozM4g&bvm=bv.61535280,d.d2k
-2025-11-04 16:36:12 INFO  pyspark-shell:244 - groupby_referrer :: The memory taken by the spark dataFrame is = {'192.168.1.204:44051': 0.36} MB
-2025-11-04 16:36:12 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
+2025-11-04 17:28:26 INFO  pyspark-shell:244 - groupby_referrer :: The memory taken by the spark dataFrame is = {'192.168.1.204:45947': 0.36} MB
+2025-11-04 17:28:26 INFO  pyspark-shell:244 - >>>>> spark_df_text dataframe:
                      referrer  count
   http://www.semicomplete.com   3038
         http://www.google.com    123
@@ -84,9 +84,9 @@ http://unix.stackexchange.com      8
     http://kufli.blogspot.com     10
          http://www.google.es     25
      http://www.google.com.gt      1
-2025-11-04 16:36:12 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/flight-time.csv dataset file
-2025-11-04 16:36:14 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:44051': 9.31} MB
-2025-11-04 16:36:14 INFO  pyspark-shell:244 - >>>>> spark_df_csv dataframe:
+2025-11-04 17:28:26 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/flight-time.csv dataset file
+2025-11-04 17:28:28 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:45947': 9.31} MB
+2025-11-04 17:28:28 INFO  pyspark-shell:244 - >>>>> spark_df_csv dataframe:
    FL_DATE OP_CARRIER  OP_CARRIER_FL_NUM ORIGIN ORIGIN_CITY_NAME DEST DEST_CITY_NAME  CRS_DEP_TIME  DEP_TIME  WHEELS_ON  TAXI_IN  CRS_ARR_TIME  ARR_TIME  CANCELLED  DISTANCE
 2000-01-01         DL               1451    BOS       Boston, MA  ATL    Atlanta, GA          1115    1113.0     1343.0      5.0          1400    1348.0          0       946
 2000-01-01         DL               1479    BOS       Boston, MA  ATL    Atlanta, GA          1315    1311.0     1536.0      7.0          1559    1543.0          0       946
@@ -113,7 +113,7 @@ http://unix.stackexchange.com      8
 2000-01-01         DL               1289    CAE     Columbia, SC  ATL    Atlanta, GA          1515    1514.0     1619.0      9.0          1633    1628.0          0       191
 2000-01-01         DL               1518    CAE     Columbia, SC  ATL    Atlanta, GA          1735    1737.0     1844.0      7.0          1852    1851.0          0       191
 2000-01-01         DL               1519    CAE     Columbia, SC  ATL    Atlanta, GA           720     720.0      811.0     10.0           818     821.0          0       191
-2025-11-04 16:36:15 INFO  pyspark-shell:244 - >>>>> spark_df_selected_col dataframe:
+2025-11-04 17:28:29 INFO  pyspark-shell:244 - >>>>> spark_df_selected_col dataframe:
    FL_DATE  CANCELLED  DISTANCE  CANCELLED
 2000-01-01      False       946      False
 2000-01-01      False       946      False
@@ -140,7 +140,7 @@ http://unix.stackexchange.com      8
 2000-01-01      False       191      False
 2000-01-01      False       191      False
 2000-01-01      False       191      False
-2025-11-04 16:36:15 INFO  pyspark-shell:244 - >>>>> spark_df_selected_col dataframe:
+2025-11-04 17:28:29 INFO  pyspark-shell:244 - >>>>> spark_df_selected_col dataframe:
    FL_DATE ORIGIN_CITY_NAME DEST_CITY_NAME  DISTANCE DISTANCE_KM
 2000-01-01       Boston, MA    Atlanta, GA       946 1522.439424
 2000-01-01       Boston, MA    Atlanta, GA       946 1522.439424
@@ -167,7 +167,7 @@ http://unix.stackexchange.com      8
 2000-01-01     Columbia, SC    Atlanta, GA       191  307.384704
 2000-01-01     Columbia, SC    Atlanta, GA       191  307.384704
 2000-01-01     Columbia, SC    Atlanta, GA       191  307.384704
-2025-11-04 16:36:15 INFO  pyspark-shell:244 - >>>>> spark_df_cancelled_col_bool dataframe:
+2025-11-04 17:28:29 INFO  pyspark-shell:244 - >>>>> spark_df_cancelled_col_bool dataframe:
    FL_DATE ORIGIN_CITY_NAME DEST_CITY_NAME  DISTANCE  CANCELLED  CANCELLED
 2000-01-01       Boston, MA    Atlanta, GA       946      False      False
 2000-01-01       Boston, MA    Atlanta, GA       946      False      False

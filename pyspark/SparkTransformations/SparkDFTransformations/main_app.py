@@ -78,7 +78,7 @@ if __name__ == "__main__":
     df_t = DataFrameTransformations(spark)
 
     # conver the string dataType datetime to timestamp datatype datetime
-    spark_df_text = df_t.convert_str_to_timestamp_type(spark_df=spark_df_text,col_name="date",spark_df_name="spark_df_text")
+    spark_df_text = df_t.convert_str_to_timestamp_type(spark_df=spark_df_text,col_name="date",spark_df_name="spark_df_text",time_stamp=True)
     sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
 
     # groupBy() rows based on referrer column
