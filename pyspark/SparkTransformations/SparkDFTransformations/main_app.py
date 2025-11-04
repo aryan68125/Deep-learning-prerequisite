@@ -103,11 +103,27 @@ if __name__ == "__main__":
     df_t = DataFrameTransformations(spark)
 
     # select column from a dataFrame
-    spark_df_selected_col = df_t.select_col(spark_df=spark_df_csv,saprk_df_name="spark_df_csv",col_list=["FL_DATE","ORIGIN_CITY_NAME", "DEST_CITY_NAME", "DISTANCE"])
+    spark_df_bool = df_t.select_col(
+        spark_df=spark_df_csv,
+        saprk_df_name="spark_df_csv",
+        col_list=["FL_DATE", "CANCELLED", "DISTANCE"],
+        convert_to_bool_col_name="CANCELLED"
+        )
+    # log spark_df_csv dataframe
+    sp_df_logger.log_df(spark_df=spark_df_bool,spark_df_name="spark_df_selected_col")
+    sp_df_logger.log_df_metrics(spark_df=spark_df_bool, spark_df_name="spark_df_selected_col")
 
+    # Convert miles to km
+    spark_df_selected_col = df_t.select_col(spark_df=spark_df_csv,saprk_df_name="spark_df_csv",col_list=["FL_DATE","ORIGIN_CITY_NAME", "DEST_CITY_NAME", "DISTANCE"],expr_str="DISTANCE * 1.609344 as DISTANCE_KM")
     # log spark_df_csv dataframe
     sp_df_logger.log_df(spark_df=spark_df_selected_col,spark_df_name="spark_df_selected_col")
     sp_df_logger.log_df_metrics(spark_df=spark_df_selected_col, spark_df_name="spark_df_selected_col")
+    
+    # Convert CANCELLED column data from integer 0 and 1 to True and False
+    spark_df_cancelled_col_bool = df_t.select_col(spark_df=spark_df_csv,saprk_df_name="spark_df_csv",col_list=["FL_DATE","ORIGIN_CITY_NAME", "DEST_CITY_NAME", "DISTANCE","CANCELLED"],convert_to_bool_col_name="CANCELLED")
+    # log spark_df_csv dataframe
+    sp_df_logger.log_df(spark_df=spark_df_cancelled_col_bool,spark_df_name="spark_df_cancelled_col_bool")
+    sp_df_logger.log_df_metrics(spark_df=spark_df_cancelled_col_bool, spark_df_name="spark_df_cancelled_col_bool")
     """Transformation ENDS"""
     # Working with dataFrame columns ENDS
     

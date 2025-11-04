@@ -12,6 +12,8 @@ for p in sys.path[:5]:
 
 # import transformation related stuff
 from pyspark.sql import functions as F
+from pyspark.sql.types import BooleanType
+from pyspark.sql.functions import udf
 # import logging related stuff
 from lib.logger import Log4j
 from lib.app_monitor import GetDataFrameMemory
@@ -66,10 +68,19 @@ class DataFrameTransformations:
             raise
 
     """This method will select the columns based on column_name"""
-    def select_col(self,spark_df, saprk_df_name:str = "",col_list:list = []):
+    def select_col(self,spark_df, saprk_df_name:str = "",col_list:list = [], expr_str:str="",convert_to_bool_col_name:str=""):
         try:
-            if len(col_list):
+            if len(col_list) and not expr_str and not convert_to_bool_col_name:
                 return spark_df.select(*col_list)
+            elif len(col_list) and expr_str and not convert_to_bool_col_name:
+                return spark_df.select(*col_list, F.expr(expr_str))
+            elif len(col_list) and not expr_str and convert_to_bool_col_name:
+                bool_udf = udf(self.bool_parser, BooleanType())
+                result_df = spark_df.withColumn(
+                    convert_to_bool_col_name,
+                    bool_udf(F.col(convert_to_bool_col_name))
+                )
+                return result_df.select(*col_list, convert_to_bool_col_name)
             else:
                 self.logger.error(f"column list cannot be empty! you need column names to be able to select columns from {saprk_df_name} dataFrame")
                 raise ValueError(f"column list cannot be empty! you need column names to be able to select columns from {saprk_df_name} dataFrame")
@@ -78,6 +89,15 @@ class DataFrameTransformations:
             raise
 
     # utility methods
+    @staticmethod
+    def bool_parser(bool_val):
+        if bool_val in (1, "1", True):
+            return True
+        elif bool_val in (0, "0", False):
+            return False
+        else:
+            raise ValueError("Numbers 1 and 0 are the only one that can be converted to boolean type boolean conversion for numbers other than this is not possible!")
+
     def log_df_metrics(self,spark_df,operation_name):
         self.logger.info(f"{operation_name} :: The memory taken by the spark dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
         schema_str = spark_df._jdf.schema().treeString()
