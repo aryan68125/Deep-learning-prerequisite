@@ -28,13 +28,17 @@ class DataFrameTransformations:
         try:
             self.logger.debug(f"converting date columns from string datatype to timestamp datatype in dataFrame {spark_df_name}")
             # Apply Spark’s to_timestamp() with the exact format
-            parsed_col = F.to_timestamp(F.col(col_name), "dd/MMM/yyyy:HH:mm:ss Z")
+            if spark_df_name == "spark_df_text" and col_name=="date":
+                parsed_col = F.to_timestamp(F.col(col_name), "dd/MMM/yyyy:HH:mm:ss Z")
+            else:
+                self.logger.error(f"You need to implement the rules to related to dataType conversion to date type from string type")
+                return None
 
             result_df = spark_df.withColumn(col_name, parsed_col)
             self.log_df_metrics(result_df,operation_name="convert_str_to_timestamp_type")
             return result_df
         except Exception as e:
-            self.logger(str(e))
+            self.logger.error(str(e))
             raise
     
     """this method groups the data based on referrer"""
@@ -58,9 +62,21 @@ class DataFrameTransformations:
             self.log_df_metrics(result_df,operation_name="groupby_referrer")
             return result_df
         except Exception as e:
-            self.logger(str(e))
+            self.logger.error(str(e))
             raise
-    
+
+    """This method will select the columns based on column_name"""
+    def select_col(self,spark_df, saprk_df_name:str = "",col_list:list = []):
+        try:
+            if len(col_list):
+                return spark_df.select(*col_list)
+            else:
+                self.logger.error(f"column list cannot be empty! you need column names to be able to select columns from {saprk_df_name} dataFrame")
+                raise ValueError(f"column list cannot be empty! you need column names to be able to select columns from {saprk_df_name} dataFrame")
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+
     # utility methods
     def log_df_metrics(self,spark_df,operation_name):
         self.logger.info(f"{operation_name} :: The memory taken by the spark dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")

@@ -25,5 +25,10 @@ class LogSparkDataframe:
     def __init__(self,spark):
         self.sp = spark
         self.logger = Log4j(spark)
+    # This will log the dataframe
     def log_df(self,spark_df,spark_df_name):
         self.logger.info(f">>>>> {spark_df_name} dataframe:\n{spark_df.limit(25).toPandas().to_string(index=False)}")
+    # This will log the database schema
+    def log_df_metrics(self,spark_df,spark_df_name):
+        schema_str = spark_df._jdf.schema().treeString()
+        self.logger.debug(f"{spark_df_name} :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): {schema_str}")

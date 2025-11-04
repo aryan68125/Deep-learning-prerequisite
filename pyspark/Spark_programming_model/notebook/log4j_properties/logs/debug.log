@@ -11525,3 +11525,9 @@ ResultQueryStage 1
 2025-10-31 10:51:27 INFO  BlockManagerMaster:184 - BlockManagerMaster stopped
 2025-10-31 10:51:27 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:184 - OutputCommitCoordinator stopped!
 2025-10-31 10:51:27 INFO  SparkContext:184 - Successfully stopped SparkContext
+2025-11-04 14:39:50 DEBUG PythonGatewayServer:204 - Exiting due to broken pipe from Python driver
+2025-11-04 14:39:50 INFO  ShutdownHookManager:184 - Shutdown hook called
+2025-11-04 14:39:50 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-5faa9f57-9e96-4cf3-b9bf-3690835f5c16
+2025-11-04 14:39:50 INFO  ShutdownHookManager:190 - Deleting directory /tmp/artifacts-75100758-a9fd-4227-b6ec-8c212611c7fb
+2025-11-04 14:39:50 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-3a8b04f3-a33e-492c-888c-eb8b7fecaf46/pyspark-432eb18a-02cc-4415-8aab-ee673225c15c
+2025-11-04 14:39:50 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-3a8b04f3-a33e-492c-888c-eb8b7fecaf46

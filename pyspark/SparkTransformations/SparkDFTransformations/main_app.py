@@ -62,6 +62,7 @@ if __name__ == "__main__":
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
 
+    # Simulating unstructured data ingested from apache server logs STARTS
     """Import data from a log file (unstructured data) STARTS"""
     # import data from a text file 
     file_name = conf.get("file_name_text")
@@ -84,7 +85,32 @@ if __name__ == "__main__":
     spark_df_text = df_t.groupby_referrer(spark_df=spark_df_text, col_name="referrer")
     sp_df_logger.log_df(spark_df=spark_df_text,spark_df_name="spark_df_text")
     """Data Transformation ENDS"""
+    # Simulating unstructured data ingested from apache server logs ENDS
 
+    # Working with dataFrame columns STARTS
+    """Import data from a paraquet file STARTS"""
+    # import data from a text file 
+    file_name = conf.get("file_name_csv")
+    file_dir = os.path.join(dataset_dir,file_name)
+    logger.debug(f"file_name_json dir = {file_dir}")
+    ingest_data = IngestData(spark)
+    spark_df_csv = ingest_data.import_data_csv(file_dir=file_dir)
+    # log spark_df_csv dataframe
+    sp_df_logger.log_df(spark_df=spark_df_csv,spark_df_name="spark_df_csv")
+    """Import data from a paraquet file ENDS"""
+
+    """Transformation STARTS"""
+    df_t = DataFrameTransformations(spark)
+
+    # select column from a dataFrame
+    spark_df_selected_col = df_t.select_col(spark_df=spark_df_csv,saprk_df_name="spark_df_csv",col_list=["FL_DATE","ORIGIN_CITY_NAME", "DEST_CITY_NAME", "DISTANCE"])
+
+    # log spark_df_csv dataframe
+    sp_df_logger.log_df(spark_df=spark_df_selected_col,spark_df_name="spark_df_selected_col")
+    sp_df_logger.log_df_metrics(spark_df=spark_df_selected_col, spark_df_name="spark_df_selected_col")
+    """Transformation ENDS"""
+    # Working with dataFrame columns ENDS
+    
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
     spark.stop()
