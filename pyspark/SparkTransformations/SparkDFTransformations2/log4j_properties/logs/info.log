@@ -1,22 +1,28 @@
-2025-11-05 13:17:04 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-05 13:17:07 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
+2025-11-05 13:54:48 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-05 13:54:50 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
      name day month year
    Rollex  28     1 2002
 Ballistic  23     5   81
   Shotgun  12    12    6
 Ballistic  23     5   81
 Artillery   7     8   63
-2025-11-05 13:17:07 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
+2025-11-05 13:54:51 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
      name day month year          id
    Rollex  28     1 2002           0
 Ballistic  23     5   81           1
   Shotgun  12    12    6  8589934592
 Ballistic  23     5   81 17179869184
 Artillery   7     8   63 17179869185
-2025-11-05 13:17:07 INFO  pyspark-shell:244 - >>>>> processed_date_df dataframe:
-     name day month  year          id
-   Rollex  28     1  2002           0
-Ballistic  23     5  1981           1
-  Shotgun  12    12  2006  8589934592
-Ballistic  23     5  1981 17179869184
-Artillery   7     8  1963 17179869185
+2025-11-05 13:54:51 INFO  pyspark-shell:244 - >>>>> processed_date_df dataframe:
+     name          id        dob
+   Rollex           0 2002-01-28
+Ballistic           1 1981-05-23
+  Shotgun  8589934592 2006-12-12
+Ballistic 17179869184 1981-05-23
+Artillery 17179869185 1963-08-07
+2025-11-05 13:54:52 INFO  pyspark-shell:244 - >>>>> processed_duplicate_df dataframe:
+     name          id        dob
+   Rollex           0 2002-01-28
+Ballistic           1 1981-05-23
+  Shotgun  8589934592 2006-12-12
+Artillery 17179869185 1963-08-07

@@ -88,10 +88,16 @@ if __name__ == "__main__":
     sp_df_logger.log_df_metrics(spark_df=generated_df,spark_df_name="generated_df")
 
     # process date and make all the inconsitent two digit and three digit year into 4 digit year
-    processed_date_df = df_t.process_date_col_year(spark_df=generated_df,col_name="year")
+    processed_date_df = df_t.process_date_col_year(spark_df=generated_df,col_name="year",combine_date=True)
     # log the output dataframe
     sp_df_logger.log_df(spark_df=processed_date_df,spark_df_name="processed_date_df")
     sp_df_logger.log_df_metrics(spark_df=processed_date_df,spark_df_name="processed_date_df")
+
+    # process duplicate data in the dataFrame
+    processed_duplicate_df = df_t.drop_duplicate_rows(spark_df=processed_date_df,col_name_list=["name","dob"])
+    # log the output dataframe
+    sp_df_logger.log_df(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
+    sp_df_logger.log_df_metrics(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
     """Transformation ENDS"""
     
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>

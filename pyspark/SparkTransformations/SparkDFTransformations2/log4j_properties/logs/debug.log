@@ -1,27 +1,34 @@
-2025-11-05 13:17:04 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/log4j_properties/log4j.properties
-2025-11-05 13:17:04 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/log4j_properties/logs
-2025-11-05 13:17:04 DEBUG pyspark-shell:244 - log dir exists = True
-2025-11-05 13:17:04 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
-2025-11-05 13:17:04 DEBUG pyspark-shell:244 - supplied data_list found : [('Rollex', '28', '1', '2002'), ('Ballistic', '23', '5', '81'), ('Shotgun', '12', '12', '6'), ('Artillery', '7', '8', '63'), ('Ballistic', '23', '5', '81')]
-2025-11-05 13:17:07 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:41423': (434.4, 434.38)} MB
-2025-11-05 13:17:07 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:41423': 0.02} MB
-2025-11-05 13:17:07 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 13:54:48 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/log4j_properties/log4j.properties
+2025-11-05 13:54:48 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/log4j_properties/logs
+2025-11-05 13:54:48 DEBUG pyspark-shell:244 - log dir exists = True
+2025-11-05 13:54:48 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
+2025-11-05 13:54:48 DEBUG pyspark-shell:244 - supplied data_list found : [('Rollex', '28', '1', '2002'), ('Ballistic', '23', '5', '81'), ('Shotgun', '12', '12', '6'), ('Artillery', '7', '8', '63'), ('Ballistic', '23', '5', '81')]
+2025-11-05 13:54:50 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38899': (434.4, 434.39)} MB
+2025-11-05 13:54:50 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38899': 0.01} MB
+2025-11-05 13:54:50 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- name: string (nullable = true)
  |-- day: string (nullable = true)
  |-- month: string (nullable = true)
  |-- year: string (nullable = true)
 
-2025-11-05 13:17:07 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 13:54:51 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- name: string (nullable = true)
  |-- day: string (nullable = true)
  |-- month: string (nullable = true)
  |-- year: string (nullable = true)
  |-- id: long (nullable = false)
 
-2025-11-05 13:17:07 DEBUG pyspark-shell:244 - processed_date_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 13:54:51 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38899': (434.4, 434.39)} MB
+2025-11-05 13:54:51 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38899': 0.01} MB
+2025-11-05 13:54:51 DEBUG pyspark-shell:244 - processed_date_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- name: string (nullable = true)
- |-- day: string (nullable = true)
- |-- month: string (nullable = true)
- |-- year: long (nullable = true)
  |-- id: long (nullable = false)
+ |-- dob: date (nullable = true)
+
+2025-11-05 13:54:52 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38899': (434.4, 434.39)} MB
+2025-11-05 13:54:52 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38899': 0.01} MB
+2025-11-05 13:54:52 DEBUG pyspark-shell:244 - processed_duplicate_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+ |-- name: string (nullable = true)
+ |-- id: long (nullable = false)
+ |-- dob: date (nullable = true)
 

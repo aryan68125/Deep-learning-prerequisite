@@ -19,11 +19,15 @@ from pyspark.sql.functions import udf
 from lib.logger import Log4j
 from lib.app_monitor import GetDataFrameMemory
 
+# import typing 
+from typing import List
+
 class DataFrameTransformations:
     def __init__(self,spark):
         self.spark_object = spark
         self.logger = Log4j(spark)
         self.metrics = GetDataFrameMemory(spark)
+        self.app_metrics = GetDataFrameMemory(spark)
 
     # dataFrame transformation methods here
     def create_unique_identifier(self,spark_df):
@@ -34,7 +38,7 @@ class DataFrameTransformations:
             self.logger.error(str(e))
             raise
     
-    def process_date_col_year(self,spark_df,col_name : str=None):
+    def process_date_col_year(self,spark_df,col_name : str=None, combine_date : bool = False):
         try:
             if not col_name or col_name == "":
                 self.logger.error("col_name cannot be empty or None!")
@@ -45,6 +49,21 @@ class DataFrameTransformations:
             else year
             end
             """))
+
+            if combine_date:
+                spark_df = spark_df.withColumn("dob",F.expr("""
+                    to_date(concat(day,'/',month,'/',year),'d/M/y')
+                """)).drop('day','month','year')
+            self.app_metrics.get_mem_usage(spark_df=spark_df)
+            return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+
+    def drop_duplicate_rows(self,spark_df,col_name_list:List[str]):
+        try:
+            spark_df = spark_df.dropDuplicates(col_name_list)
+            self.app_metrics.get_mem_usage(spark_df=spark_df)
             return spark_df
         except Exception as e:
             self.logger.error(str(e))
