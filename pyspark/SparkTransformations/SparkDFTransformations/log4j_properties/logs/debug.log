@@ -1,34 +1,34 @@
-2025-11-04 17:28:22 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/log4j_properties/log4j.properties
-2025-11-04 17:28:22 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/log4j_properties/logs
-2025-11-04 17:28:22 DEBUG pyspark-shell:244 - log dir exists = True
-2025-11-04 17:28:22 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/apache_logs.txt
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:45947': (434.4, 434.2)} MB
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:45947': 0.2} MB
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:33 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/log4j_properties/log4j.properties
+2025-11-05 08:54:33 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/log4j_properties/logs
+2025-11-05 08:54:33 DEBUG pyspark-shell:244 - log dir exists = True
+2025-11-05 08:54:33 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/apache_logs.txt
+2025-11-05 08:54:35 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:37411': (434.4, 434.2)} MB
+2025-11-05 08:54:35 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:37411': 0.2} MB
+2025-11-05 08:54:35 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- ip: string (nullable = true)
  |-- date: string (nullable = true)
  |-- request: string (nullable = true)
  |-- referrer: string (nullable = true)
 
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - converting date columns from string datatype to timestamp datatype in dataFrame spark_df_text
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:45947': (434.4, 434.04)} MB
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:45947': 0.36} MB
-2025-11-04 17:28:25 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:36 DEBUG pyspark-shell:244 - converting date columns from string datatype to timestamp datatype in dataFrame spark_df_text
+2025-11-05 08:54:36 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:37411': (434.4, 434.03)} MB
+2025-11-05 08:54:36 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:37411': 0.37} MB
+2025-11-05 08:54:36 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- ip: string (nullable = true)
  |-- date: timestamp (nullable = true)
  |-- request: string (nullable = true)
  |-- referrer: string (nullable = true)
 
-2025-11-04 17:28:26 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:45947': (434.4, 434.04)} MB
-2025-11-04 17:28:26 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:45947': 0.36} MB
-2025-11-04 17:28:26 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:37 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:37411': (434.4, 434.04)} MB
+2025-11-05 08:54:37 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:37411': 0.36} MB
+2025-11-05 08:54:37 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- referrer: string (nullable = true)
  |-- count: long (nullable = false)
 
-2025-11-04 17:28:26 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/flight-time.csv
-2025-11-04 17:28:28 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:45947': (434.4, 425.09)} MB
-2025-11-04 17:28:28 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:45947': 9.31} MB
-2025-11-04 17:28:28 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:37 DEBUG pyspark-shell:244 - file_name_json dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations/dataset/flight-time.csv
+2025-11-05 08:54:39 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:37411': (434.4, 425.09)} MB
+2025-11-05 08:54:39 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:37411': 9.31} MB
+2025-11-05 08:54:39 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- FL_DATE: date (nullable = true)
  |-- OP_CARRIER: string (nullable = true)
  |-- OP_CARRIER_FL_NUM: integer (nullable = true)
@@ -45,20 +45,20 @@
  |-- CANCELLED: integer (nullable = true)
  |-- DISTANCE: integer (nullable = true)
 
-2025-11-04 17:28:29 DEBUG pyspark-shell:244 - spark_df_selected_col :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:40 DEBUG pyspark-shell:244 - spark_df_selected_col :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- FL_DATE: date (nullable = true)
  |-- CANCELLED: boolean (nullable = true)
  |-- DISTANCE: integer (nullable = true)
  |-- CANCELLED: boolean (nullable = true)
 
-2025-11-04 17:28:29 DEBUG pyspark-shell:244 - spark_df_selected_col :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:40 DEBUG pyspark-shell:244 - spark_df_selected_col :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- FL_DATE: date (nullable = true)
  |-- ORIGIN_CITY_NAME: string (nullable = true)
  |-- DEST_CITY_NAME: string (nullable = true)
  |-- DISTANCE: integer (nullable = true)
  |-- DISTANCE_KM: decimal(18,6) (nullable = true)
 
-2025-11-04 17:28:29 DEBUG pyspark-shell:244 - spark_df_cancelled_col_bool :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-05 08:54:40 DEBUG pyspark-shell:244 - spark_df_cancelled_col_bool :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- FL_DATE: date (nullable = true)
  |-- ORIGIN_CITY_NAME: string (nullable = true)
  |-- DEST_CITY_NAME: string (nullable = true)
