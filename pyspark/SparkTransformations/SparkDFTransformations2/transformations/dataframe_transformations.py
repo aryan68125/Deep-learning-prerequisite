@@ -69,6 +69,22 @@ class DataFrameTransformations:
             self.logger.error(str(e))
             raise
 
+    def aggregation_operation(self,spark_df):
+        try:
+            spark_df = spark_df.selectExpr(
+                """
+                    count(*) `count`
+                """,
+                """
+                    count(StockCode) as `count field`
+                """,
+                """sum(Quantity) as TotalQuantity"""
+            )
+            return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+
     def log_df_metrics(self,spark_df,operation_name):
         self.logger.info(f"{operation_name} :: The memory taken by the spark dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
         schema_str = spark_df._jdf.schema().treeString()

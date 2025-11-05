@@ -5,45 +5,31 @@ class FlightSchemaMixin:
     """
     This method defines the spark dataFrame schema using Programmatical method
     """
-    def return_flight_df_schema(self):
-        flight_schema = StructType([
-            StructField("FL_DATE", DateType(), True),
-            StructField("OP_CARRIER", StringType(), True),
-            StructField("OP_CARRIER_FL_NUM", IntegerType(), True),
-            StructField("ORIGIN", StringType(), True),
-            StructField("ORIGIN_CITY_NAME", StringType(), True),
-            StructField("DEST", StringType(), True),
-            StructField("DEST_CITY_NAME", StringType(), True),
-            StructField("CRS_DEP_TIME", IntegerType(), True),
-            StructField("DEP_TIME", IntegerType(), True),
-            StructField("WHEELS_ON", IntegerType(), True),
-            StructField("TAXI_IN", IntegerType(), True),
-            StructField("CRS_ARR_TIME", IntegerType(), True),
-            StructField("ARR_TIME", IntegerType(), True),
-            StructField("CANCELLED", IntegerType(), True),
-            StructField("DISTANCE", IntegerType(), True)
+    def return_invoice_df_schema(self):
+        invoice_schema = StructType([
+            StructField("InvoiceNo", IntegerType(), True),
+            StructField("StockCode", StringType(), True),
+            StructField("Description", StringType(), True),
+            StructField("Quantity", IntegerType(), True),
+            StructField("InvoiceDate", StringType(), True),
+            StructField("UnitPrice", DoubleType(), True),
+            StructField("CustomerID", IntegerType(), True),
+            StructField("Country", StringType(), True)
         ])
-        return flight_schema
+        return invoice_schema
 
     """
     This method defines the spark dataFrame schema using DDL method
     """
-    def return_flight_schema_ddl(self):
-        flight_schema_ddl = """
-            FL_DATE DATE,
-            OP_CARRIER STRING,
-            OP_CARRIER_FL_NUM INT,
-            ORIGIN STRING,
-            ORIGIN_CITY_NAME STRING,
-            DEST STRING,
-            DEST_CITY_NAME STRING,
-            CRS_DEP_TIME INT,
-            DEP_TIME INT,
-            WHEELS_ON INT,
-            TAXI_IN INT,
-            CRS_ARR_TIME INT,
-            ARR_TIME INT,
-            CANCELLED INT,
-            DISTANCE INT
+    def return_invoice_schema_ddl(self):
+        invoice_schema_ddl = """
+            InvoiceNo INT,
+            StockCode STRING,
+            Description STRING,
+            Quantity INT,
+            InvoiceDate TIMESTAMP,
+            UnitPrice DOUBLE,
+            CustomerID INT,
+            Country STRING
         """
-        return flight_schema_ddl
+        return invoice_schema_ddl

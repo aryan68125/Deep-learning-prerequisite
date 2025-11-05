@@ -65,6 +65,9 @@ if __name__ == "__main__":
     logger.info("Reading the data from the directory")
     dataset_dir = os.path.join(project_dir,"dataset")
 
+    ######################################
+    # CREATE A DATAFRAME AND PERFORM TRANSFORAMTION ON IT STARTS
+    ######################################
     """Create DataFrame STARTS"""
     gen_df = GenerateDataFrame(spark)
     data_list = [
@@ -99,7 +102,37 @@ if __name__ == "__main__":
     sp_df_logger.log_df(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
     sp_df_logger.log_df_metrics(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
     """Transformation ENDS"""
-    
+    ######################################
+    # CREATE A DATAFRAME AND PERFORM TRANSFORAMTION ON IT ENDS
+    ######################################
+
+
+
+
+
+
+    ######################################
+    # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT STARTS
+    ######################################
+    """Ingest data STARTS"""
+    # get the file directory from where the data will be ingested 
+    file_dir = os.path.join(dataset_dir,"invoices.csv")
+    # initialize the ingest data class 
+    ingest_data = IngestData(spark)
+    spark_df =ingest_data.import_data_csv(file_dir=file_dir)
+    # log the output dataframe
+    sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df")
+    """Ingest data ENDS"""
+
+
+    """Perform aggregation operation on the dataFrame STARTS"""
+    aggregated_df = df_t.aggregation_operation(spark_df=spark_df)
+    sp_df_logger.log_df(spark_df=aggregated_df,spark_df_name="aggregated_df")
+    """Perform aggregation operation on the dataFrame ENDS"""
+    ######################################
+    # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT ENDS
+    ######################################
+
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
     spark.stop()

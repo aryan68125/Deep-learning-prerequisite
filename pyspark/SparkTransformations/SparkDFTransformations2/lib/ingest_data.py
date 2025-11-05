@@ -7,6 +7,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from pyspark.sql.functions import regexp_extract
+from pyspark.sql import functions as F
 
 from .logger import Log4j
 from .app_monitor import GetDataFrameMemory
@@ -31,84 +32,19 @@ class IngestData():
                     .format("csv")
                     .option("header","true")
                     # .option("inferschema","true")
-                    .schema(self.df_schema.return_flight_df_schema())
-                    # Set the mode for error if the schema don't match
-                    .option("mode","FAILFAST")
-                    # Set the date string format
-                    .option("dateFormat","M/d/y")
+                    .schema(self.df_schema.return_invoice_df_schema())
                     .load(file_dir)
             )
+            # handle the string dtype dates
+            spark_df=spark_df = spark_df.withColumn(
+                "InvoiceDate",
+                F.to_timestamp(F.regexp_replace("InvoiceDate", r"\.", ":"), "dd-MM-yyyy H:mm")
+            )
+
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_csv")
             return spark_df
         except Exception as e:
             self.logger.error(str(e))
-
-    def import_data_json(self,file_dir):
-        try:
-            spark_df = (
-                self.spark_object
-                .read
-                .format("json")
-                .schema(self.df_schema.return_flight_schema_ddl())
-                .option("dateFormat","M/d/y")
-                .load(file_dir)
-            )
-            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_json")
-            return spark_df
-        except Exception as e:
-            self.logger.error(str(e))
-            raise
-
-    def import_data_parquet(self,file_dir):
-        try:
-            spark_df = (
-                self.spark_object
-                .read
-                .format("parquet")
-                .load(file_dir)
-            )
-            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_parquet")
-            return spark_df
-        except Exception as e:
-            self.logger.error(str(e))
-            raise
-    
-    def import_data_text(self,file_dir,unstructured:bool=False):
-        try:
-            if not unstructured:
-                self.logger.debug("This is a work in progress the logic has not been implemented yet! \n If your data is unstructured in text format then I recommend using this mtehod with the flag unstructured set to True")
-                return None
-            # This regex is used to extract these data from the log text file
-            """
-            IP
-            client
-            datetime
-            cmd
-            request
-            protocol
-            status
-            bytes
-            referrer
-            userAgent
-            """
-            log_regex = r'^(\S+) (\S+) (\S+) \[([\w:/]+\s[+\-]\d{4})\] "(\S+) (\S+) (\S+)" (\d{3}) (\S+) "(\S+)" "([^"]*)'
-            file_df = (
-                self.spark_object
-                .read
-                .format("text")
-                .load(file_dir)
-            )
-            spark_df = file_df.select(
-                            regexp_extract('value',log_regex,1).alias("ip"),
-                            regexp_extract('value',log_regex,4).alias("date"),
-                            regexp_extract('value',log_regex,6).alias("request"),
-                            regexp_extract('value',log_regex,10).alias("referrer"),
-                        )
-            self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_text")
-            return spark_df
-        except Exception as e:
-            self.logger.error(str(e))
-            raise
 
     # utility methods
     def log_df_metrics(self,spark_df,file_dir,operation_name):

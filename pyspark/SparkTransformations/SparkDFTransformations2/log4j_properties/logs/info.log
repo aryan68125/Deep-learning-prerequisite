@@ -1,28 +1,60 @@
-2025-11-05 13:54:48 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-05 13:54:50 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
+2025-11-05 15:45:28 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-05 15:45:31 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
      name day month year
    Rollex  28     1 2002
 Ballistic  23     5   81
   Shotgun  12    12    6
 Ballistic  23     5   81
 Artillery   7     8   63
-2025-11-05 13:54:51 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
+2025-11-05 15:45:31 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
      name day month year          id
    Rollex  28     1 2002           0
 Ballistic  23     5   81           1
   Shotgun  12    12    6  8589934592
 Ballistic  23     5   81 17179869184
 Artillery   7     8   63 17179869185
-2025-11-05 13:54:51 INFO  pyspark-shell:244 - >>>>> processed_date_df dataframe:
+2025-11-05 15:45:32 INFO  pyspark-shell:244 - >>>>> processed_date_df dataframe:
      name          id        dob
    Rollex           0 2002-01-28
 Ballistic           1 1981-05-23
   Shotgun  8589934592 2006-12-12
 Ballistic 17179869184 1981-05-23
 Artillery 17179869185 1963-08-07
-2025-11-05 13:54:52 INFO  pyspark-shell:244 - >>>>> processed_duplicate_df dataframe:
+2025-11-05 15:45:32 INFO  pyspark-shell:244 - >>>>> processed_duplicate_df dataframe:
      name          id        dob
    Rollex           0 2002-01-28
 Ballistic           1 1981-05-23
   Shotgun  8589934592 2006-12-12
 Artillery 17179869185 1963-08-07
+2025-11-05 15:45:32 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/dataset/invoices.csv dataset file
+2025-11-05 15:45:35 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:45217': 7.3} MB
+2025-11-05 15:45:35 INFO  pyspark-shell:244 - >>>>> spark_df dataframe:
+ InvoiceNo StockCode                         Description  Quantity         InvoiceDate  UnitPrice  CustomerID        Country
+    536365      None  WHITE HANGING HEART T-LIGHT HOLDER         6 2010-12-01 08:26:00       2.55       17850 United Kingdom
+    536365     71053                 WHITE METAL LANTERN         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
+    536365    84406B      CREAM CUPID HEARTS COAT HANGER         8 2010-12-01 08:26:00       2.75       17850 United Kingdom
+    536365    84029G KNITTED UNION FLAG HOT WATER BOTTLE         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
+    536365    84029E      RED WOOLLY HOTTIE WHITE HEART.         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
+    536365     22752        SET 7 BABUSHKA NESTING BOXES         2 2010-12-01 08:26:00       7.65       17850 United Kingdom
+    536365     21730   GLASS STAR FROSTED T-LIGHT HOLDER         6 2010-12-01 08:26:00       4.25       17850 United Kingdom
+    536366     22633              HAND WARMER UNION JACK         6 2010-12-01 08:28:00       1.85       17850 United Kingdom
+    536366     22632           HAND WARMER RED POLKA DOT         6 2010-12-01 08:28:00       1.85       17850 United Kingdom
+    536367     84879       ASSORTED COLOUR BIRD ORNAMENT        32 2010-12-01 08:34:00       1.69       13047 United Kingdom
+    536367     22745          POPPY'S PLAYHOUSE BEDROOM          6 2010-12-01 08:34:00       2.10       13047 United Kingdom
+    536367     22748           POPPY'S PLAYHOUSE KITCHEN         6 2010-12-01 08:34:00       2.10       13047 United Kingdom
+    536367     22749   FELTCRAFT PRINCESS CHARLOTTE DOLL         8 2010-12-01 08:34:00       3.75       13047 United Kingdom
+    536367     22310             IVORY KNITTED MUG COSY          6 2010-12-01 08:34:00       1.65       13047 United Kingdom
+    536367     84969  BOX OF 6 ASSORTED COLOUR TEASPOONS         6 2010-12-01 08:34:00       4.25       13047 United Kingdom
+    536367     22623       BOX OF VINTAGE JIGSAW BLOCKS          3 2010-12-01 08:34:00       4.95       13047 United Kingdom
+    536367     22622      BOX OF VINTAGE ALPHABET BLOCKS         2 2010-12-01 08:34:00       9.95       13047 United Kingdom
+    536367     21754            HOME BUILDING BLOCK WORD         3 2010-12-01 08:34:00       5.95       13047 United Kingdom
+    536367     21755            LOVE BUILDING BLOCK WORD         3 2010-12-01 08:34:00       5.95       13047 United Kingdom
+    536367     21777         RECIPE BOX WITH METAL HEART         4 2010-12-01 08:34:00       7.95       13047 United Kingdom
+    536367     48187                 DOORMAT NEW ENGLAND         4 2010-12-01 08:34:00       7.95       13047 United Kingdom
+    536368     22960            JAM MAKING SET WITH JARS         6 2010-12-01 08:34:00       4.25       13047 United Kingdom
+    536368     22913         RED COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
+    536368     22912      YELLOW COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
+    536368     22914        BLUE COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
+2025-11-05 15:45:35 INFO  pyspark-shell:244 - >>>>> aggregated_df dataframe:
+ count  count field  TotalQuantity
+541909       541908        5176450
