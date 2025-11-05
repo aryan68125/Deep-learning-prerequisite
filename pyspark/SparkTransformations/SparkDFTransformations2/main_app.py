@@ -82,7 +82,10 @@ if __name__ == "__main__":
     """Create DataFrame ENDS""" 
 
     """Transformation STARTS"""
+    # initialize df transformation class
     df_t = DataFrameTransformations(spark)
+    # initialize df export class
+    df_exp = ExportSparkDataFrame(spark)
 
     # add a uniquely identifiable id for the rows
     generated_df = df_t.create_unique_identifier(spark_df=generated_df) 
@@ -126,8 +129,21 @@ if __name__ == "__main__":
 
 
     """Perform aggregation operation on the dataFrame STARTS"""
-    aggregated_df = df_t.aggregation_operation(spark_df=spark_df)
+    # performing simple aggregation
+    aggregated_df = df_t.simple_aggregation_operation(spark_df=spark_df)
     sp_df_logger.log_df(spark_df=aggregated_df,spark_df_name="aggregated_df")
+
+    # performing complex aggregation
+    complex_aggregated_df = df_t.complex_aggregation_operation(spark_df=spark_df)
+    sp_df_logger.log_df(spark_df=complex_aggregated_df,spark_df_name="complex_aggregated_df")
+
+    # performaing groupby "Country" and "WeekNumber" then perform aggregation operation on the dataFrame
+    result_df = df_t.group_by_country_agg(spark_df=spark_df)
+    logger.info('group the data based on "Country" and "WeekNumber" then perform aggregation operation on the dataFrame')
+    sp_df_logger.log_df(spark_df=result_df,spark_df_name="result_df")
+    # export this df in a paraquet file
+    output_path = os.path.join(project_dir,"export")
+    df_exp.export_df_parquet(spark_df=result_df,output_path=output_path)
     """Perform aggregation operation on the dataFrame ENDS"""
     ######################################
     # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT ENDS

@@ -1,12 +1,11 @@
 from lib.logger import Log4j
 class ExportSparkDataFrame:
-    def __init__(self,spark_df,spark):
-        self.spark_df = spark_df
+    def __init__(self,spark):
         self.logger = Log4j(spark)
-    def export_df_parquet(self,save_mode: str = "overwrite",output_path : str="",max_rec : int = 100):
+    def export_df_parquet(self,spark_df,save_mode: str = "overwrite",output_path : str="",max_rec : int = 100):
         try:
             (
-                self.spark_df.write
+                spark_df.write
                 .format("parquet")
                 .mode(save_mode)
                 .option("path",output_path)
@@ -18,10 +17,10 @@ class ExportSparkDataFrame:
             self.logger.error(str(e))
             raise
     
-    def export_df_avro(self,save_mode: str = "overwrite", output_path: str = ""):
+    def export_df_avro(self,spark_df,save_mode: str = "overwrite", output_path: str = ""):
         try:
             (
-                self.spark_df.write
+                spark_df.write
                 .format("avro")
                 .mode(save_mode)
                 .option("path",output_path)
@@ -32,10 +31,10 @@ class ExportSparkDataFrame:
             self.logger.error(str(e))
             raise
 
-    def export_df_json(self,save_mode : str = "overwrite", output_path : str = "",column_list : list = []):
+    def export_df_json(self,spark_df,save_mode : str = "overwrite", output_path : str = "",column_list : list = []):
         try:
             (
-                self.spark_df.write
+                spark_df.write
                 .format("json")
                 .mode(save_mode)
                 .option("path",output_path)

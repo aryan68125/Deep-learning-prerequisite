@@ -69,7 +69,7 @@ class DataFrameTransformations:
             self.logger.error(str(e))
             raise
 
-    def aggregation_operation(self,spark_df):
+    def simple_aggregation_operation(self,spark_df):
         try:
             spark_df = spark_df.selectExpr(
                 """
@@ -78,9 +78,52 @@ class DataFrameTransformations:
                 """
                     count(StockCode) as `count field`
                 """,
-                """sum(Quantity) as TotalQuantity"""
+                """sum(Quantity) as TotalQuantity""",
+                """avg(UnitPrice) as AverageUnitPrice"""
             )
             return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+    
+    def complex_aggregation_operation(self,spark_df):
+        try:
+            spark_df = (
+                spark_df
+                .groupBy("Country", "InvoiceNo")
+                .agg(
+                    F.sum("Quantity").alias("TotalQuantity"),
+                    F.round(F.sum(F.expr("Quantity * UnitPrice")),2).alias("InvoiceValue")
+                )
+        )
+            return spark_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+
+    def group_by_country_agg(self,spark_df):
+        try:
+            NumInvoice = F.countDistinct("InvoiceNo").alias("NumInvoice")
+            TotalQuantity = F.sum("Quantity").alias("TotalQuantity")
+            InvoiceValue = F.round(
+                F.sum(
+                    F.expr("Quantity * UnitPrice")
+                ),2
+            ).alias("InvoiceValue")
+            saprk_df = (
+                spark_df
+                .where("year(InvoiceDate) == 2010")
+                .withColumn("WeekNumber",F.weekofyear(
+                    F.col("InvoiceDate")
+                ))
+                .groupBy(
+                    "Country","WeekNumber"
+                )
+                .agg(
+                    NumInvoice, TotalQuantity, InvoiceValue
+                )
+            )
+            return saprk_df
         except Exception as e:
             self.logger.error(str(e))
             raise
