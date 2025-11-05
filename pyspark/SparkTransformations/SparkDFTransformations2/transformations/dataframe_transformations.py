@@ -19,6 +19,9 @@ from pyspark.sql.functions import udf
 from lib.logger import Log4j
 from lib.app_monitor import GetDataFrameMemory
 
+# import window for implementing window function
+from pyspark.sql.window import Window
+
 # import typing 
 from typing import List
 
@@ -124,6 +127,35 @@ class DataFrameTransformations:
                 )
             )
             return saprk_df
+        except Exception as e:
+            self.logger.error(str(e))
+            raise
+
+    def window_aggregation(self,spark_df):
+        try:
+            # Step 1: Add WeekNumber and per-row InvoiceValue
+            spark_df = (
+                spark_df
+                .withColumn("WeekNumber", F.weekofyear(F.col("InvoiceDate")))
+                .withColumn("InvoiceValue", F.round(F.col("Quantity") * F.col("UnitPrice"), 2))
+            )
+            # Step 2 : setting up the window function
+            running_total_window = (
+                    Window
+                    .partitionBy("Country")
+                    .orderBy("WeekNumber")
+                    .rowsBetween(Window.unboundedPreceding,Window.currentRow)
+                )
+            # Step 3 : perform window function operation on the dataFrame
+            spark_df = (
+                spark_df
+                .withColumn(
+                    "RunningTotal",
+                    (F.sum("InvoiceValue")
+                    .over(running_total_window))
+                )
+            )
+            return spark_df
         except Exception as e:
             self.logger.error(str(e))
             raise

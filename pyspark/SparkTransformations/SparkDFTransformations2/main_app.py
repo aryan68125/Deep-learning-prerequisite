@@ -144,6 +144,11 @@ if __name__ == "__main__":
     # export this df in a paraquet file
     output_path = os.path.join(project_dir,"export")
     df_exp.export_df_parquet(spark_df=result_df,output_path=output_path)
+
+    # Window aggregation implementation
+    result_df = df_t.window_aggregation(spark_df=spark_df)
+    logger.info("Performaing window aggregation on the dataFrame")
+    sp_df_logger.log_df(spark_df=result_df,spark_df_name="result_df")
     """Perform aggregation operation on the dataFrame ENDS"""
     ######################################
     # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT ENDS
