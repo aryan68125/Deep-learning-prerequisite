@@ -81,7 +81,17 @@ if __name__ == "__main__":
     """Transformation STARTS"""
     df_t = DataFrameTransformations(spark)
 
-    
+    # add a uniquely identifiable id for the rows
+    generated_df = df_t.create_unique_identifier(spark_df=generated_df) 
+    # log the output dataframe
+    sp_df_logger.log_df(spark_df=generated_df,spark_df_name="generated_df")
+    sp_df_logger.log_df_metrics(spark_df=generated_df,spark_df_name="generated_df")
+
+    # process date and make all the inconsitent two digit and three digit year into 4 digit year
+    processed_date_df = df_t.process_date_col_year(spark_df=generated_df,col_name="year")
+    # log the output dataframe
+    sp_df_logger.log_df(spark_df=processed_date_df,spark_df_name="processed_date_df")
+    sp_df_logger.log_df_metrics(spark_df=processed_date_df,spark_df_name="processed_date_df")
     """Transformation ENDS"""
     
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
