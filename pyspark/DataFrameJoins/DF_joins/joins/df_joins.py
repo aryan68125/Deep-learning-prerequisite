@@ -8,6 +8,7 @@ class DataFrameJoins:
         self.metrics = LogSparkDataframe(spark)
     def inner_join_df(self,left_df,right_df,join_expression):
         try:
+            # perform join operation
             result_df = left_df.join(right_df,join_expression,"inner")
             # logging memory taken by the df
             self.mem.get_mem_usage(result_df)
@@ -21,6 +22,7 @@ class DataFrameJoins:
     # left join is also called left outer join
     def left_join_df(self,left_df,right_df,join_expression):
         try:
+            # perform join operation
             result_df = left_df.join(right_df,join_expression,"left")
             # logging memory taken by the df
             self.mem.get_mem_usage(result_df)
@@ -34,6 +36,7 @@ class DataFrameJoins:
     # right join is also called right outer join
     def right_join_df(self,left_df,right_df,join_expression):
         try:
+            # perform join operation
             result_df = left_df.join(right_df,join_expression,"right")
             # logging memory taken by the df
             self.mem.get_mem_usage(result_df)
@@ -47,6 +50,7 @@ class DataFrameJoins:
     # here outer join is actually full outer join there is no difference between them
     def outer_join_df(self,left_df,right_df,join_expression):
         try:
+            # perform join operation
             result_df = left_df.join(right_df,join_expression,"outer")
             # logging memory taken by the df
             self.mem.get_mem_usage(result_df)

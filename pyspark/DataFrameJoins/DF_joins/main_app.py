@@ -115,27 +115,39 @@ if __name__ == "__main__":
     # initialize dataframe join classes 
     df_joins = DataFrameJoins(spark)
 
+    #  Handling column ambiguity 
+    product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
     # performing inner join opertion on the two dataFrames
-    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
-    inner_join_df = df_joins.inner_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    join_expression = generated_order_df.prod_id == product_renamed_df.prod_id2
+    inner_join_df = df_joins.inner_join_df(left_df=generated_order_df,right_df=product_renamed_df,join_expression=join_expression)
+    inner_join_df = inner_join_df.select("order_id","prod_id","unit_price","qty","prod_name","list_price","reorder_qty")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=inner_join_df,spark_df_name="inner_join_df")
 
+    #  Handling column ambiguity 
+    product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
     # performing left join operation on the two dataFrames
-    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
-    left_join_df = df_joins.left_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    join_expression = generated_order_df.prod_id == product_renamed_df.prod_id2
+    left_join_df = df_joins.left_join_df(left_df=generated_order_df,right_df=product_renamed_df,join_expression=join_expression)
+    left_join_df = left_join_df.select("order_id","prod_id","unit_price","qty","prod_name","list_price","reorder_qty")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=left_join_df,spark_df_name="left_join_df")
 
+    #  Handling column ambiguity 
+    product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
     # performing right join operation on the two dataframes
-    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
-    right_join_df = df_joins.right_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    join_expression = generated_order_df.prod_id == product_renamed_df.prod_id2
+    right_join_df = df_joins.right_join_df(left_df=generated_order_df,right_df=product_renamed_df,join_expression=join_expression)
+    right_join_df = right_join_df.select("order_id","prod_id","unit_price","qty","prod_name","list_price","reorder_qty")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=right_join_df,spark_df_name="right_join_df")
 
+    #  Handling column ambiguity 
+    product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
     # performing outer join operation on the two dataFrames
-    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
-    outer_join_df = df_joins.outer_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    join_expression = generated_order_df.prod_id == product_renamed_df.prod_id2
+    outer_join_df = df_joins.outer_join_df(left_df=generated_order_df,right_df=product_renamed_df,join_expression=join_expression)
+    outer_join_df = outer_join_df.select("order_id","prod_id","unit_price","qty","prod_name","list_price","reorder_qty")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=outer_join_df,spark_df_name="outer_join_df")
     """Join operation ENDS"""
