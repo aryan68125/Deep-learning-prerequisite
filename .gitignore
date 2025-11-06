@@ -3,3 +3,5 @@ pyspark/Introduction/dataset/*
 pyspark/Spark_sources_and_sinks/SparkSchemaDemo/dataset*
 pyspark/Spark_sources_and_sinks/SparkSqlTables/dataset/*
 pyspark/SparkTransformations/SparkSqlTables/dataset/*
+pyspark/DataFrameJoins/notebook/dataset*
+pyspark/DataFrameJoins/DF_joins/dataset/*
