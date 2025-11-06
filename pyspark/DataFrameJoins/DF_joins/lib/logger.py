@@ -30,5 +30,15 @@ class LogSparkDataframe:
         self.logger.info(f">>>>> {spark_df_name} dataframe:\n{spark_df.limit(25).toPandas().to_string(index=False)}")
     # This will log the database schema
     def log_df_metrics(self,spark_df,spark_df_name):
+        # log the dataFrame schema 
         schema_str = spark_df._jdf.schema().treeString()
         self.logger.debug(f"{spark_df_name} :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): {schema_str}")
+        # log the dataFrame partition
+        df_partition = spark_df.rdd.getNumPartitions()
+        if df_partition > 1:
+            self.logger.debug(f"{spark_df_name} has {df_partition} partitons")
+        elif df_partition == 1:
+            self.logger.debug(f"{spark_df_name} has {df_partition} partiton")
+        else:
+            self.logger.error(f"dataFrame partition not found!")
+    
