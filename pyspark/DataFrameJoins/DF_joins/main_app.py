@@ -164,6 +164,26 @@ if __name__ == "__main__":
     ######################################
 
 
+
+
+
+
+
+    ######################################
+    # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
+    ######################################
+    # initializing ingest data class 
+    ingest_data = IngestData(spark)
+    
+    # get the dataset directory
+    data_dir = os.path.join(project_dir,"dataset","d1")
+    spark_df1 = ingest_data.import_data_json(data_dir)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=spark_df1,spark_df_name="spark_df1")
+    ######################################
+    # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
+    ######################################
+
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
     spark.stop()

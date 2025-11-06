@@ -24,21 +24,24 @@ class IngestData():
         self.metrics = GetDataFrameMemory(spark)
         self.df_schema = FlightSchemaMixin()
 
-    def import_data_csv(self,file_dir):
+    def import_data_json(self,file_dir):
         try:
+            self.logger.debug("\n Reading data from the json file : Ingest data into dataFrame")
             spark_df = (
                     self.spark_object
                     .read
-                    .format("csv")
-                    .option("header","true")
-                    # .option("inferschema","true")
-                    .schema(self.df_schema.return_invoice_df_schema())
+                    .format("json")
+                    .schema(self.df_schema.return_flight_schema())
                     .load(file_dir)
             )
             # handle the string dtype dates
-            spark_df=spark_df = spark_df.withColumn(
-                "InvoiceDate",
-                F.to_timestamp(F.regexp_replace("InvoiceDate", r"\.", ":"), "dd-MM-yyyy H:mm")
+            spark_df = spark_df.withColumn(
+                "FL_DATE",
+                F.to_timestamp("FL_DATE", "M/d/yyyy")
+            )
+            spark_df = spark_df.withColumn(
+                "id",
+                F.expr("CAST(id AS BIGINT)")
             )
 
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_csv")
@@ -52,3 +55,11 @@ class IngestData():
         self.logger.info(f"{operation_name} :: The memory taken by the spark dataFrame is = {self.metrics.get_mem_usage(spark_df).get("mem")} MB")
         schema_str = spark_df._jdf.schema().treeString()
         self.logger.debug(f"Spark DataFrame Schema (expanded): {schema_str}")
+        # log the dataFrame partition
+        df_partition = spark_df.rdd.getNumPartitions()
+        if df_partition > 1:
+            self.logger.debug(f"dataFrame has {df_partition} partitons")
+        elif df_partition == 1:
+            self.logger.debug(f"dataFrame has {df_partition} partiton")
+        else:
+            self.logger.error(f"dataFrame partition not found!")
