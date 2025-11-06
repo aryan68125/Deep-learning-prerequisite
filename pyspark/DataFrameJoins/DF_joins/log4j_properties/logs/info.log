@@ -1,143 +1,66 @@
-2025-11-06 09:59:35 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-06 09:59:38 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
-     name day month year
-   Rollex  28     1 2002
-Ballistic  23     5   81
-  Shotgun  12    12    6
-Ballistic  23     5   81
-Artillery   7     8   63
-2025-11-06 09:59:38 INFO  pyspark-shell:244 - >>>>> generated_df dataframe:
-     name day month year          id
-   Rollex  28     1 2002           0
-Ballistic  23     5   81           1
-  Shotgun  12    12    6  8589934592
-Ballistic  23     5   81 17179869184
-Artillery   7     8   63 17179869185
-2025-11-06 09:59:39 INFO  pyspark-shell:244 - >>>>> processed_date_df dataframe:
-     name          id        dob
-   Rollex           0 2002-01-28
-Ballistic           1 1981-05-23
-  Shotgun  8589934592 2006-12-12
-Ballistic 17179869184 1981-05-23
-Artillery 17179869185 1963-08-07
-2025-11-06 09:59:39 INFO  pyspark-shell:244 - >>>>> processed_duplicate_df dataframe:
-     name          id        dob
-   Rollex           0 2002-01-28
-Ballistic           1 1981-05-23
-  Shotgun  8589934592 2006-12-12
-Artillery 17179869185 1963-08-07
-2025-11-06 09:59:39 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/SparkTransformations/SparkDFTransformations2/dataset/invoices.csv dataset file
-2025-11-06 09:59:41 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:35073': 7.3} MB
-2025-11-06 09:59:42 INFO  pyspark-shell:244 - >>>>> spark_df dataframe:
- InvoiceNo StockCode                         Description  Quantity         InvoiceDate  UnitPrice  CustomerID        Country
-    536365      None  WHITE HANGING HEART T-LIGHT HOLDER         6 2010-12-01 08:26:00       2.55       17850 United Kingdom
-    536365     71053                 WHITE METAL LANTERN         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
-    536365    84406B      CREAM CUPID HEARTS COAT HANGER         8 2010-12-01 08:26:00       2.75       17850 United Kingdom
-    536365    84029G KNITTED UNION FLAG HOT WATER BOTTLE         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
-    536365    84029E      RED WOOLLY HOTTIE WHITE HEART.         6 2010-12-01 08:26:00       3.39       17850 United Kingdom
-    536365     22752        SET 7 BABUSHKA NESTING BOXES         2 2010-12-01 08:26:00       7.65       17850 United Kingdom
-    536365     21730   GLASS STAR FROSTED T-LIGHT HOLDER         6 2010-12-01 08:26:00       4.25       17850 United Kingdom
-    536366     22633              HAND WARMER UNION JACK         6 2010-12-01 08:28:00       1.85       17850 United Kingdom
-    536366     22632           HAND WARMER RED POLKA DOT         6 2010-12-01 08:28:00       1.85       17850 United Kingdom
-    536367     84879       ASSORTED COLOUR BIRD ORNAMENT        32 2010-12-01 08:34:00       1.69       13047 United Kingdom
-    536367     22745          POPPY'S PLAYHOUSE BEDROOM          6 2010-12-01 08:34:00       2.10       13047 United Kingdom
-    536367     22748           POPPY'S PLAYHOUSE KITCHEN         6 2010-12-01 08:34:00       2.10       13047 United Kingdom
-    536367     22749   FELTCRAFT PRINCESS CHARLOTTE DOLL         8 2010-12-01 08:34:00       3.75       13047 United Kingdom
-    536367     22310             IVORY KNITTED MUG COSY          6 2010-12-01 08:34:00       1.65       13047 United Kingdom
-    536367     84969  BOX OF 6 ASSORTED COLOUR TEASPOONS         6 2010-12-01 08:34:00       4.25       13047 United Kingdom
-    536367     22623       BOX OF VINTAGE JIGSAW BLOCKS          3 2010-12-01 08:34:00       4.95       13047 United Kingdom
-    536367     22622      BOX OF VINTAGE ALPHABET BLOCKS         2 2010-12-01 08:34:00       9.95       13047 United Kingdom
-    536367     21754            HOME BUILDING BLOCK WORD         3 2010-12-01 08:34:00       5.95       13047 United Kingdom
-    536367     21755            LOVE BUILDING BLOCK WORD         3 2010-12-01 08:34:00       5.95       13047 United Kingdom
-    536367     21777         RECIPE BOX WITH METAL HEART         4 2010-12-01 08:34:00       7.95       13047 United Kingdom
-    536367     48187                 DOORMAT NEW ENGLAND         4 2010-12-01 08:34:00       7.95       13047 United Kingdom
-    536368     22960            JAM MAKING SET WITH JARS         6 2010-12-01 08:34:00       4.25       13047 United Kingdom
-    536368     22913         RED COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
-    536368     22912      YELLOW COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
-    536368     22914        BLUE COAT RACK PARIS FASHION         3 2010-12-01 08:34:00       4.95       13047 United Kingdom
-2025-11-06 09:59:42 INFO  pyspark-shell:244 - >>>>> aggregated_df dataframe:
- count  count field  TotalQuantity  AverageUnitPrice
-541909       541908        5176450          4.611114
-2025-11-06 09:59:43 INFO  pyspark-shell:244 - >>>>> complex_aggregated_df dataframe:
-       Country  InvoiceNo  TotalQuantity  InvoiceValue
-United Kingdom     536368             15         70.05
-United Kingdom     536371             80        204.00
-United Kingdom     536373             88        259.86
-United Kingdom     536375             88        259.86
-United Kingdom     536377             12         22.20
-United Kingdom     536380             24         34.80
-United Kingdom     536381            198        449.98
-United Kingdom     536384            190        489.60
-United Kingdom     536388            108        226.14
-United Kingdom     536394            544       1024.68
-United Kingdom     536396            102        376.36
-United Kingdom     536397             60        279.00
-United Kingdom     536398            150        426.56
-United Kingdom     536399             12         22.20
-United Kingdom     536400             12         17.40
-United Kingdom     536401            124        354.23
-United Kingdom     536402            116        357.00
-United Kingdom     536405            128        326.40
-United Kingdom     536408            558        783.11
-United Kingdom     536412            220        514.41
-United Kingdom     536414             56          0.00
-United Kingdom     536415            228        390.79
-United Kingdom     536423             78        303.90
-United Kingdom     536446            329        440.89
-United Kingdom     536460            158        295.54
-2025-11-06 09:59:43 INFO  pyspark-shell:244 - group the data based on "Country" and "WeekNumber" then perform aggregation operation on the dataFrame
-2025-11-06 09:59:43 INFO  pyspark-shell:244 - >>>>> result_df dataframe:
-        Country  WeekNumber  NumInvoice  TotalQuantity  InvoiceValue
-         France          48           4           1299       2808.16
-    Netherlands          48           1             97        192.60
-        Germany          48           9           1795       3309.75
-           EIRE          48           6           2822       3147.23
-         Poland          48           1            140        248.16
-       Portugal          48           1             65        131.80
- United Kingdom          49         576         105498     244020.45
-         France          49           8           2303       4527.01
-        Iceland          49           1            319        711.79
-      Australia          49           1            214        258.90
-          Japan          49           2           3897       7384.99
- United Kingdom          50         420          94956     191501.99
-          Spain          50           2            400       1049.01
-           EIRE          50           4           1184       2321.78
-        Belgium          50           2            285        625.16
- United Kingdom          51         153          28782      75103.46
-        Bahrain          51           1             54        205.74
-         France          51           5            847       1702.87
-        Germany          51           3           1103       1665.91
-        Belgium          51           2            942        838.65
-      Australia          48           1            107        358.25
-      Lithuania          49           1             30         63.00
-Channel Islands          49           1             80        363.53
-        Denmark          49           1            454       1281.50
-        Austria          50           1              3        257.04
-2025-11-06 09:59:44 INFO  pyspark-shell:244 - Performaing window aggregation on the dataFrame
-2025-11-06 09:59:45 INFO  pyspark-shell:244 - >>>>> result_df dataframe:
- InvoiceNo StockCode                        Description  Quantity         InvoiceDate  UnitPrice  CustomerID   Country  WeekNumber  InvoiceValue  RunningTotal
-    540267     22078           RIBBON REEL LACE DESIGN        120 2011-01-06 11:12:00       1.85       12415 Australia           1        222.00        222.00
-    540267     22079         RIBBON REEL HEARTS DESIGN        120 2011-01-06 11:12:00       1.45       12415 Australia           1        174.00        396.00
-    540267     22080             RIBBON REEL POLKADOTS        120 2011-01-06 11:12:00       1.45       12415 Australia           1        174.00        570.00
-    540267     22077             6 RIBBONS RUSTIC CHARM       144 2011-01-06 11:12:00       1.45       12415 Australia           1        208.80        778.80
-    540267     22505          MEMO BOARD COTTAGE DESIGN        24 2011-01-06 11:12:00       4.25       12415 Australia           1        102.00        880.80
-    540267     22516            CHILDS GARDEN RAKE BLUE        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60        947.40
-    540267     22517            CHILDS GARDEN RAKE PINK        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60       1014.00
-    540267     22518           CHILDS GARDEN BRUSH BLUE        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60       1080.60
-    540267     22519           CHILDS GARDEN BRUSH PINK        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60       1147.20
-    540267     22514           CHILDS GARDEN SPADE BLUE        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60       1213.80
-    540267     22515           CHILDS GARDEN SPADE PINK        36 2011-01-06 11:12:00       1.85       12415 Australia           1         66.60       1280.40
-    540267     22522           CHILDS GARDEN FORK BLUE        192 2011-01-06 11:12:00       0.72       12415 Australia           1        138.24       1418.64
-    540267     22524       CHILDRENS GARDEN GLOVES BLUE       100 2011-01-06 11:12:00       1.06       12415 Australia           1        106.00       1524.64
-    540267     22525       CHILDRENS GARDEN GLOVES PINK       100 2011-01-06 11:12:00       1.06       12415 Australia           1        106.00       1630.64
-    540267     22933  BAKING MOULD EASTER EGG MILK CHOC         6 2011-01-06 11:12:00       2.95       12415 Australia           1         17.70       1648.34
-    540267     22934 BAKING MOULD EASTER EGG WHITE CHOC        48 2011-01-06 11:12:00       2.55       12415 Australia           1        122.40       1770.74
-    540267     84218       BOX/12 CHICK & EGG IN BASKET        60 2011-01-06 11:12:00       1.69       12415 Australia           1        101.40       1872.14
-    540267     84228         HEN HOUSE W CHICK STANDING       120 2011-01-06 11:12:00       0.37       12415 Australia           1         44.40       1916.54
-    540267     22148             EASTER CRAFT 4 CHICKS         40 2011-01-06 11:12:00       1.65       12415 Australia           1         66.00       1982.54
-    540267     22857          ASSORTED EASTER GIFT TAGS       144 2011-01-06 11:12:00       0.72       12415 Australia           1        103.68       2086.22
-    540267     22858                EASTER TIN KEEPSAKE        48 2011-01-06 11:12:00       1.65       12415 Australia           1         79.20       2165.42
-    540267     22859           EASTER TIN BUNNY BOUQUET        48 2011-01-06 11:12:00       1.65       12415 Australia           1         79.20       2244.62
-    540267     22860       EASTER TIN CHICKS PINK DAISY        48 2011-01-06 11:12:00       1.65       12415 Australia           1         79.20       2323.82
-    540267     21915             RED  HARMONICA IN BOX        240 2011-01-06 11:12:00       1.06       12415 Australia           1        254.40       2578.22
-    540267     21914             BLUE HARMONICA IN BOX        240 2011-01-06 11:12:00       1.06       12415 Australia           1        254.40       2832.62
+2025-11-06 11:26:37 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-06 11:26:40 INFO  pyspark-shell:244 - >>>>> generated_order_df dataframe:
+order_id prod_id  unit_price  qty
+      01      07         320    2
+      02      06         220    1
+      04      08         410    2
+      01      04         580    1
+      02      03         450    1
+      04      09         270    3
+      01      02         350    1
+      03      01         195    1
+      05      02         350    1
+2025-11-06 11:26:41 INFO  pyspark-shell:244 - >>>>> generated_product_df dataframe:
+prod_id           prod_name  list_price  qty
+     02       Optical Mouse         350   20
+     07 32 GB Flash Storage         320   50
+     01        Scroll Mouse         250   20
+     03      Wireless Mouse         450   50
+     06 16 GB Flash Storage         240  100
+     04   Wireless Keyboard         580   50
+     08 64 GB Flash Storage         430   25
+     05   Standard Keyboard         360   10
+2025-11-06 11:26:41 INFO  pyspark-shell:244 - >>>>> inner_join_df dataframe:
+order_id prod_id  unit_price  qty prod_id           prod_name  list_price  qty
+      05      02         350    1      02       Optical Mouse         350   20
+      01      02         350    1      02       Optical Mouse         350   20
+      01      07         320    2      07 32 GB Flash Storage         320   50
+      03      01         195    1      01        Scroll Mouse         250   20
+      02      03         450    1      03      Wireless Mouse         450   50
+      02      06         220    1      06 16 GB Flash Storage         240  100
+      01      04         580    1      04   Wireless Keyboard         580   50
+      04      08         410    2      08 64 GB Flash Storage         430   25
+2025-11-06 11:26:42 INFO  pyspark-shell:244 - >>>>> left_join_df dataframe:
+order_id prod_id  unit_price  qty prod_id           prod_name  list_price   qty
+      01      07         320    2      07 32 GB Flash Storage       320.0  50.0
+      02      06         220    1      06 16 GB Flash Storage       240.0 100.0
+      04      08         410    2      08 64 GB Flash Storage       430.0  25.0
+      01      04         580    1      04   Wireless Keyboard       580.0  50.0
+      02      03         450    1      03      Wireless Mouse       450.0  50.0
+      04      09         270    3    None                None         NaN   NaN
+      01      02         350    1      02       Optical Mouse       350.0  20.0
+      03      01         195    1      01        Scroll Mouse       250.0  20.0
+      05      02         350    1      02       Optical Mouse       350.0  20.0
+2025-11-06 11:26:42 INFO  pyspark-shell:244 - >>>>> right_join_df dataframe:
+order_id prod_id  unit_price  qty prod_id           prod_name  list_price  qty
+      05      02       350.0  1.0      02       Optical Mouse         350   20
+      01      02       350.0  1.0      02       Optical Mouse         350   20
+      01      07       320.0  2.0      07 32 GB Flash Storage         320   50
+      03      01       195.0  1.0      01        Scroll Mouse         250   20
+      02      03       450.0  1.0      03      Wireless Mouse         450   50
+      02      06       220.0  1.0      06 16 GB Flash Storage         240  100
+      01      04       580.0  1.0      04   Wireless Keyboard         580   50
+      04      08       410.0  2.0      08 64 GB Flash Storage         430   25
+    None    None         NaN  NaN      05   Standard Keyboard         360   10
+2025-11-06 11:26:42 INFO  pyspark-shell:244 - >>>>> outer_join_df dataframe:
+order_id prod_id  unit_price  qty prod_id           prod_name  list_price   qty
+      03      01       195.0  1.0      01        Scroll Mouse       250.0  20.0
+      01      04       580.0  1.0      04   Wireless Keyboard       580.0  50.0
+    None    None         NaN  NaN      05   Standard Keyboard       360.0  10.0
+      02      06       220.0  1.0      06 16 GB Flash Storage       240.0 100.0
+      01      07       320.0  2.0      07 32 GB Flash Storage       320.0  50.0
+      04      09       270.0  3.0    None                None         NaN   NaN
+      01      02       350.0  1.0      02       Optical Mouse       350.0  20.0
+      05      02       350.0  1.0      02       Optical Mouse       350.0  20.0
+      02      03       450.0  1.0      03      Wireless Mouse       450.0  50.0
+      04      08       410.0  2.0      08 64 GB Flash Storage       430.0  25.0

@@ -14,6 +14,8 @@ import os
 from lib.ingest_data import IngestData
 # Transform data
 from transformations.dataframe_transformations import DataFrameTransformations
+# imports related to dataframe joins
+from joins.df_joins import DataFrameJoins
 
 # imports related to cleanup when the main_app.py is re-run
 from lib.clean_up_file_system import CleanupAppFileSystemOnReRun
@@ -66,93 +68,82 @@ if __name__ == "__main__":
     dataset_dir = os.path.join(project_dir,"dataset")
 
     ######################################
-    # CREATE A DATAFRAME AND PERFORM TRANSFORAMTION ON IT STARTS
+    # CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
     ######################################
     """Create DataFrame STARTS"""
     gen_df = GenerateDataFrame(spark)
+
+    # Generate orders dataFrame
     data_list = [
-        ("Rollex","28","1","2002"),
-        ("Ballistic","23","5","81"),
-        ("Shotgun","12","12","6"),
-        ("Artillery","7","8","63"),
-        ("Ballistic","23","5","81"),
-    ]
-    generated_df = gen_df.generate_dataframe(data_list)
-    sp_df_logger.log_df(spark_df=generated_df,spark_df_name="generated_df")
+                ("01", "02", 350, 1),
+                ("01", "04", 580, 1),
+                ("01", "07", 320, 2),
+                ("02", "03", 450, 1),
+                ("02", "06", 220, 1),
+                ("03", "01", 195, 1),
+                ("04", "09", 270, 3),
+                ("04", "08", 410, 2),
+                ("05", "02", 350, 1)
+            ]
+    column_name_list = ["order_id", "prod_id", "unit_price", "qty"]
+    generated_order_df = gen_df.generate_dataframe(data_list=data_list,column_name_list=column_name_list)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=generated_order_df,spark_df_name="generated_order_df")
+
+    # Generate product_list dataFrame
+    data_list = [
+                    ("01", "Scroll Mouse", 250, 20),
+                    ("02", "Optical Mouse", 350, 20),
+                    ("03", "Wireless Mouse", 450, 50),
+                    ("04", "Wireless Keyboard", 580, 50),
+                    ("05", "Standard Keyboard", 360, 10),
+                    ("06", "16 GB Flash Storage", 240, 100),
+                    ("07", "32 GB Flash Storage", 320, 50),
+                    ("08", "64 GB Flash Storage", 430, 25)
+                ]
+    column_name_list = ["prod_id", "prod_name", "list_price", "qty"]
+    generated_product_df = gen_df.generate_dataframe(data_list=data_list,column_name_list=column_name_list)
+    # logging dataFrame 
+    sp_df_logger.log_df(spark_df=generated_product_df,spark_df_name="generated_product_df")
     """Create DataFrame ENDS""" 
 
-    """Transformation STARTS"""
+    """Join operation STARTS"""
     # initialize df transformation class
     df_t = DataFrameTransformations(spark)
     # initialize df export class
     df_exp = ExportSparkDataFrame(spark)
+    # initialize dataframe join classes 
+    df_joins = DataFrameJoins(spark)
 
-    # add a uniquely identifiable id for the rows
-    generated_df = df_t.create_unique_identifier(spark_df=generated_df) 
-    # log the output dataframe
-    sp_df_logger.log_df(spark_df=generated_df,spark_df_name="generated_df")
-    sp_df_logger.log_df_metrics(spark_df=generated_df,spark_df_name="generated_df")
+    # performing inner join opertion on the two dataFrames
+    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
+    inner_join_df = df_joins.inner_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=inner_join_df,spark_df_name="inner_join_df")
 
-    # process date and make all the inconsitent two digit and three digit year into 4 digit year
-    processed_date_df = df_t.process_date_col_year(spark_df=generated_df,col_name="year",combine_date=True)
-    # log the output dataframe
-    sp_df_logger.log_df(spark_df=processed_date_df,spark_df_name="processed_date_df")
-    sp_df_logger.log_df_metrics(spark_df=processed_date_df,spark_df_name="processed_date_df")
+    # performing left join operation on the two dataFrames
+    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
+    left_join_df = df_joins.left_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=left_join_df,spark_df_name="left_join_df")
 
-    # process duplicate data in the dataFrame
-    processed_duplicate_df = df_t.drop_duplicate_rows(spark_df=processed_date_df,col_name_list=["name","dob"])
-    # log the output dataframe
-    sp_df_logger.log_df(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
-    sp_df_logger.log_df_metrics(spark_df=processed_duplicate_df,spark_df_name="processed_duplicate_df")
-    """Transformation ENDS"""
+    # performing right join operation on the two dataframes
+    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
+    right_join_df = df_joins.right_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=right_join_df,spark_df_name="right_join_df")
+
+    # performing outer join operation on the two dataFrames
+    join_expression = generated_order_df.prod_id == generated_product_df.prod_id
+    outer_join_df = df_joins.outer_join_df(left_df=generated_order_df,right_df=generated_product_df,join_expression=join_expression)
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=outer_join_df,spark_df_name="outer_join_df")
+    """Join operation ENDS"""
     ######################################
-    # CREATE A DATAFRAME AND PERFORM TRANSFORAMTION ON IT ENDS
+    # CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT ENDS
     ######################################
 
 
-
-
-
-
-    ######################################
-    # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT STARTS
-    ######################################
-    """Ingest data STARTS"""
-    # get the file directory from where the data will be ingested 
-    file_dir = os.path.join(dataset_dir,"invoices.csv")
-    # initialize the ingest data class 
-    ingest_data = IngestData(spark)
-    spark_df =ingest_data.import_data_csv(file_dir=file_dir)
-    # log the output dataframe
-    sp_df_logger.log_df(spark_df=spark_df,spark_df_name="spark_df")
-    """Ingest data ENDS"""
-
-
-    """Perform aggregation operation on the dataFrame STARTS"""
-    # performing simple aggregation
-    aggregated_df = df_t.simple_aggregation_operation(spark_df=spark_df)
-    sp_df_logger.log_df(spark_df=aggregated_df,spark_df_name="aggregated_df")
-
-    # performing complex aggregation
-    complex_aggregated_df = df_t.complex_aggregation_operation(spark_df=spark_df)
-    sp_df_logger.log_df(spark_df=complex_aggregated_df,spark_df_name="complex_aggregated_df")
-
-    # performaing groupby "Country" and "WeekNumber" then perform aggregation operation on the dataFrame
-    result_df = df_t.group_by_country_agg(spark_df=spark_df)
-    logger.info('group the data based on "Country" and "WeekNumber" then perform aggregation operation on the dataFrame')
-    sp_df_logger.log_df(spark_df=result_df,spark_df_name="result_df")
-    # export this df in a paraquet file
-    output_path = os.path.join(project_dir,"export")
-    df_exp.export_df_parquet(spark_df=result_df,output_path=output_path)
-
-    # Window aggregation implementation
-    result_df = df_t.window_aggregation(spark_df=spark_df)
-    logger.info("Performaing window aggregation on the dataFrame")
-    sp_df_logger.log_df(spark_df=result_df,spark_df_name="result_df")
-    """Perform aggregation operation on the dataFrame ENDS"""
-    ######################################
-    # INGEST DATA INTO THE DATAFRAME AND PERFORM AGGREGATION OPERATIONS ON IT ENDS
-    ######################################
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
     # input("Please enter")
