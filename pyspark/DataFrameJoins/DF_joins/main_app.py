@@ -123,6 +123,8 @@ if __name__ == "__main__":
     inner_join_df = inner_join_df.drop("prod_id2")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=inner_join_df,spark_df_name="inner_join_df")
+    # performing dummy action to force the joi operation
+    inner_join_df.foreach(lambda f: None)
 
     #  Handling column ambiguity 
     product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
@@ -132,6 +134,8 @@ if __name__ == "__main__":
     left_join_df = left_join_df.drop("prod_id2")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=left_join_df,spark_df_name="left_join_df")
+    # performing dummy action to force the joi operation
+    left_join_df.foreach(lambda f: None)
 
     #  Handling column ambiguity 
     product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
@@ -141,6 +145,8 @@ if __name__ == "__main__":
     right_join_df = right_join_df.drop("prod_id2")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=right_join_df,spark_df_name="right_join_df")
+    # performing dummy action to force the joi operation
+    right_join_df.foreach(lambda f: None)
 
     #  Handling column ambiguity 
     product_renamed_df = generated_product_df.withColumnRenamed("qty","reorder_qty").withColumnRenamed("prod_id","prod_id2")
@@ -150,11 +156,12 @@ if __name__ == "__main__":
     outer_join_df = outer_join_df.drop("prod_id2")
     # logging dataFrame
     sp_df_logger.log_df(spark_df=outer_join_df,spark_df_name="outer_join_df")
+    # performing dummy action to force the joi operation
+    outer_join_df.foreach(lambda f: None)
     """Join operation ENDS"""
     ######################################
     # CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT ENDS
     ######################################
-
 
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
