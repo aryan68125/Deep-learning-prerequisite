@@ -1,5 +1,5 @@
-2025-11-06 11:48:03 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-06 11:48:06 INFO  pyspark-shell:244 - >>>>> generated_order_df dataframe:
+2025-11-06 12:10:16 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-06 12:10:19 INFO  pyspark-shell:244 - >>>>> generated_order_df dataframe:
 order_id prod_id  unit_price  qty
       01      07         320    2
       02      06         220    1
@@ -10,7 +10,7 @@ order_id prod_id  unit_price  qty
       01      02         350    1
       03      01         195    1
       05      02         350    1
-2025-11-06 11:48:06 INFO  pyspark-shell:244 - >>>>> generated_product_df dataframe:
+2025-11-06 12:10:20 INFO  pyspark-shell:244 - >>>>> generated_product_df dataframe:
 prod_id           prod_name  list_price  qty
      02       Optical Mouse         350   20
      07 32 GB Flash Storage         320   50
@@ -20,7 +20,7 @@ prod_id           prod_name  list_price  qty
      04   Wireless Keyboard         580   50
      08 64 GB Flash Storage         430   25
      05   Standard Keyboard         360   10
-2025-11-06 11:48:07 INFO  pyspark-shell:244 - >>>>> inner_join_df dataframe:
+2025-11-06 12:10:21 INFO  pyspark-shell:244 - >>>>> inner_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       05      02         350    1       Optical Mouse         350           20
       01      02         350    1       Optical Mouse         350           20
@@ -30,7 +30,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       02      06         220    1 16 GB Flash Storage         240          100
       01      04         580    1   Wireless Keyboard         580           50
       04      08         410    2 64 GB Flash Storage         430           25
-2025-11-06 11:48:08 INFO  pyspark-shell:244 - >>>>> left_join_df dataframe:
+2025-11-06 12:10:21 INFO  pyspark-shell:244 - >>>>> left_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      07         320    2 32 GB Flash Storage       320.0         50.0
       02      06         220    1 16 GB Flash Storage       240.0        100.0
@@ -41,7 +41,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      02         350    1       Optical Mouse       350.0         20.0
       03      01         195    1        Scroll Mouse       250.0         20.0
       05      02         350    1       Optical Mouse       350.0         20.0
-2025-11-06 11:48:08 INFO  pyspark-shell:244 - >>>>> right_join_df dataframe:
+2025-11-06 12:10:21 INFO  pyspark-shell:244 - >>>>> right_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       05      02       350.0  1.0       Optical Mouse         350           20
       01      02       350.0  1.0       Optical Mouse         350           20
@@ -52,7 +52,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      04       580.0  1.0   Wireless Keyboard         580           50
       04      08       410.0  2.0 64 GB Flash Storage         430           25
     None    None         NaN  NaN   Standard Keyboard         360           10
-2025-11-06 11:48:09 INFO  pyspark-shell:244 - >>>>> outer_join_df dataframe:
+2025-11-06 12:10:22 INFO  pyspark-shell:244 - >>>>> outer_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       03      01       195.0  1.0        Scroll Mouse       250.0         20.0
       01      04       580.0  1.0   Wireless Keyboard       580.0         50.0

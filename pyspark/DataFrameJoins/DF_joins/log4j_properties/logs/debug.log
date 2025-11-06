@@ -1,45 +1,32 @@
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/log4j.properties
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/logs
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - log dir exists = True
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - supplied data_list found : [('01', '02', 350, 1), ('01', '04', 580, 1), ('01', '07', 320, 2), ('02', '03', 450, 1), ('02', '06', 220, 1), ('03', '01', 195, 1), ('04', '09', 270, 3), ('04', '08', 410, 2), ('05', '02', 350, 1)]
-2025-11-06 11:48:03 DEBUG pyspark-shell:244 - column name list foind ['order_id', 'prod_id', 'unit_price', 'qty']
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.38)} MB
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.02} MB
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/log4j.properties
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/logs
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - log dir exists = True
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - supplied data_list found : [('01', '02', 350, 1), ('01', '04', 580, 1), ('01', '07', 320, 2), ('02', '03', 450, 1), ('02', '06', 220, 1), ('03', '01', 195, 1), ('04', '09', 270, 3), ('04', '08', 410, 2), ('05', '02', 350, 1)]
+2025-11-06 12:10:16 DEBUG pyspark-shell:244 - column name list foind ['order_id', 'prod_id', 'unit_price', 'qty']
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.38)} MB
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.02} MB
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
  |-- qty: long (nullable = true)
 
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - supplied data_list found : [('01', 'Scroll Mouse', 250, 20), ('02', 'Optical Mouse', 350, 20), ('03', 'Wireless Mouse', 450, 50), ('04', 'Wireless Keyboard', 580, 50), ('05', 'Standard Keyboard', 360, 10), ('06', '16 GB Flash Storage', 240, 100), ('07', '32 GB Flash Storage', 320, 50), ('08', '64 GB Flash Storage', 430, 25)]
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - column name list foind ['prod_id', 'prod_name', 'list_price', 'qty']
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.39)} MB
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.01} MB
-2025-11-06 11:48:06 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - supplied data_list found : [('01', 'Scroll Mouse', 250, 20), ('02', 'Optical Mouse', 350, 20), ('03', 'Wireless Mouse', 450, 50), ('04', 'Wireless Keyboard', 580, 50), ('05', 'Standard Keyboard', 360, 10), ('06', '16 GB Flash Storage', 240, 100), ('07', '32 GB Flash Storage', 320, 50), ('08', '64 GB Flash Storage', 430, 25)]
+2025-11-06 12:10:19 DEBUG pyspark-shell:244 - column name list foind ['prod_id', 'prod_name', 'list_price', 'qty']
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.39)} MB
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.01} MB
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- prod_id: string (nullable = true)
  |-- prod_name: string (nullable = true)
  |-- list_price: long (nullable = true)
  |-- qty: long (nullable = true)
 
-2025-11-06 11:48:07 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.37)} MB
-2025-11-06 11:48:07 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.03} MB
-2025-11-06 11:48:07 DEBUG pyspark-shell:244 - logging intermediate dataframe after inner join operation
-2025-11-06 11:48:07 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
- |-- order_id: string (nullable = true)
- |-- prod_id: string (nullable = true)
- |-- unit_price: long (nullable = true)
- |-- qty: long (nullable = true)
- |-- prod_id2: string (nullable = true)
- |-- prod_name: string (nullable = true)
- |-- list_price: long (nullable = true)
- |-- reorder_qty: long (nullable = true)
-
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.38)} MB
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.02} MB
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - logging intermediate dataframe after left join operation
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.35)} MB
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.05} MB
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - logging intermediate dataframe after inner join operation
+2025-11-06 12:10:20 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -49,10 +36,10 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.38)} MB
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.02} MB
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - logging intermediate dataframe after right join operation
-2025-11-06 11:48:08 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.36)} MB
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.04} MB
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - logging intermediate dataframe after left join operation
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -62,10 +49,23 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-06 11:48:09 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:44069': (434.4, 434.32)} MB
-2025-11-06 11:48:09 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:44069': 0.08} MB
-2025-11-06 11:48:09 DEBUG pyspark-shell:244 - logging intermediate dataframe after outer join operation
-2025-11-06 11:48:09 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.36)} MB
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.04} MB
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - logging intermediate dataframe after right join operation
+2025-11-06 12:10:21 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+ |-- order_id: string (nullable = true)
+ |-- prod_id: string (nullable = true)
+ |-- unit_price: long (nullable = true)
+ |-- qty: long (nullable = true)
+ |-- prod_id2: string (nullable = true)
+ |-- prod_name: string (nullable = true)
+ |-- list_price: long (nullable = true)
+ |-- reorder_qty: long (nullable = true)
+
+2025-11-06 12:10:22 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:40571': (434.4, 434.36)} MB
+2025-11-06 12:10:22 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:40571': 0.04} MB
+2025-11-06 12:10:22 DEBUG pyspark-shell:244 - logging intermediate dataframe after outer join operation
+2025-11-06 12:10:22 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
