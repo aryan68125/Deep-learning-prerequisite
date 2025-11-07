@@ -64,6 +64,7 @@ cffi                   = "1.17.1"
 charset-normalizer     = "3.3.2"
 click                  = "8.2.1"
 colorama               = "0.4.6"
+chispa                 = "0.2.14"
 
 [dev-packages]
 
