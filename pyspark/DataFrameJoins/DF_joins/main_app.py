@@ -196,7 +196,7 @@ if __name__ == "__main__":
     """Ingest data and create dataframes ENDS"""
 
     """Perform join on the two dataFrames STARTS"""
-    df_exp.export_df_sql_table(spark_df1=spark_df1,spark_df2=spark_df2)
+    df_exp.export_df_sql_table(spark_df1=spark_df1,spark_df2=spark_df2,save_mode="overwrite")
     """Perform join on the two dataFrames ENDS"""
     ######################################
     # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS

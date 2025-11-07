@@ -46,15 +46,15 @@ class ExportSparkDataFrame:
             self.logger.error(str(e))
             raise
 
-    def export_df_sql_table(self,spark_df1,spark_df2):
+    def export_df_sql_table(self,spark_df1,spark_df2,save_mode):
         try:
             self.logger.debug(">>>> Exporting dataframe to the sql table")
             # Create database if not exists
             self.spark.sql("CREATE DATABASE IF NOT EXISTS RollexDB")
             self.spark.sql("USE RollexDB")
             # save the dataFrames in a table after partitioning by bucket
-            spark_df1.coalesce(1).write.bucketBy(3,"id").saveAsTable("RollexDB.flight_data1")
-            spark_df2.coalesce(1).write.bucketBy(3,"id").saveAsTable("RollexDB.flight_data2")
+            spark_df1.coalesce(1).write.bucketBy(3,"id").mode(save_mode).saveAsTable("RollexDB.flight_data1")
+            spark_df2.coalesce(1).write.bucketBy(3,"id").mode(save_mode).saveAsTable("RollexDB.flight_data2")
         except Exception as e:
             self.logger.error(str(e))
             raise
