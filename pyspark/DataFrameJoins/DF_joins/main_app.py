@@ -26,6 +26,9 @@ from unit_testing.generate_dataframe import GenerateDataFrame
 # imports related to dataframe schema 
 from spark_dataFrame_schema.spark_dataframe_schema import FlightSchemaMixin
 
+# import pyspark functions
+from pyspark.sql import functions as F
+
 if __name__ == "__main__":
     # logging related logic
     # Get the current project's directory
@@ -208,9 +211,9 @@ if __name__ == "__main__":
     sp_df_logger.log_df(spark_df=df2,spark_df_name="df2")
     # performing inner join expression manually right here
     # Since I want spark to apply broadcast join here 
-    spark.conf.set("spark.sql.autoBroadcastJoinThreshold",-1)
+    # spark.conf.set("spark.sql.autoBroadcastJoinThreshold",-1)
     join_expr = df1.id == df2.id
-    join_df = df1.join(df2,join_expr,"inner")
+    join_df = df1.join(F.broadcast(df2),join_expr,"inner")
     join_df.collect()
   
     """Perform join on the two dataFrames ENDS"""
@@ -219,7 +222,7 @@ if __name__ == "__main__":
     ######################################
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
-    # input("Please enter to terminate")
+    input("Please enter to terminate")
     spark.stop()
 
 
