@@ -1,5 +1,5 @@
-2025-11-07 10:27:05 INFO  pyspark-shell:244 - Reading the data from the directory
-2025-11-07 10:27:08 INFO  pyspark-shell:244 - >>>>> generated_order_df dataframe:
+2025-11-07 10:47:46 INFO  pyspark-shell:244 - Reading the data from the directory
+2025-11-07 10:47:49 INFO  pyspark-shell:244 - >>>>> generated_order_df dataframe:
 order_id prod_id  unit_price  qty
       01      07         320    2
       02      06         220    1
@@ -10,7 +10,7 @@ order_id prod_id  unit_price  qty
       01      02         350    1
       03      01         195    1
       05      02         350    1
-2025-11-07 10:27:08 INFO  pyspark-shell:244 - >>>>> generated_product_df dataframe:
+2025-11-07 10:47:50 INFO  pyspark-shell:244 - >>>>> generated_product_df dataframe:
 prod_id           prod_name  list_price  qty
      02       Optical Mouse         350   20
      07 32 GB Flash Storage         320   50
@@ -20,7 +20,7 @@ prod_id           prod_name  list_price  qty
      04   Wireless Keyboard         580   50
      08 64 GB Flash Storage         430   25
      05   Standard Keyboard         360   10
-2025-11-07 10:27:10 INFO  pyspark-shell:244 - >>>>> inner_join_df dataframe:
+2025-11-07 10:47:50 INFO  pyspark-shell:244 - >>>>> inner_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       05      02         350    1       Optical Mouse         350           20
       01      02         350    1       Optical Mouse         350           20
@@ -30,7 +30,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       02      06         220    1 16 GB Flash Storage         240          100
       01      04         580    1   Wireless Keyboard         580           50
       04      08         410    2 64 GB Flash Storage         430           25
-2025-11-07 10:27:10 INFO  pyspark-shell:244 - >>>>> left_join_df dataframe:
+2025-11-07 10:47:51 INFO  pyspark-shell:244 - >>>>> left_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      07         320    2 32 GB Flash Storage       320.0         50.0
       02      06         220    1 16 GB Flash Storage       240.0        100.0
@@ -41,7 +41,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      02         350    1       Optical Mouse       350.0         20.0
       03      01         195    1        Scroll Mouse       250.0         20.0
       05      02         350    1       Optical Mouse       350.0         20.0
-2025-11-07 10:27:10 INFO  pyspark-shell:244 - >>>>> right_join_df dataframe:
+2025-11-07 10:47:51 INFO  pyspark-shell:244 - >>>>> right_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       05      02       350.0  1.0       Optical Mouse         350           20
       01      02       350.0  1.0       Optical Mouse         350           20
@@ -52,7 +52,7 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      04       580.0  1.0   Wireless Keyboard         580           50
       04      08       410.0  2.0 64 GB Flash Storage         430           25
     None    None         NaN  NaN   Standard Keyboard         360           10
-2025-11-07 10:27:11 INFO  pyspark-shell:244 - >>>>> outer_join_df dataframe:
+2025-11-07 10:47:52 INFO  pyspark-shell:244 - >>>>> outer_join_df dataframe:
 order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       03      01       195.0  1.0        Scroll Mouse       250.0         20.0
     None    None         NaN  NaN   Standard Keyboard       360.0         10.0
@@ -64,9 +64,9 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
       01      02       350.0  1.0       Optical Mouse       350.0         20.0
       05      02       350.0  1.0       Optical Mouse       350.0         20.0
       04      09       270.0  3.0                None         NaN          NaN
-2025-11-07 10:27:11 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/dataset/d1 dataset file
-2025-11-07 10:27:13 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:42175': 2.59} MB
-2025-11-07 10:27:13 INFO  pyspark-shell:244 - >>>>> spark_df1 dataframe:
+2025-11-07 10:47:52 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/dataset/d1 dataset file
+2025-11-07 10:47:54 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:38979': 2.59} MB
+2025-11-07 10:47:54 INFO  pyspark-shell:244 - >>>>> spark_df1 dataframe:
         id    FL_DATE OP_CARRIER  OP_CARRIER_FL_NUM ORIGIN ORIGIN_CITY_NAME DEST DEST_CITY_NAME
 8589934592 2000-01-12         UA                911    IAD   Washington, DC  BOS     Boston, MA
 8589934593 2000-01-12         UA               1210    IAD   Washington, DC  BOS     Boston, MA
@@ -93,9 +93,9 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
 8589934614 2000-01-12         US               6450    IAD   Washington, DC  BOS     Boston, MA
 8589934615 2000-01-12         US               6452    IAD   Washington, DC  BOS     Boston, MA
 8589934616 2000-01-12         US               6454    IAD   Washington, DC  BOS     Boston, MA
-2025-11-07 10:27:13 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/dataset/d2 dataset file
-2025-11-07 10:27:15 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:42175': 9.23} MB
-2025-11-07 10:27:15 INFO  pyspark-shell:244 - >>>>> spark_df2 dataframe:
+2025-11-07 10:47:54 INFO  pyspark-shell:244 - import_data_csv :: spark_df created successfully from /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/dataset/d2 dataset file
+2025-11-07 10:47:55 INFO  pyspark-shell:244 - import_data_csv :: The memory taken by the spark dataFrame is = {'192.168.1.204:38979': 9.23} MB
+2025-11-07 10:47:55 INFO  pyspark-shell:244 - >>>>> spark_df2 dataframe:
         id  CRS_DEP_TIME  DEP_TIME  WHEELS_ON  TAXI_IN  CRS_ARR_TIME  ARR_TIME  CANCELLED  DISTANCE
 8589934592          2130      2151       2311        6          2254      2317          0     413.0
 8589934593          1230      1231       1351        6          1356      1357          0     413.0
@@ -122,3 +122,57 @@ order_id prod_id  unit_price  qty           prod_name  list_price  reorder_qty
 8589934614          1445      1443       1615        8          1616      1623          0     413.0
 8589934615          1545      1622       1750        5          1720      1755          0     413.0
 8589934616          1645      1644       1818       10          1819      1828          0     413.0
+2025-11-07 10:48:01 INFO  pyspark-shell:244 - >>>>> df1 dataframe:
+        id    FL_DATE OP_CARRIER  OP_CARRIER_FL_NUM ORIGIN ORIGIN_CITY_NAME DEST DEST_CITY_NAME
+8589934593 2000-01-12         UA               1210    IAD   Washington, DC  BOS     Boston, MA
+8589934594 2000-01-12         UA               1244    IAD   Washington, DC  BOS     Boston, MA
+8589934599 2000-01-12         UA               1908    IAD   Washington, DC  BOS     Boston, MA
+8589934600 2000-01-12         UA               1910    IAD   Washington, DC  BOS     Boston, MA
+8589934602 2000-01-12         UA               1980    IAD   Washington, DC  BOS     Boston, MA
+8589934605 2000-01-12         UA               1988    IAD   Washington, DC  BOS     Boston, MA
+8589934610 2000-01-12         US               6442    IAD   Washington, DC  BOS     Boston, MA
+8589934617 2000-01-12         US               6456    IAD   Washington, DC  BOS     Boston, MA
+8589934625 2000-01-12         CO               1698    IAH      Houston, TX  BOS     Boston, MA
+8589934628 2000-01-12         DL               1866    JFK     New York, NY  BOS     Boston, MA
+8589934629 2000-01-12         TW                708    JFK     New York, NY  BOS     Boston, MA
+8589934630 2000-01-12         UA                988    JFK     New York, NY  BOS     Boston, MA
+8589934633 2000-01-12         HP               2064    LAS    Las Vegas, NV  BOS     Boston, MA
+8589934634 2000-01-12         AA                 12    LAX  Los Angeles, CA  BOS     Boston, MA
+8589934643 2000-01-12         DL               1822    LGA     New York, NY  BOS     Boston, MA
+8589934644 2000-01-12         DL               1824    LGA     New York, NY  BOS     Boston, MA
+8589934646 2000-01-12         DL               1828    LGA     New York, NY  BOS     Boston, MA
+8589934648 2000-01-12         DL               1832    LGA     New York, NY  BOS     Boston, MA
+8589934649 2000-01-12         DL               1834    LGA     New York, NY  BOS     Boston, MA
+8589934650 2000-01-12         DL               1836    LGA     New York, NY  BOS     Boston, MA
+8589934651 2000-01-12         DL               1838    LGA     New York, NY  BOS     Boston, MA
+8589934652 2000-01-12         DL               1840    LGA     New York, NY  BOS     Boston, MA
+8589934656 2000-01-12         DL               1848    LGA     New York, NY  BOS     Boston, MA
+8589934661 2000-01-12         DL               2356    MCO      Orlando, FL  BOS     Boston, MA
+8589934663 2000-01-12         DL               2454    MCO      Orlando, FL  BOS     Boston, MA
+2025-11-07 10:48:01 INFO  pyspark-shell:244 - >>>>> df2 dataframe:
+        id  CRS_DEP_TIME  DEP_TIME  WHEELS_ON  TAXI_IN  CRS_ARR_TIME  ARR_TIME  CANCELLED  DISTANCE
+8589934593          1230      1231       1351        6          1356      1357          0     413.0
+8589934594          1430      1427       1553        4          1556      1557          0     413.0
+8589934599          1730      1725       1910       11          1906      1921          0     413.0
+8589934600           730       728        845        2           856       847          0     413.0
+8589934602           830       828        952        3           956       955          0     413.0
+8589934605          1330      1326       1446        2          1453      1448          0     413.0
+8589934610          1045      1043       1157        5          1216      1202          0     413.0
+8589934617          1745      1742       1933       12          1923      1945          0     413.0
+8589934625          1316      1311       1752        8          1759      1800          0    1597.0
+8589934628          1745      1744       1859       11          1908      1910          0     187.0
+8589934629          1730      1726       1835       14          1844      1849          0     187.0
+8589934630           745       739        836        4           847       840          0     187.0
+8589934633          1558      1559       2309        4          2345      2313          0    2381.0
+8589934634          1315      1312       2110        6          2141      2116          0    2611.0
+8589934643           730       733        848        8           837       856          0     185.0
+8589934644           830       830        935        5           935       940          0     185.0
+8589934646          1030      1030       1124        5          1132      1129          0     185.0
+8589934648          1230      1230       1324        3          1331      1327          0     185.0
+8589934649          1330      1330       1418        6          1432      1424          0     185.0
+8589934650          1430      1430       1526        9          1530      1535          0     185.0
+8589934651          1530      1538       1654        6          1640      1700          0     185.0
+8589934652          1630      1630       1807        8          1740      1815          0     185.0
+8589934656          2030      2030       2133        5          2141      2138          0     185.0
+8589934661          1545      1540       1841        8          1845      1849          0    1121.0
+8589934663          1710      1714       2001       10          2010      2011          0    1121.0

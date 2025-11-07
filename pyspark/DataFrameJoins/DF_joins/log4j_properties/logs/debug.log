@@ -1,35 +1,35 @@
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/log4j.properties
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/logs
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - log dir exists = True
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - supplied data_list found : [('01', '02', 350, 1), ('01', '04', 580, 1), ('01', '07', 320, 2), ('02', '03', 450, 1), ('02', '06', 220, 1), ('03', '01', 195, 1), ('04', '09', 270, 3), ('04', '08', 410, 2), ('05', '02', 350, 1)]
-2025-11-07 10:27:05 DEBUG pyspark-shell:244 - column name list foind ['order_id', 'prod_id', 'unit_price', 'qty']
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.37)} MB
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.03} MB
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - log4j.properties file dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/log4j.properties
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - log files dir = /home/aditya/github/Deep-learning-prerequisite/pyspark/DataFrameJoins/DF_joins/log4j_properties/logs
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - log dir exists = True
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - supplied data_list found : [('01', '02', 350, 1), ('01', '04', 580, 1), ('01', '07', 320, 2), ('02', '03', 450, 1), ('02', '06', 220, 1), ('03', '01', 195, 1), ('04', '09', 270, 3), ('04', '08', 410, 2), ('05', '02', 350, 1)]
+2025-11-07 10:47:46 DEBUG pyspark-shell:244 - column name list foind ['order_id', 'prod_id', 'unit_price', 'qty']
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.38)} MB
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.02} MB
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
  |-- qty: long (nullable = true)
 
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - generated_df has 3 partitons
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - supplied data_list found : [('01', 'Scroll Mouse', 250, 20), ('02', 'Optical Mouse', 350, 20), ('03', 'Wireless Mouse', 450, 50), ('04', 'Wireless Keyboard', 580, 50), ('05', 'Standard Keyboard', 360, 10), ('06', '16 GB Flash Storage', 240, 100), ('07', '32 GB Flash Storage', 320, 50), ('08', '64 GB Flash Storage', 430, 25)]
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - column name list foind ['prod_id', 'prod_name', 'list_price', 'qty']
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.37)} MB
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.03} MB
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - generated_df has 3 partitons
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - checking for the supplied data_list: 
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - supplied data_list found : [('01', 'Scroll Mouse', 250, 20), ('02', 'Optical Mouse', 350, 20), ('03', 'Wireless Mouse', 450, 50), ('04', 'Wireless Keyboard', 580, 50), ('05', 'Standard Keyboard', 360, 10), ('06', '16 GB Flash Storage', 240, 100), ('07', '32 GB Flash Storage', 320, 50), ('08', '64 GB Flash Storage', 430, 25)]
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - column name list foind ['prod_id', 'prod_name', 'list_price', 'qty']
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.37)} MB
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.03} MB
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - generated_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- prod_id: string (nullable = true)
  |-- prod_name: string (nullable = true)
  |-- list_price: long (nullable = true)
  |-- qty: long (nullable = true)
 
-2025-11-07 10:27:08 DEBUG pyspark-shell:244 - generated_df has 3 partitons
-2025-11-07 10:27:09 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:49 DEBUG pyspark-shell:244 - generated_df has 3 partitons
+2025-11-07 10:47:50 DEBUG pyspark-shell:244 - 
  logging intermediate dataframe after inner join operation
-2025-11-07 10:27:09 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.37)} MB
-2025-11-07 10:27:09 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.03} MB
-2025-11-07 10:27:09 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:50 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.37)} MB
+2025-11-07 10:47:50 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.03} MB
+2025-11-07 10:47:50 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -39,12 +39,12 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-07 10:27:09 DEBUG pyspark-shell:244 - result_df has 3 partitons
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:50 DEBUG pyspark-shell:244 - result_df has 3 partitons
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - 
  logging intermediate dataframe after left join operation
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.37)} MB
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.03} MB
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.33)} MB
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.07} MB
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -54,12 +54,12 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - result_df has 3 partitons
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - result_df has 3 partitons
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - 
  logging intermediate dataframe after right join operation
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.3)} MB
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.1} MB
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.27)} MB
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.13} MB
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -69,12 +69,12 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - result_df has 3 partitons
-2025-11-07 10:27:10 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - result_df has 3 partitons
+2025-11-07 10:47:51 DEBUG pyspark-shell:244 - 
  logging intermediate dataframe after outer join operation
-2025-11-07 10:27:11 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 434.28)} MB
-2025-11-07 10:27:11 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 0.12} MB
-2025-11-07 10:27:11 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:52 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 434.31)} MB
+2025-11-07 10:47:52 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 0.09} MB
+2025-11-07 10:47:52 DEBUG pyspark-shell:244 - result_df :: operation - LogSparkDataframe :: Spark DataFrame Schema (expanded): root
  |-- order_id: string (nullable = true)
  |-- prod_id: string (nullable = true)
  |-- unit_price: long (nullable = true)
@@ -84,12 +84,12 @@
  |-- list_price: long (nullable = true)
  |-- reorder_qty: long (nullable = true)
 
-2025-11-07 10:27:11 DEBUG pyspark-shell:244 - result_df has 3 partitons
-2025-11-07 10:27:11 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:52 DEBUG pyspark-shell:244 - result_df has 3 partitons
+2025-11-07 10:47:52 DEBUG pyspark-shell:244 - 
  Reading data from the json file : Ingest data into dataFrame
-2025-11-07 10:27:13 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 431.81)} MB
-2025-11-07 10:27:13 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 2.59} MB
-2025-11-07 10:27:13 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:54 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 431.81)} MB
+2025-11-07 10:47:54 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 2.59} MB
+2025-11-07 10:47:54 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- id: long (nullable = true)
  |-- FL_DATE: timestamp (nullable = true)
  |-- OP_CARRIER: string (nullable = true)
@@ -99,12 +99,12 @@
  |-- DEST: string (nullable = true)
  |-- DEST_CITY_NAME: string (nullable = true)
 
-2025-11-07 10:27:13 DEBUG pyspark-shell:244 - dataFrame has 3 partitons
-2025-11-07 10:27:13 DEBUG pyspark-shell:244 - 
+2025-11-07 10:47:54 DEBUG pyspark-shell:244 - dataFrame has 3 partitons
+2025-11-07 10:47:54 DEBUG pyspark-shell:244 - 
  Reading data from the json file : Ingest data into dataFrame
-2025-11-07 10:27:15 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:42175': (434.4, 425.17)} MB
-2025-11-07 10:27:15 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:42175': 9.23} MB
-2025-11-07 10:27:15 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
+2025-11-07 10:47:55 DEBUG pyspark-shell:244 - Executor memory usage snapshot: {'192.168.1.204:38979': (434.4, 425.17)} MB
+2025-11-07 10:47:55 DEBUG pyspark-shell:244 - Memory used by executors (MB): {'192.168.1.204:38979': 9.23} MB
+2025-11-07 10:47:55 DEBUG pyspark-shell:244 - Spark DataFrame Schema (expanded): root
  |-- id: long (nullable = true)
  |-- CRS_DEP_TIME: integer (nullable = true)
  |-- DEP_TIME: integer (nullable = true)
@@ -115,5 +115,5 @@
  |-- CANCELLED: integer (nullable = true)
  |-- DISTANCE: double (nullable = true)
 
-2025-11-07 10:27:15 DEBUG pyspark-shell:244 - dataFrame has 3 partitons
-2025-11-07 10:27:15 DEBUG pyspark-shell:244 - >>>> Exporting dataframe to the sql table
+2025-11-07 10:47:55 DEBUG pyspark-shell:244 - dataFrame has 3 partitons
+2025-11-07 10:47:55 DEBUG pyspark-shell:244 - >>>> Exporting dataframe to the sql table

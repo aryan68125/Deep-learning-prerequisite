@@ -196,14 +196,30 @@ if __name__ == "__main__":
     """Ingest data and create dataframes ENDS"""
 
     """Perform join on the two dataFrames STARTS"""
+    # Save the dataFrame in the sql table
     df_exp.export_df_sql_table(spark_df1=spark_df1,spark_df2=spark_df2,save_mode="overwrite")
+
+    # read the sql table and create dataframes out of it
+    df1 = spark.read.table("RollexDB.flight_data1")
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=df1,spark_df_name="df1")
+    df2 = spark.read.table("RollexDB.flight_data2")
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=df2,spark_df_name="df2")
+    # performing inner join expression manually right here
+    # Since I want spark to apply broadcast join here 
+    spark.conf.set("spark.sql.autoBroadcastJoinThreshold",-1)
+    join_expr = df1.id == df2.id
+    join_df = df1.join(df2,join_expr,"inner")
+    join_df.collect()
+  
     """Perform join on the two dataFrames ENDS"""
     ######################################
     # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
     ######################################
 
     # This line is for debugging only comment after <required to see the partitions of spark dataFrame>
-    # input("Please enter")
+    # input("Please enter to terminate")
     spark.stop()
 
 
