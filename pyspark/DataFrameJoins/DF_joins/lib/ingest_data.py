@@ -12,7 +12,7 @@ from pyspark.sql import functions as F
 from .logger import Log4j
 from .app_monitor import GetDataFrameMemory
 
-from spark_dataFrame_schema.spark_dataframe_schema import FlightSchemaMixin
+
 
 """
 This class ingest data from csv, json and parquet file format
@@ -22,27 +22,31 @@ class IngestData():
         self.spark_object = spark
         self.logger = Log4j(spark)
         self.metrics = GetDataFrameMemory(spark)
-        self.df_schema = FlightSchemaMixin()
 
-    def import_data_json(self,file_dir):
+    def import_data_json(self,file_dir,df_schema):
         try:
             self.logger.debug("\n Reading data from the json file : Ingest data into dataFrame")
             spark_df = (
                     self.spark_object
                     .read
                     .format("json")
-                    .schema(self.df_schema.return_flight_schema())
+                    .schema(df_schema)
                     .load(file_dir)
             )
-            # handle the string dtype dates
-            spark_df = spark_df.withColumn(
-                "FL_DATE",
-                F.to_timestamp("FL_DATE", "M/d/yyyy")
-            )
-            spark_df = spark_df.withColumn(
-                "id",
-                F.expr("CAST(id AS BIGINT)")
-            )
+ 
+            # Convert FL_DATE only if present
+            if "FL_DATE" in spark_df.columns:
+                spark_df = spark_df.withColumn(
+                    "FL_DATE",
+                    F.to_timestamp("FL_DATE", "M/d/yyyy")
+                )
+
+            # Convert id safely
+            if "id" in spark_df.columns:
+                spark_df = spark_df.withColumn(
+                    "id",
+                    F.col("id").cast("bigint")
+                )
 
             self.log_df_metrics(spark_df=spark_df,file_dir=file_dir,operation_name="import_data_csv")
             return spark_df

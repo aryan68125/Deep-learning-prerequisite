@@ -23,6 +23,9 @@ from lib.clean_up_file_system import CleanupAppFileSystemOnReRun
 # imports related to generating dataFrame
 from unit_testing.generate_dataframe import GenerateDataFrame
 
+# imports related to dataframe schema 
+from spark_dataFrame_schema.spark_dataframe_schema import FlightSchemaMixin
+
 if __name__ == "__main__":
     # logging related logic
     # Get the current project's directory
@@ -172,14 +175,29 @@ if __name__ == "__main__":
     ######################################
     # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
     ######################################
+    """Ingest data and create dataframes STARTS"""
+    # Ingest data in df1
     # initializing ingest data class 
     ingest_data = IngestData(spark)
-    
+    # initializing dataFrame schema
+    df_schema_obj=FlightSchemaMixin()
     # get the dataset directory
     data_dir = os.path.join(project_dir,"dataset","d1")
-    spark_df1 = ingest_data.import_data_json(data_dir)
+    spark_df1 = ingest_data.import_data_json(data_dir,df_schema_obj.return_left_flight_schema())
     # logging dataFrame
     sp_df_logger.log_df(spark_df=spark_df1,spark_df_name="spark_df1")
+
+    # Ingest data in df2
+    # get the dataset directory
+    data_dir = os.path.join(project_dir,"dataset","d2")
+    spark_df2 = ingest_data.import_data_json(data_dir,df_schema_obj.return_right_flight_schema())
+    # logging dataFrame
+    sp_df_logger.log_df(spark_df=spark_df2,spark_df_name="spark_df2")
+    """Ingest data and create dataframes ENDS"""
+
+    """Perform join on the two dataFrames STARTS"""
+    df_exp.export_df_sql_table(spark_df1=spark_df1,spark_df2=spark_df2)
+    """Perform join on the two dataFrames ENDS"""
     ######################################
     # IMPORT JSON DATA AND CREATE A DATAFRAME AND PERFORM DATAFRAME JOIN ON IT STARTS
     ######################################
