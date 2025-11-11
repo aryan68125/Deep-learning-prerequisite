@@ -1024,3 +1024,6 @@ INSERT INTO public.diabetes_patients (patient_id, name, age, gender, diagnosis_d
 ('P0998', 'Swati Rao', 40, 'male', '2017-09-14', 187.5, 6.4, 172.2, 71.8, 135, 85, 'current', '["Metformin", "Dapagliflozin"]', '2024-07-21 00:00:00'),
 ('P0999', 'Priya Kapoor', 65, 'female', '2022-10-22', 152.3, 6.6, 152.6, 92.7, 128, 80, 'never', '["Insulin", "Metformin"]', '2024-08-09 00:00:00'),
 ('P1000', 'Meera Soni', 60, 'male', '2016-03-14', 131.1, 6.7, 153.8, 54.1, 150, 97, 'current', '["Metformin"]', '2024-07-07 00:00:00');
+
+
+SELECT * FROM diabetes_patients LIMIT 25;
