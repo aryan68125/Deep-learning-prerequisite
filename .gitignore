@@ -7,3 +7,4 @@ pyspark/DataFrameJoins/notebook/dataset*
 pyspark/DataFrameJoins/DF_joins/dataset/*
 pyspark/Pyspark_project/notebook/dataset/*
 pyspark/Pyspark_project/project_typeR/dataset/*
+.databricks
