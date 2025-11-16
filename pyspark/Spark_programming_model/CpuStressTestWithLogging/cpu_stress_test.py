@@ -55,7 +55,6 @@ df = spark.range(0, num_rows, numPartitions=num_partitions) \
 rdd = df.rdd.map(lambda row: row.asDict())
 # Estimate memory size of one partition
 def estimate_partition_size(partition):
-    import sys
     size = 0
     for record in partition:
         size += sys.getsizeof(record)

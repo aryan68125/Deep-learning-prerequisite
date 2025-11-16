@@ -12278,3 +12278,539 @@ ResultQueryStage 1
 2025-10-31 10:50:01 INFO  ShutdownHookManager:190 - Deleting directory /tmp/artifacts-41f30f49-af50-4ec0-8f9d-2224eaa3a185
 2025-10-31 10:50:01 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-0af1ee57-534b-4e74-b384-6892a190d533
 2025-10-31 10:50:01 INFO  ShutdownHookManager:190 - Deleting directory /tmp/spark-b8793f84-9a37-47e5-afe1-72667f5349f8/pyspark-1f2d4e99-806f-456b-80e5-625770b6285b
+2025-11-16 15:51:54 DEBUG ShutdownHookManager:204 - Adding shutdown hook
+2025-11-16 15:51:54 DEBUG PythonGatewayServer:204 - Started PythonGatewayServer on localhost/127.0.0.1 with port 42955
+2025-11-16 15:51:54 INFO  SparkContext:190 - Running Spark version 4.0.1
+2025-11-16 15:51:54 INFO  SparkContext:190 - OS info Linux, 6.12.55-1-lts, amd64
+2025-11-16 15:51:54 INFO  SparkContext:190 - Java version 17.0.17
+2025-11-16 15:51:54 INFO  ResourceUtils:184 - ==============================================================
+2025-11-16 15:51:54 INFO  ResourceUtils:184 - No custom resources configured for spark.driver.
+2025-11-16 15:51:54 INFO  ResourceUtils:184 - ==============================================================
+2025-11-16 15:51:54 INFO  SparkContext:190 - Submitted application: CPU_Stress_Test
+2025-11-16 15:51:54 INFO  ResourceProfile:190 - Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-11-16 15:51:54 INFO  ResourceProfile:190 - Limiting resource is cpu
+2025-11-16 15:51:54 INFO  ResourceProfileManager:190 - Added ResourceProfile id: 0
+2025-11-16 15:51:54 INFO  SecurityManager:190 - Changing view acls to: aditya
+2025-11-16 15:51:54 INFO  SecurityManager:190 - Changing modify acls to: aditya
+2025-11-16 15:51:54 INFO  SecurityManager:190 - Changing view acls groups to: aditya
+2025-11-16 15:51:54 INFO  SecurityManager:190 - Changing modify acls groups to: aditya
+2025-11-16 15:51:54 INFO  SecurityManager:190 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: aditya groups with view permissions: EMPTY; users with modify permissions: aditya; groups with modify permissions: EMPTY; RPC SSL disabled
+2025-11-16 15:51:54 DEBUG SecurityManager:204 - Created SSL options for rpc: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-11-16 15:51:54 DEBUG TransportServer:180 - Shuffle server started on 192.168.1.11 with port 44457
+2025-11-16 15:51:54 INFO  Utils:190 - Successfully started service 'sparkDriver' on port 44457.
+2025-11-16 15:51:54 DEBUG SparkEnv:204 - Using serializer: class org.apache.spark.serializer.JavaSerializer
+2025-11-16 15:51:54 INFO  SparkEnv:190 - Registering MapOutputTracker
+2025-11-16 15:51:54 DEBUG MapOutputTrackerMasterEndpoint:204 - init
+2025-11-16 15:51:54 INFO  SparkEnv:190 - Registering BlockManagerMaster
+2025-11-16 15:51:54 INFO  BlockManagerMasterEndpoint:190 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2025-11-16 15:51:54 INFO  BlockManagerMasterEndpoint:184 - BlockManagerMasterEndpoint up
+2025-11-16 15:51:54 INFO  SparkEnv:190 - Registering BlockManagerMasterHeartbeat
+2025-11-16 15:51:54 INFO  DiskBlockManager:190 - Created local directory at /tmp/blockmgr-5df5a114-6628-4bef-9af2-38769ea054af
+2025-11-16 15:51:54 DEBUG DiskBlockManager:204 - Adding shutdown hook
+2025-11-16 15:51:54 INFO  SparkEnv:190 - Registering OutputCommitCoordinator
+2025-11-16 15:51:54 DEBUG OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:204 - init
+2025-11-16 15:51:54 DEBUG SecurityManager:204 - Created SSL options for ui: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-11-16 15:51:55 INFO  JettyUtils:190 - Start Jetty 0.0.0.0:4040 for SparkUI
+2025-11-16 15:51:55 DEBUG JettyUtils:204 - Using requestHeaderSize: 8192
+2025-11-16 15:51:55 DEBUG JettyUtils:204 - Using setSendServerVersion: false
+2025-11-16 15:51:55 DEBUG JettyUtils:204 - Using setSendXPoweredBy: false
+2025-11-16 15:51:55 INFO  Utils:190 - Successfully started service 'SparkUI' on port 4040.
+2025-11-16 15:51:55 INFO  SparkContext:190 - Added file /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties at file:/home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties with timestamp 1763288514671
+2025-11-16 15:51:55 INFO  Utils:190 - Copying /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties to /tmp/spark-ab7824df-76d3-4765-8fcf-01113270fd52/userFiles-4de6255c-61d1-4630-b49e-9904e29b9614/log4j.properties
+2025-11-16 15:51:55 INFO  SecurityManager:190 - Changing view acls to: aditya
+2025-11-16 15:51:55 INFO  SecurityManager:190 - Changing modify acls to: aditya
+2025-11-16 15:51:55 INFO  SecurityManager:190 - Changing view acls groups to: aditya
+2025-11-16 15:51:55 INFO  SecurityManager:190 - Changing modify acls groups to: aditya
+2025-11-16 15:51:55 INFO  SecurityManager:190 - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: aditya groups with view permissions: EMPTY; users with modify permissions: aditya; groups with modify permissions: EMPTY; RPC SSL disabled
+2025-11-16 15:51:55 DEBUG SecurityManager:204 - Created SSL options for rpc: SSLOptions{enabled=false, port=None, keyStore=None, keyStorePassword=None, privateKey=None, keyPassword=None, privateKeyPassword=None, keyStoreType=None, needClientAuth=false, certChain=None, trustStore=None, trustStorePassword=None, trustStoreReloadIntervalMs=10000, trustStoreReloadingEnabled=false, openSSLEnabled=false, protocol=None, enabledAlgorithms=Set()}
+2025-11-16 15:51:55 INFO  Executor:190 - Starting executor ID driver on host 192.168.1.11
+2025-11-16 15:51:55 INFO  Executor:190 - OS info Linux, 6.12.55-1-lts, amd64
+2025-11-16 15:51:55 INFO  Executor:190 - Java version 17.0.17
+2025-11-16 15:51:55 INFO  Executor:190 - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-11-16 15:51:55 INFO  Executor:190 - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@239ab42a for default.
+2025-11-16 15:51:55 INFO  Executor:190 - Fetching file:/home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties with timestamp 1763288514671
+2025-11-16 15:51:55 INFO  Utils:190 - /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties has been previously copied to /tmp/spark-ab7824df-76d3-4765-8fcf-01113270fd52/userFiles-4de6255c-61d1-4630-b49e-9904e29b9614/log4j.properties
+2025-11-16 15:51:55 DEBUG TransportServer:180 - Shuffle server started on 192.168.1.11 with port 41899
+2025-11-16 15:51:55 INFO  Utils:190 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41899.
+2025-11-16 15:51:55 INFO  NettyBlockTransferService:155 - Server created on 192.168.1.11:41899
+2025-11-16 15:51:55 INFO  BlockManager:190 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-11-16 15:51:55 INFO  BlockManagerMaster:190 - Registering BlockManager BlockManagerId(driver, 192.168.1.11, 41899, None)
+2025-11-16 15:51:55 DEBUG DefaultTopologyMapper:204 - Got a request for 192.168.1.11
+2025-11-16 15:51:55 INFO  BlockManagerMasterEndpoint:190 - Registering block manager 192.168.1.11:41899 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.1.11, 41899, None)
+2025-11-16 15:51:55 INFO  BlockManagerMaster:190 - Registered BlockManager BlockManagerId(driver, 192.168.1.11, 41899, None)
+2025-11-16 15:51:55 INFO  BlockManager:190 - Initialized BlockManager: BlockManagerId(driver, 192.168.1.11, 41899, None)
+2025-11-16 15:51:55 DEBUG SparkContext:204 - Adding shutdown hook
+2025-11-16 15:51:56 INFO  SharedState:190 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2025-11-16 15:51:56 DEBUG SharedState:204 - Applying other initial session options to HadoopConf: spark.executor.extraJavaOptions -> -Dlog4j.configuration=file:/home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties
+2025-11-16 15:51:56 DEBUG SharedState:204 - Applying other initial session options to HadoopConf: spark.app.name -> CPU_Stress_Test
+2025-11-16 15:51:56 DEBUG SharedState:204 - Applying other initial session options to HadoopConf: spark.files -> /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties
+2025-11-16 15:51:56 DEBUG SharedState:204 - Applying other initial session options to HadoopConf: spark.driver.extraJavaOptions -> -Dlog4j.configuration=file:/home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/log4j_properties/log4j.properties
+2025-11-16 15:51:56 DEBUG SharedState:204 - Applying other initial session options to HadoopConf: spark.master -> local[*]
+2025-11-16 15:51:56 INFO  SharedState:190 - Warehouse path is 'file:/home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/spark-warehouse'.
+2025-11-16 15:51:56 DEBUG CatalystSqlParser:204 - Parsing command: spark_grouping_id
+2025-11-16 15:51:57 DEBUG WholeStageCodegenExec:204 - 
+/* 001 */ public Object generate(Object[] references) {
+/* 002 */   return new GeneratedIteratorForCodegenStage1(references);
+/* 003 */ }
+/* 004 */
+/* 005 */ // codegenStageId=1
+/* 006 */ final class GeneratedIteratorForCodegenStage1 extends org.apache.spark.sql.execution.BufferedRowIterator {
+/* 007 */   private Object[] references;
+/* 008 */   private scala.collection.Iterator[] inputs;
+/* 009 */   private boolean range_initRange_0;
+/* 010 */   private long range_nextIndex_0;
+/* 011 */   private TaskContext range_taskContext_0;
+/* 012 */   private InputMetrics range_inputMetrics_0;
+/* 013 */   private long range_batchEnd_0;
+/* 014 */   private long range_numElementsTodo_0;
+/* 015 */   private org.apache.spark.util.random.XORShiftRandom[] project_mutableStateArray_0 = new org.apache.spark.util.random.XORShiftRandom[1];
+/* 016 */   private org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[] range_mutableStateArray_0 = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[2];
+/* 017 */
+/* 018 */   public GeneratedIteratorForCodegenStage1(Object[] references) {
+/* 019 */     this.references = references;
+/* 020 */   }
+/* 021 */
+/* 022 */   public void init(int index, scala.collection.Iterator[] inputs) {
+/* 023 */     partitionIndex = index;
+/* 024 */     this.inputs = inputs;
+/* 025 */
+/* 026 */     range_taskContext_0 = TaskContext.get();
+/* 027 */     range_inputMetrics_0 = range_taskContext_0.taskMetrics().inputMetrics();
+/* 028 */     range_mutableStateArray_0[0] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(1, 0);
+/* 029 */     range_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(2, 0);
+/* 030 */
+/* 031 */     project_mutableStateArray_0[0] = new org.apache.spark.util.random.XORShiftRandom(4312679126753734409L + partitionIndex);
+/* 032 */   }
+/* 033 */
+/* 034 */   private void initRange(int idx) {
+/* 035 */     java.math.BigInteger index = java.math.BigInteger.valueOf(idx);
+/* 036 */     java.math.BigInteger numSlice = java.math.BigInteger.valueOf(16L);
+/* 037 */     java.math.BigInteger numElement = java.math.BigInteger.valueOf(9999999999L);
+/* 038 */     java.math.BigInteger step = java.math.BigInteger.valueOf(1L);
+/* 039 */     java.math.BigInteger start = java.math.BigInteger.valueOf(0L);
+/* 040 */     long partitionEnd;
+/* 041 */
+/* 042 */     java.math.BigInteger st = index.multiply(numElement).divide(numSlice).multiply(step).add(start);
+/* 043 */     if (st.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 044 */       range_nextIndex_0 = Long.MAX_VALUE;
+/* 045 */     } else if (st.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 046 */       range_nextIndex_0 = Long.MIN_VALUE;
+/* 047 */     } else {
+/* 048 */       range_nextIndex_0 = st.longValue();
+/* 049 */     }
+/* 050 */     range_batchEnd_0 = range_nextIndex_0;
+/* 051 */
+/* 052 */     java.math.BigInteger end = index.add(java.math.BigInteger.ONE).multiply(numElement).divide(numSlice)
+/* 053 */     .multiply(step).add(start);
+/* 054 */     if (end.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 055 */       partitionEnd = Long.MAX_VALUE;
+/* 056 */     } else if (end.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 057 */       partitionEnd = Long.MIN_VALUE;
+/* 058 */     } else {
+/* 059 */       partitionEnd = end.longValue();
+/* 060 */     }
+/* 061 */
+/* 062 */     java.math.BigInteger startToEnd = java.math.BigInteger.valueOf(partitionEnd).subtract(
+/* 063 */       java.math.BigInteger.valueOf(range_nextIndex_0));
+/* 064 */     range_numElementsTodo_0  = startToEnd.divide(step).longValue();
+/* 065 */     if (range_numElementsTodo_0 < 0) {
+/* 066 */       range_numElementsTodo_0 = 0;
+/* 067 */     } else if (startToEnd.remainder(step).compareTo(java.math.BigInteger.valueOf(0L)) != 0) {
+/* 068 */       range_numElementsTodo_0++;
+/* 069 */     }
+/* 070 */   }
+/* 071 */
+/* 072 */   protected void processNext() throws java.io.IOException {
+/* 073 */     // initialize Range
+/* 074 */     if (!range_initRange_0) {
+/* 075 */       range_initRange_0 = true;
+/* 076 */       initRange(partitionIndex);
+/* 077 */     }
+/* 078 */
+/* 079 */     while (true) {
+/* 080 */       if (range_nextIndex_0 == range_batchEnd_0) {
+/* 081 */         long range_nextBatchTodo_0;
+/* 082 */         if (range_numElementsTodo_0 > 1000L) {
+/* 083 */           range_nextBatchTodo_0 = 1000L;
+/* 084 */           range_numElementsTodo_0 -= 1000L;
+/* 085 */         } else {
+/* 086 */           range_nextBatchTodo_0 = range_numElementsTodo_0;
+/* 087 */           range_numElementsTodo_0 = 0;
+/* 088 */           if (range_nextBatchTodo_0 == 0) break;
+/* 089 */         }
+/* 090 */         range_batchEnd_0 += range_nextBatchTodo_0 * 1L;
+/* 091 */       }
+/* 092 */
+/* 093 */       int range_localEnd_0 = (int)((range_batchEnd_0 - range_nextIndex_0) / 1L);
+/* 094 */       for (int range_localIdx_0 = 0; range_localIdx_0 < range_localEnd_0; range_localIdx_0++) {
+/* 095 */         long range_value_0 = ((long)range_localIdx_0 * 1L) + range_nextIndex_0;
+/* 096 */
+/* 097 */         // common sub-expressions
+/* 098 */
+/* 099 */         final double project_value_1 = project_mutableStateArray_0[0].nextDouble();
+/* 100 */
+/* 101 */         range_mutableStateArray_0[1].reset();
+/* 102 */
+/* 103 */         range_mutableStateArray_0[1].write(0, range_value_0);
+/* 104 */
+/* 105 */         range_mutableStateArray_0[1].write(1, project_value_1);
+/* 106 */         append((range_mutableStateArray_0[1].getRow()));
+/* 107 */
+/* 108 */         if (shouldStop()) {
+/* 109 */           range_nextIndex_0 = range_value_0 + 1L;
+/* 110 */           ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localIdx_0 + 1);
+/* 111 */           range_inputMetrics_0.incRecordsRead(range_localIdx_0 + 1);
+/* 112 */           return;
+/* 113 */         }
+/* 114 */
+/* 115 */       }
+/* 116 */       range_nextIndex_0 = range_batchEnd_0;
+/* 117 */       ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localEnd_0);
+/* 118 */       range_inputMetrics_0.incRecordsRead(range_localEnd_0);
+/* 119 */       range_taskContext_0.killTaskIfInterrupted();
+/* 120 */     }
+/* 121 */   }
+/* 122 */
+/* 123 */ }
+
+2025-11-16 15:51:57 DEBUG CodeGenerator:204 - 
+/* 001 */ public Object generate(Object[] references) {
+/* 002 */   return new GeneratedIteratorForCodegenStage1(references);
+/* 003 */ }
+/* 004 */
+/* 005 */ // codegenStageId=1
+/* 006 */ final class GeneratedIteratorForCodegenStage1 extends org.apache.spark.sql.execution.BufferedRowIterator {
+/* 007 */   private Object[] references;
+/* 008 */   private scala.collection.Iterator[] inputs;
+/* 009 */   private boolean range_initRange_0;
+/* 010 */   private long range_nextIndex_0;
+/* 011 */   private TaskContext range_taskContext_0;
+/* 012 */   private InputMetrics range_inputMetrics_0;
+/* 013 */   private long range_batchEnd_0;
+/* 014 */   private long range_numElementsTodo_0;
+/* 015 */   private org.apache.spark.util.random.XORShiftRandom[] project_mutableStateArray_0 = new org.apache.spark.util.random.XORShiftRandom[1];
+/* 016 */   private org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[] range_mutableStateArray_0 = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[2];
+/* 017 */
+/* 018 */   public GeneratedIteratorForCodegenStage1(Object[] references) {
+/* 019 */     this.references = references;
+/* 020 */   }
+/* 021 */
+/* 022 */   public void init(int index, scala.collection.Iterator[] inputs) {
+/* 023 */     partitionIndex = index;
+/* 024 */     this.inputs = inputs;
+/* 025 */
+/* 026 */     range_taskContext_0 = TaskContext.get();
+/* 027 */     range_inputMetrics_0 = range_taskContext_0.taskMetrics().inputMetrics();
+/* 028 */     range_mutableStateArray_0[0] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(1, 0);
+/* 029 */     range_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(2, 0);
+/* 030 */
+/* 031 */     project_mutableStateArray_0[0] = new org.apache.spark.util.random.XORShiftRandom(4312679126753734409L + partitionIndex);
+/* 032 */   }
+/* 033 */
+/* 034 */   private void initRange(int idx) {
+/* 035 */     java.math.BigInteger index = java.math.BigInteger.valueOf(idx);
+/* 036 */     java.math.BigInteger numSlice = java.math.BigInteger.valueOf(16L);
+/* 037 */     java.math.BigInteger numElement = java.math.BigInteger.valueOf(9999999999L);
+/* 038 */     java.math.BigInteger step = java.math.BigInteger.valueOf(1L);
+/* 039 */     java.math.BigInteger start = java.math.BigInteger.valueOf(0L);
+/* 040 */     long partitionEnd;
+/* 041 */
+/* 042 */     java.math.BigInteger st = index.multiply(numElement).divide(numSlice).multiply(step).add(start);
+/* 043 */     if (st.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 044 */       range_nextIndex_0 = Long.MAX_VALUE;
+/* 045 */     } else if (st.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 046 */       range_nextIndex_0 = Long.MIN_VALUE;
+/* 047 */     } else {
+/* 048 */       range_nextIndex_0 = st.longValue();
+/* 049 */     }
+/* 050 */     range_batchEnd_0 = range_nextIndex_0;
+/* 051 */
+/* 052 */     java.math.BigInteger end = index.add(java.math.BigInteger.ONE).multiply(numElement).divide(numSlice)
+/* 053 */     .multiply(step).add(start);
+/* 054 */     if (end.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 055 */       partitionEnd = Long.MAX_VALUE;
+/* 056 */     } else if (end.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 057 */       partitionEnd = Long.MIN_VALUE;
+/* 058 */     } else {
+/* 059 */       partitionEnd = end.longValue();
+/* 060 */     }
+/* 061 */
+/* 062 */     java.math.BigInteger startToEnd = java.math.BigInteger.valueOf(partitionEnd).subtract(
+/* 063 */       java.math.BigInteger.valueOf(range_nextIndex_0));
+/* 064 */     range_numElementsTodo_0  = startToEnd.divide(step).longValue();
+/* 065 */     if (range_numElementsTodo_0 < 0) {
+/* 066 */       range_numElementsTodo_0 = 0;
+/* 067 */     } else if (startToEnd.remainder(step).compareTo(java.math.BigInteger.valueOf(0L)) != 0) {
+/* 068 */       range_numElementsTodo_0++;
+/* 069 */     }
+/* 070 */   }
+/* 071 */
+/* 072 */   protected void processNext() throws java.io.IOException {
+/* 073 */     // initialize Range
+/* 074 */     if (!range_initRange_0) {
+/* 075 */       range_initRange_0 = true;
+/* 076 */       initRange(partitionIndex);
+/* 077 */     }
+/* 078 */
+/* 079 */     while (true) {
+/* 080 */       if (range_nextIndex_0 == range_batchEnd_0) {
+/* 081 */         long range_nextBatchTodo_0;
+/* 082 */         if (range_numElementsTodo_0 > 1000L) {
+/* 083 */           range_nextBatchTodo_0 = 1000L;
+/* 084 */           range_numElementsTodo_0 -= 1000L;
+/* 085 */         } else {
+/* 086 */           range_nextBatchTodo_0 = range_numElementsTodo_0;
+/* 087 */           range_numElementsTodo_0 = 0;
+/* 088 */           if (range_nextBatchTodo_0 == 0) break;
+/* 089 */         }
+/* 090 */         range_batchEnd_0 += range_nextBatchTodo_0 * 1L;
+/* 091 */       }
+/* 092 */
+/* 093 */       int range_localEnd_0 = (int)((range_batchEnd_0 - range_nextIndex_0) / 1L);
+/* 094 */       for (int range_localIdx_0 = 0; range_localIdx_0 < range_localEnd_0; range_localIdx_0++) {
+/* 095 */         long range_value_0 = ((long)range_localIdx_0 * 1L) + range_nextIndex_0;
+/* 096 */
+/* 097 */         // common sub-expressions
+/* 098 */
+/* 099 */         final double project_value_1 = project_mutableStateArray_0[0].nextDouble();
+/* 100 */
+/* 101 */         range_mutableStateArray_0[1].reset();
+/* 102 */
+/* 103 */         range_mutableStateArray_0[1].write(0, range_value_0);
+/* 104 */
+/* 105 */         range_mutableStateArray_0[1].write(1, project_value_1);
+/* 106 */         append((range_mutableStateArray_0[1].getRow()));
+/* 107 */
+/* 108 */         if (shouldStop()) {
+/* 109 */           range_nextIndex_0 = range_value_0 + 1L;
+/* 110 */           ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localIdx_0 + 1);
+/* 111 */           range_inputMetrics_0.incRecordsRead(range_localIdx_0 + 1);
+/* 112 */           return;
+/* 113 */         }
+/* 114 */
+/* 115 */       }
+/* 116 */       range_nextIndex_0 = range_batchEnd_0;
+/* 117 */       ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localEnd_0);
+/* 118 */       range_inputMetrics_0.incRecordsRead(range_localEnd_0);
+/* 119 */       range_taskContext_0.killTaskIfInterrupted();
+/* 120 */     }
+/* 121 */   }
+/* 122 */
+/* 123 */ }
+
+2025-11-16 15:51:57 INFO  CodeGenerator:190 - Code generated in 115.374972 ms
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$inputRDDs$1$adapted
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$doExecute$4$adapted
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 -  +++ indylambda closure ($anonfun$doExecute$4$adapted) is now cleaned +++
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$javaToPython$1
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 -  +++ indylambda closure ($anonfun$javaToPython$1) is now cleaned +++
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$javaToPython$1
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$collect$2
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 -  +++ indylambda closure ($anonfun$collect$2) is now cleaned +++
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 - Cleaning indylambda closure: $anonfun$runJob$5
+2025-11-16 15:51:57 DEBUG ClosureCleaner:204 -  +++ indylambda closure ($anonfun$runJob$5) is now cleaned +++
+2025-11-16 15:51:57 INFO  SparkContext:190 - Starting job: collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64
+2025-11-16 15:51:57 DEBUG DAGScheduler:204 - eagerlyComputePartitionsForRddAndAncestors for RDD 6 took 0.000440 seconds
+2025-11-16 15:51:57 DEBUG DAGScheduler:204 - Merging stage rdd profiles: HashSet()
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Got job 0 (collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64) with 16 output partitions
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Final stage: ResultStage 0 (collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64)
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Parents of final stage: List()
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Missing parents: List()
+2025-11-16 15:51:57 DEBUG DAGScheduler:204 - submitStage(ResultStage 0 (name=collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64;jobs=0))
+2025-11-16 15:51:57 DEBUG DAGScheduler:204 - missing: List()
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Submitting ResultStage 0 (PythonRDD[6] at collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64), which has no missing parents
+2025-11-16 15:51:57 DEBUG DAGScheduler:204 - submitMissingTasks(ResultStage 0)
+2025-11-16 15:51:57 INFO  MemoryStore:190 - MemoryStore started with capacity 434.4 MiB
+2025-11-16 15:51:57 INFO  MemoryStore:190 - Block broadcast_0 stored as values in memory (estimated size 19.1 KiB, free 434.4 MiB)
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Put block broadcast_0 locally took 15 ms
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Putting block broadcast_0 without replication took 15 ms
+2025-11-16 15:51:57 INFO  MemoryStore:190 - Block broadcast_0_piece0 stored as bytes in memory (estimated size 9.3 KiB, free 434.4 MiB)
+2025-11-16 15:51:57 DEBUG BlockManagerMasterEndpoint:204 - Updating block info on master broadcast_0_piece0 for BlockManagerId(driver, 192.168.1.11, 41899, None)
+2025-11-16 15:51:57 DEBUG BlockManagerInfo:210 - Added broadcast_0_piece0 in memory on 192.168.1.11:41899 (size: 9.3 KiB, free: 434.4 MiB)
+2025-11-16 15:51:57 DEBUG BlockManagerMaster:204 - Updated info of block broadcast_0_piece0
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Told master about block broadcast_0_piece0
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Put block broadcast_0_piece0 locally took 8 ms
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Putting block broadcast_0_piece0 without replication took 8 ms
+2025-11-16 15:51:57 INFO  SparkContext:190 - Created broadcast 0 from broadcast at DAGScheduler.scala:1676
+2025-11-16 15:51:57 INFO  DAGScheduler:190 - Submitting 16 missing tasks from ResultStage 0 (PythonRDD[6] at collect at /home/aditya/github/Deep-learning-prerequisite/pyspark/Spark_programming_model/CpuStressTestWithLogging/cpu_stress_test.py:64) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+2025-11-16 15:51:57 INFO  TaskSchedulerImpl:190 - Adding task set 0.0 with 16 tasks resource profile 0
+2025-11-16 15:51:57 DEBUG TaskSetManager:204 - Epoch for TaskSet 0.0: 0
+2025-11-16 15:51:57 DEBUG TaskSetManager:204 - Adding pending tasks took 0 ms
+2025-11-16 15:51:57 DEBUG TaskSetManager:204 - Valid locality levels for TaskSet 0.0: NO_PREF, ANY
+2025-11-16 15:51:57 DEBUG TaskSchedulerImpl:204 - parentName: , name: TaskSet_0.0, runningTasks: 0
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 0.0 in stage 0.0 (TID 0) (192.168.1.11,executor driver, partition 0, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 1.0 in stage 0.0 (TID 1) (192.168.1.11,executor driver, partition 1, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 2.0 in stage 0.0 (TID 2) (192.168.1.11,executor driver, partition 2, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 3.0 in stage 0.0 (TID 3) (192.168.1.11,executor driver, partition 3, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 4.0 in stage 0.0 (TID 4) (192.168.1.11,executor driver, partition 4, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 5.0 in stage 0.0 (TID 5) (192.168.1.11,executor driver, partition 5, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 6.0 in stage 0.0 (TID 6) (192.168.1.11,executor driver, partition 6, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 7.0 in stage 0.0 (TID 7) (192.168.1.11,executor driver, partition 7, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 8.0 in stage 0.0 (TID 8) (192.168.1.11,executor driver, partition 8, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 9.0 in stage 0.0 (TID 9) (192.168.1.11,executor driver, partition 9, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 10.0 in stage 0.0 (TID 10) (192.168.1.11,executor driver, partition 10, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 11.0 in stage 0.0 (TID 11) (192.168.1.11,executor driver, partition 11, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 12.0 in stage 0.0 (TID 12) (192.168.1.11,executor driver, partition 12, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 13.0 in stage 0.0 (TID 13) (192.168.1.11,executor driver, partition 13, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 14.0 in stage 0.0 (TID 14) (192.168.1.11,executor driver, partition 14, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  TaskSetManager:190 - Starting task 15.0 in stage 0.0 (TID 15) (192.168.1.11,executor driver, partition 15, PROCESS_LOCAL, 10035 bytes) 
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 7.0 in stage 0.0 (TID 7)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 15.0 in stage 0.0 (TID 15)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 5.0 in stage 0.0 (TID 5)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 14.0 in stage 0.0 (TID 14)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 1.0 in stage 0.0 (TID 1)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 0.0 in stage 0.0 (TID 0)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 9.0 in stage 0.0 (TID 9)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 2.0 in stage 0.0 (TID 2)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 12.0 in stage 0.0 (TID 12)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 3.0 in stage 0.0 (TID 3)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 10.0 in stage 0.0 (TID 10)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 4.0 in stage 0.0 (TID 4)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 13.0 in stage 0.0 (TID 13)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 8.0 in stage 0.0 (TID 8)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 6.0 in stage 0.0 (TID 6)
+2025-11-16 15:51:57 INFO  Executor:190 - Running task 11.0 in stage 0.0 (TID 11)
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 2
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 5
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 15
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 13
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 12
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 1
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 11
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 7
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 10
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 14
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 6
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 8
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 9
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 4
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 3
+2025-11-16 15:51:57 DEBUG ExecutorMetricsPoller:204 - stageTCMP: (0, 0) -> 16
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Getting local block broadcast_0
+2025-11-16 15:51:57 DEBUG BlockManager:204 - Level for block broadcast_0 is StorageLevel(disk, memory, deserialized, 1 replicas)
+2025-11-16 15:51:57 DEBUG CodeGenerator:204 - 
+/* 001 */ public Object generate(Object[] references) {
+/* 002 */   return new GeneratedIteratorForCodegenStage1(references);
+/* 003 */ }
+/* 004 */
+/* 005 */ // codegenStageId=1
+/* 006 */ final class GeneratedIteratorForCodegenStage1 extends org.apache.spark.sql.execution.BufferedRowIterator {
+/* 007 */   private Object[] references;
+/* 008 */   private scala.collection.Iterator[] inputs;
+/* 009 */   private boolean range_initRange_0;
+/* 010 */   private long range_nextIndex_0;
+/* 011 */   private TaskContext range_taskContext_0;
+/* 012 */   private InputMetrics range_inputMetrics_0;
+/* 013 */   private long range_batchEnd_0;
+/* 014 */   private long range_numElementsTodo_0;
+/* 015 */   private org.apache.spark.util.random.XORShiftRandom[] project_mutableStateArray_0 = new org.apache.spark.util.random.XORShiftRandom[1];
+/* 016 */   private org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[] range_mutableStateArray_0 = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter[2];
+/* 017 */
+/* 018 */   public GeneratedIteratorForCodegenStage1(Object[] references) {
+/* 019 */     this.references = references;
+/* 020 */   }
+/* 021 */
+/* 022 */   public void init(int index, scala.collection.Iterator[] inputs) {
+/* 023 */     partitionIndex = index;
+/* 024 */     this.inputs = inputs;
+/* 025 */
+/* 026 */     range_taskContext_0 = TaskContext.get();
+/* 027 */     range_inputMetrics_0 = range_taskContext_0.taskMetrics().inputMetrics();
+/* 028 */     range_mutableStateArray_0[0] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(1, 0);
+/* 029 */     range_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(2, 0);
+/* 030 */
+/* 031 */     project_mutableStateArray_0[0] = new org.apache.spark.util.random.XORShiftRandom(4312679126753734409L + partitionIndex);
+/* 032 */   }
+/* 033 */
+/* 034 */   private void initRange(int idx) {
+/* 035 */     java.math.BigInteger index = java.math.BigInteger.valueOf(idx);
+/* 036 */     java.math.BigInteger numSlice = java.math.BigInteger.valueOf(16L);
+/* 037 */     java.math.BigInteger numElement = java.math.BigInteger.valueOf(9999999999L);
+/* 038 */     java.math.BigInteger step = java.math.BigInteger.valueOf(1L);
+/* 039 */     java.math.BigInteger start = java.math.BigInteger.valueOf(0L);
+/* 040 */     long partitionEnd;
+/* 041 */
+/* 042 */     java.math.BigInteger st = index.multiply(numElement).divide(numSlice).multiply(step).add(start);
+/* 043 */     if (st.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 044 */       range_nextIndex_0 = Long.MAX_VALUE;
+/* 045 */     } else if (st.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 046 */       range_nextIndex_0 = Long.MIN_VALUE;
+/* 047 */     } else {
+/* 048 */       range_nextIndex_0 = st.longValue();
+/* 049 */     }
+/* 050 */     range_batchEnd_0 = range_nextIndex_0;
+/* 051 */
+/* 052 */     java.math.BigInteger end = index.add(java.math.BigInteger.ONE).multiply(numElement).divide(numSlice)
+/* 053 */     .multiply(step).add(start);
+/* 054 */     if (end.compareTo(java.math.BigInteger.valueOf(Long.MAX_VALUE)) > 0) {
+/* 055 */       partitionEnd = Long.MAX_VALUE;
+/* 056 */     } else if (end.compareTo(java.math.BigInteger.valueOf(Long.MIN_VALUE)) < 0) {
+/* 057 */       partitionEnd = Long.MIN_VALUE;
+/* 058 */     } else {
+/* 059 */       partitionEnd = end.longValue();
+/* 060 */     }
+/* 061 */
+/* 062 */     java.math.BigInteger startToEnd = java.math.BigInteger.valueOf(partitionEnd).subtract(
+/* 063 */       java.math.BigInteger.valueOf(range_nextIndex_0));
+/* 064 */     range_numElementsTodo_0  = startToEnd.divide(step).longValue();
+/* 065 */     if (range_numElementsTodo_0 < 0) {
+/* 066 */       range_numElementsTodo_0 = 0;
+/* 067 */     } else if (startToEnd.remainder(step).compareTo(java.math.BigInteger.valueOf(0L)) != 0) {
+/* 068 */       range_numElementsTodo_0++;
+/* 069 */     }
+/* 070 */   }
+/* 071 */
+/* 072 */   protected void processNext() throws java.io.IOException {
+/* 073 */     // initialize Range
+/* 074 */     if (!range_initRange_0) {
+/* 075 */       range_initRange_0 = true;
+/* 076 */       initRange(partitionIndex);
+/* 077 */     }
+/* 078 */
+/* 079 */     while (true) {
+/* 080 */       if (range_nextIndex_0 == range_batchEnd_0) {
+/* 081 */         long range_nextBatchTodo_0;
+/* 082 */         if (range_numElementsTodo_0 > 1000L) {
+/* 083 */           range_nextBatchTodo_0 = 1000L;
+/* 084 */           range_numElementsTodo_0 -= 1000L;
+/* 085 */         } else {
+/* 086 */           range_nextBatchTodo_0 = range_numElementsTodo_0;
+/* 087 */           range_numElementsTodo_0 = 0;
+/* 088 */           if (range_nextBatchTodo_0 == 0) break;
+/* 089 */         }
+/* 090 */         range_batchEnd_0 += range_nextBatchTodo_0 * 1L;
+/* 091 */       }
+/* 092 */
+/* 093 */       int range_localEnd_0 = (int)((range_batchEnd_0 - range_nextIndex_0) / 1L);
+/* 094 */       for (int range_localIdx_0 = 0; range_localIdx_0 < range_localEnd_0; range_localIdx_0++) {
+/* 095 */         long range_value_0 = ((long)range_localIdx_0 * 1L) + range_nextIndex_0;
+/* 096 */
+/* 097 */         // common sub-expressions
+/* 098 */
+/* 099 */         final double project_value_1 = project_mutableStateArray_0[0].nextDouble();
+/* 100 */
+/* 101 */         range_mutableStateArray_0[1].reset();
+/* 102 */
+/* 103 */         range_mutableStateArray_0[1].write(0, range_value_0);
+/* 104 */
+/* 105 */         range_mutableStateArray_0[1].write(1, project_value_1);
+/* 106 */         append((range_mutableStateArray_0[1].getRow()));
+/* 107 */
+/* 108 */         if (shouldStop()) {
+/* 109 */           range_nextIndex_0 = range_value_0 + 1L;
+/* 110 */           ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localIdx_0 + 1);
+/* 111 */           range_inputMetrics_0.incRecordsRead(range_localIdx_0 + 1);
+/* 112 */           return;
+/* 113 */         }
+/* 114 */
+/* 115 */       }
+/* 116 */       range_nextIndex_0 = range_batchEnd_0;
+/* 117 */       ((org.apache.spark.sql.execution.metric.SQLMetric) references[0] /* numOutputRows */).add(range_localEnd_0);
+/* 118 */       range_inputMetrics_0.incRecordsRead(range_localEnd_0);
+/* 119 */       range_taskContext_0.killTaskIfInterrupted();
+/* 120 */     }
+/* 121 */   }
+/* 122 */
+/* 123 */ }
+
+2025-11-16 15:51:57 INFO  CodeGenerator:190 - Code generated in 12.25952 ms
