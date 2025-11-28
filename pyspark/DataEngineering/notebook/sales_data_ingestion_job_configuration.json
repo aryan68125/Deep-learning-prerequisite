@@ -6,5 +6,6 @@
   "sales_table": "sales_table",
   "sales_delta_table_schema_path": "/Volumes/job_orchestration/default/sales_volume/schema_store/",
   "sales_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/sales_volume/checkpoints/",
-  "sales_delta_table_location": "job_orchestration.default.sales_table"
+  "sales_delta_table_location": "job_orchestration.default.sales_table",
+  "ingest_customer_data_job_metadata_table" : "job_orchestration.default.Ingest_customer_data_metadata"
 }
