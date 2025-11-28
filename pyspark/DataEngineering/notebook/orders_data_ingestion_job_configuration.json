@@ -6,5 +6,6 @@
   "orders_table": "orders_table",
   "orders_delta_table_schema_path": "/Volumes/job_orchestration/default/orders_volume/schema_store/",
   "orders_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/orders_volume/checkpoints/",
-  "orders_delta_table_location": "job_orchestration.default.orders_table"
+  "orders_delta_table_location": "job_orchestration.default.orders_table",
+  "ingest_customer_data_job_metadata_table" : "job_orchestration.default.Ingest_customer_data_metadata"
 }
