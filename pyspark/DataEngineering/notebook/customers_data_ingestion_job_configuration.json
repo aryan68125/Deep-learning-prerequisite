@@ -14,4 +14,3 @@
   "customer_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/customers_volume/checkpoints/",
   "customer_delta_table_location": "job_orchestration.default.customers_table"
 }
-
