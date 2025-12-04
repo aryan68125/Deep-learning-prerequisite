@@ -7,8 +7,8 @@
   "orders_delta_table_schema_path": "/Volumes/job_orchestration/default/orders_volume/schema_store/",
   "orders_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/orders_volume/checkpoints/",
   "orders_delta_table_location": "job_orchestration.default.orders_table",
-  "ingest_customer_data_job_metadata_table": "job_orchestration.default.Ingest_customer_data_metadata",
   "second_job_id": "",
   "databricks_host": "https://dbc-e59b7df7-56be.cloud.databricks.com",
-  "job_orchestration_token": ""
+  "job_orchestration_token": "",
+  "third_job_id": ""
 }
