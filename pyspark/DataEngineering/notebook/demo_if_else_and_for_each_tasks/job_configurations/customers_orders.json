@@ -1,0 +1,4 @@
+{
+  "table_name": "customers_order_table",
+  "gold_table_name": "customers_order_table_gold"
+}

@@ -1,0 +1,4 @@
+{
+  "silver_table_name": "customers_order_table_silver",
+  "state": "{{input}}"
+}

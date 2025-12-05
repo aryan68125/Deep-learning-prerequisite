@@ -1,0 +1,4 @@
+{
+  "aggregated_by_state_table_name_gold": "agg_customers_orders_state_wise_data",
+  "aggregated_by_category_table_name_gold": "agg_customers_orders_data_category_wise_data"
+}
