@@ -1,0 +1,14 @@
+{
+  "delta_table_volume": "orders_volume",
+  "delta_table_schema_store": "/Volumes/job_orchestration/default/orders_volume/schema_store",
+  "delta_table_checkpoints": "/Volumes/job_orchestration/default/orders_volume/checkpoints",
+  "delta_table_path": "/Volumes/job_orchestration/default/orders_volume/orders_table",
+  "orders_table": "orders_table",
+  "orders_delta_table_schema_path": "/Volumes/job_orchestration/default/orders_volume/schema_store/",
+  "orders_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/orders_volume/checkpoints/",
+  "orders_delta_table_location": "job_orchestration.default.orders_table",
+  "second_job_id": "",
+  "databricks_host": "",
+  "job_orchestration_token": "",
+  "third_job_id": ""
+}

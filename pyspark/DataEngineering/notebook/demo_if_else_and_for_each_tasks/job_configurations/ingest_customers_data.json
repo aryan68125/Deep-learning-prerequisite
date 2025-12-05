@@ -1,0 +1,16 @@
+{
+  "catalog": "job_orchestration",
+  "schema": "default",
+  "delta_table_volume": "customers_volume",
+  "data_ingestion_volume": "job_orchestration_volume",
+  "delta_table_schema_store": "/Volumes/job_orchestration/default/customers_volume/schema_store",
+  "delta_table_checkpoints": "/Volumes/job_orchestration/default/customers_volume/checkpoints",
+  "delta_table_path": "/Volumes/job_orchestration/default/customers_volume/customers_table",
+  "customers_data": "/Volumes/job_orchestration/default/job_orchestration_volume/ingest_data/customers_data/",
+  "orders_data": "/Volumes/job_orchestration/default/job_orchestration_volume/ingest_data/orders_data/",
+  "sales_data": "/Volumes/job_orchestration/default/job_orchestration_volume/ingest_data/sales_data/",
+  "customers_table": "customers_table",
+  "customer_delta_table_schema_path": "/Volumes/job_orchestration/default/customers_volume/schema_store/",
+  "customer_delta_table_checkpoint_path": "/Volumes/job_orchestration/default/customers_volume/checkpoints/",
+  "customer_delta_table_location": "job_orchestration.default.customers_table"
+}
