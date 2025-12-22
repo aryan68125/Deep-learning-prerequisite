@@ -1,0 +1,11 @@
+bundle:
+  name: customer-ingestion
+
+include:
+  - resources/*.yml
+  
+targets:
+  dev:
+    default: true
+
+

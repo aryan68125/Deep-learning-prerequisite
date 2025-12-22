@@ -1,0 +1,9 @@
+resources:
+  jobs:
+    customers_bronze_ingestion:
+      name: customers_bronze_ingestion
+      tasks:
+        - task_key: ingest_customers
+          notebook_task:
+            notebook_path: /Workspace/Users/aditya.kumar@credencys.com/notebooks/bronze/ingest_customers.ipynb
+            source: WORKSPACE
